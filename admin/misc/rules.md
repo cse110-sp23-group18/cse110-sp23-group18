@@ -15,7 +15,7 @@ Team member info:
 | -------- | -------- | -------- | -------- |
 | Pramesh Kariyawasam | pjalath@ucsd.edu| (424) 744-6637 |  |
 | Brian Liu | bgliu@ucsd.edu |(530) 302-6459 | [Github](https://github.com/brianliu1412)  [Linkedin](https://www.linkedin.com/in/brianliu1412/) |
-| Grant Cheng | gxcheng@ucsd.edu | (650) 561-2658 |[Github](https://github.com/brianliu1412)  [Linkedin](https://www.linkedin.com/in/brianliu1412/)  [Website](https://www.linkedin.com/in/brianliu1412/) |
+| Grant Cheng | gxcheng@ucsd.edu | (650) 561-2658 |[Github](https://github.com/CatFish47)  [Linkedin](https://www.linkedin.com/in/grant-cheng-52171b205/)  [Website](https://grantcheng.com) |
 | Kavi Nelakonda | knelakon@ucsd.edu | (408) 507-7054 | [Github](https://github.com/kNelakonda) [Linkedin](https://www.linkedin.com/in/kavi-n-a207ba102/)|
 | Jessie Ouyang | jeouyang@ucsd.edu | (916) 390-2714 | [Github](https://github.com/ouyangca) [Linkedin](https://www.linkedin.com/in/jessieyouyang/) |
 | Yulei Lu |ax008752@acsmail.ucsd.edu | (929) 606-3882 | [Github](https://github.com/Yuleilu) [Linkedin](https://www.linkedin.com/in/yulei-lu-383b4126b/)|
