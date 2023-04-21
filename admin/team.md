@@ -38,7 +38,7 @@ Hi! I'm [Jessie](https://github.com/ouyangca). I am a developer on the team. I a
 
 
 ### Damaris Flores
-Hi I'm [Damaris] (https://github.com/dflores1229). I am one of the developers on the team. I am an undergraduate student majoring in Applied Mathematics at University of California, San Diego. 
+Hi I'm [Damaris](https://github.com/dflores1229). I am one of the developers of the team. I am a 4th year Applied Mathematics major and a CS minor in Sixth College. Let's go team Apollo 18!
 
 
 ### Fangyu Zhu
