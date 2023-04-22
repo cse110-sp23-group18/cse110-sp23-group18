@@ -2,6 +2,8 @@
 
 # Team 18: Apollo 18 🚀 🌕 🚩
 
+![Team Logo](/admin/branding/logo.png)
+
 # Values: 
 Team Apollo 18 fosters an environment where every group member's opinion is equally heard. We strive to keep our code simple but effective. We value dependable functionality over flashy features. 
 
