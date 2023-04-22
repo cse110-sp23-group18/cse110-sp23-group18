@@ -58,3 +58,5 @@ Meeting Type: Kickoff meeting
 - We have decided to meet on two times: 
 - Tuesdays @ Geisel (Normal Meetings) - 6:45pm-7:45pm, 
 - Fridays (Emergency Meeting) - 4-5pm
+
+The meeting ended at 6pm
