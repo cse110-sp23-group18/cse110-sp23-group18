@@ -2,7 +2,7 @@
 
 # Team 18: Apollo 18 🚀 🌕 🚩
 
-![Team Logo](branding/logo.png)
+![Team Logo](https://res.cloudinary.com/dounttx9k/image/upload/v1682148954/logo_pgwal2.png)
 
 # Values: 
 Team Apollo 18 fosters an environment where every group member's opinion is equally heard. We strive to keep our code simple but effective. We value dependable functionality over flashy features. 
