@@ -1,3 +1,13 @@
+@font-face {
+	font-family: VoyagerHeavy;
+	src: url(assets/Voyager\ Heavy.otf);
+}
+@font-face {
+	font-family: VoyagerLight;
+	src: url(assets/Voyager\ Light.otf);
+}
+
+
 body {
 	font-family: Arial, sans-serif;
 	background-image: url("images/black-space.jpg");
@@ -5,15 +15,23 @@ body {
 	color: #333;
 	margin: 0;
 	padding: 0;
+	height: 80vh;
 }
 
 h1 {
 	text-align: center;
     color: #ffffff;
 	margin-top: 50px;
-	font-size: 3rem;
+	font-size: 6vw;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
+	height: 0vh;
+	font-family: VoyagerHeavy;
+	letter-spacing: 0.75rem;
+}
+
+* {
+	font-family: VoyagerLight;
 }
 
 form {
@@ -52,10 +70,6 @@ label {
 	justify-content: center;
 	
 }
-
-.rocket {
-	
-}
 .question {
 	background-color: #A4A4A4;
 	opacity: 37%;
@@ -71,7 +85,8 @@ label {
 	width: 6vw;
 	height: 6vw;
 	background-color: #7AD1F9;
-	transform: translateX(6vw);
+	transform: translateX(4vw);
+	font-size: 1.6vw;
 
 	
 }
@@ -93,27 +108,6 @@ label {
 	transform: translateX(-40vw);
 	animation-duration: 2s;
 }
-/*input[type="text"] {
-	width: 100%;
-	padding: 10px;
-    background-color: #a4a4a4;
-	border-radius: 5px;
-	border: none;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-*/
-
-/*button[type="submit"] {
-	display: block;
-	margin: 20px auto 0;
-	padding: 10px 20px;
-	border-radius: 5px;
-	background-color: #333;
-	color: #fff;
-	border: none;
-	cursor: pointer;
-}
-*/
 
 #answer {
 	margin-top: 30px;

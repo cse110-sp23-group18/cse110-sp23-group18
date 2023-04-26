@@ -4,7 +4,6 @@ const moon = document.getElementById('#moon');
 
 
 function MyFunc() {
-	console.log("Hi!");
 
 	const question = document.getElementById("question").value;
 
@@ -12,6 +11,7 @@ function MyFunc() {
 	const validQuestionRegex = /^(can|will|should|do|does|did|is|are|am|was|were|has|have|had|may|might|must|shall|could|would|do|did|were)(\s.+)?\?$/i;
 	if (!validQuestionRegex.test(question)) {
 		document.getElementById("responsebox").innerHTML = "Please ask a valid yes/no question.";
+		document.getElementById("question").value = document.getElementById("question").defaultValue;
 		return;
 	}
 	
@@ -62,12 +62,13 @@ function MyFunc() {
 		var audio = new Audio("audio/the_mystical_beings_lack.mp3")
 		audio.play();
     }
-	
-	
-	// Add animations to the answer box, still needs plenty fixing
-	document.getElementById("responsebox").innerHTML = `${question} Hmm... ${response}`;
 
-	
+	document.getElementById("responsebox").innerHTML = `${question} Hmm... ${response}`;
+	document.getElementById("question").value = document.getElementById("question").defaultValue;
+
+	//Extra features past MVP
+
+
 	/*document.getElementById("moon").style.transform="translateX(-40vw)";
 	document.getElementById("moon").style.transform="translateX(-40vw)";
 	*/
