@@ -1,19 +1,21 @@
-const form = document.querySelector('form');
-const answer = document.querySelector('#answer');
+const form = document.querySelector('.cont');
+const answer = document.querySelector('.answer');
+const moon = document.getElementById('#moon');
 
-form.addEventListener('submit', function(e) {
-	e.preventDefault();
-	const question = form.elements.question.value.trim();
+
+function MyFunc() {
+	console.log("Hi!");
+
+	const question = document.getElementById("question").value;
 
 	// Checks if the question is valid, and makes sure it ends with a "?" so we know it was a question
 	const validQuestionRegex = /^(can|will|should|do|does|did|is|are|am|was|were|has|have|had|may|might|must|shall|could|would|do|did|were)(\s.+)?\?$/i;
 	if (!validQuestionRegex.test(question)) {
-		answer.innerHTML = "Please ask a valid yes/no question.";
+		document.getElementById("responsebox").innerHTML = "Please ask a valid yes/no question.";
 		return;
 	}
-
+	
 	const randomNumber = Math.random();
-
 	let response;
     //gives an equal chance to all 10 random answers
 	
@@ -61,12 +63,17 @@ form.addEventListener('submit', function(e) {
 		audio.play();
     }
 	
-
+	
 	// Add animations to the answer box, still needs plenty fixing
-	answer.innerHTML = '';
-	form.classList.add('shake');
-	setTimeout(() => {
-		answer.innerHTML = `${question} Hmm... ${response}`; // We can randomize this line as well
+	document.getElementById("responsebox").innerHTML = `${question} Hmm... ${response}`;
+
+	
+	/*document.getElementById("moon").style.transform="translateX(-40vw)";
+	document.getElementById("moon").style.transform="translateX(-40vw)";
+	*/
+
+	/* setTimeout(() => {
+		 // We can randomize this line as well
 		form.classList.remove('shake');
 		answer.classList.add('darken');
 		setTimeout(() => {
@@ -77,6 +84,5 @@ form.addEventListener('submit', function(e) {
 			}, 100);
 		}, 1000);
 	}, 500);
-
-	form.reset();
-});
+	 */
+};

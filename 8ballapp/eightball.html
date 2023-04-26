@@ -11,15 +11,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Ask a Yes or No Question</h1>
-	<form>
-		<label>
-			Ask your question to the mighty 8-ball:
-			<input type="text" name="question" required>
-		</label>
-		<button type="submit">Ask</button>
-	</form>
-	<div id="answer"></div>
 	<script src="response.js"></script>
+	<h1>Apollo 18 Ball</h1>
+	<div class="cont">
+		<div class="rocket">
+			<input type="text" id="question" placeholder="Question: ">
+		</input>
+		<button class="button" type="submit" onclick="MyFunc()">Ask</button>
+		</div>
+
+		<div type="text" id="moon">
+			<p id="responsebox"></p>
+		</div>
+
+	
+	</div>
 </body>
 </html>
