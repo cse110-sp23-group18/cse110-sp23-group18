@@ -1,10 +1,10 @@
 @font-face {
 	font-family: VoyagerHeavy;
-	src: url(assets/Voyager\ Heavy.otf);
+	src: url('/8ballapp/assets/Voyager\ Heavy.otf');
 }
 @font-face {
 	font-family: VoyagerLight;
-	src: url(assets/Voyager\ Light.otf);
+	src: url('/8ballapp/assets/Voyager\ Light.otf');
 }
 
 
