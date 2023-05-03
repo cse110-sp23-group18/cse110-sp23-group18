@@ -24,7 +24,6 @@ Meeting Type: Brainstorm meeting
 
 ### Links to Important Documents
 - [Miro Board](https://miro.com/app/board/uXjVMPWJi-g=/?share_link_id=436152701996)
-- [Tasks]()
 
 ### Brainstorm
 
