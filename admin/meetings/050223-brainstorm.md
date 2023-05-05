@@ -68,4 +68,4 @@ Meeting Type: Brainstorm meeting
   - Risk and rabbit holes
   - Statement of purpose
 
-Meeting ended at 8:15pm
+Meeting ended at 8:45pm
