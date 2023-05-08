@@ -1,60 +1,123 @@
-# Apollo 18 Pitch: Timeless Tweets #
+# Apollo 18 Pitch: r/FindMyFutureJob #
 
 ## Statement of Purpose ##
 
-The purpose of our project is to provide an entertainment platform that imitates the art of fortune telling. Our interface will mimic the social media platform Twitter’s wireframe, which will allow the user to “tweet” a question regarding their future and their future self will respond having already “known” what the future holds. The reason we chose to use Twitter as the mode of delivering a fortune was because it is a platform that encourages public conversations. Overall, the goal of this project is to create an app that provides its users with a fun way to explore their curiosity about what the future holds while also showcasing how technology can simulate fortune telling. We aim to offer a unique and entertaining experience for users of our platform. 
+The purpose of our project is to provide a platform that gives the user a prediction of their future job based on the user’s interests and skills. We plan to do this by implementing the art of fortune telling to make our predictions of the user’s future job. Our interface will mimic the social networking platform Reddit’s wireframe. In particular, the user will answer a series of questions which will help the “fortune teller” to make the final prediction. The reason we chose to use a platform similar to Reddit as the mode of delivering a fortune was because it is a platform that divides people into communities based on shared interests. Since the users of our page will have the shared interest of seeking to know their future job, our platform will mimic a subreddit community specific to r/MyFutureJob. Overall, the goal of this project is to create a platform that provides its users with a fun way to explore their curiosity about what the future holds while also showcasing how technology can simulate fortune telling. We aim to offer an informative and entertaining experience for users of our platform.
+
 
 ## User Personas ##
 
-For Gen Z Users: 11 to 26 years old
-(groups might be more likely looking forward to their prospective future)
-To target Gen Z users, you can use a playful and casual tone. Start by asking questions about their future self, such as "What do you see yourself doing in 5 years?" or "What kind of person do you hope to be in the future?" Then, reply to your own question as if you were their future self, offering advice or insights based on your own experience.
+High School Student - 
+Name: Emily
+Grade: 11
+Interests: Reading, writing, playing video games, listening to music, volunteering at the local animal shelter…
+Current Study Interest: 
+"I'm interested in exploring different career paths related to writing 
+and storytelling. I love creating my own stories and worlds, and 
+I'm interested in finding ways to turn that passion into a career."
+Looking for: career guidance and advice
 
-For Millennial Users: 27 to 42 years old 
-(groups might be more likely looking into their past)
-To target millennial users, you can use a more reflective and introspective tone. Ask questions that prompt them to reflect on their past, such as "What advice would you give your younger self?" or "What have been the biggest lessons you've learned so far in life?" Then, reply to your own question as if you were their past self, offering wisdom and guidance based on your own experience.
+Aim of using our web app:
+As a high school student, Emily is just starting to think about her future career options. She wants to use this web application to learn more about different career paths related to writing and storytelling, such as journalism, creative writing, and screenwriting. She hopes to gain a better understanding of what these careers entail, what skills they require, and what steps she can take now to start working towards her goals. She's also interested in finding resources and advice on how to build a portfolio and get her work noticed by potential employers.
 
-For Baby Boomer Users: 59 to 77 years old
-To target baby boomer users, you can use a more authoritative and informative tone. Ask questions that relate to their life experience, such as "What was the most challenging time in your career?" or "What were your biggest accomplishments in life?" Then, reply to your own question as if you were an expert or mentor, offering insights and advice based on your own knowledge and experience.
+UCSD Undergraduate Student - 
+Name: Jack
+Year: Freshman
+Major: undecided
+Hobbies: skiing, climbing, badminton, watching basketball games…
+Current Study Interest: 
+“I was very interested into electronics when I was young. I like investigating how the electric circuits are composed by diving them in parts.”
+Looking for: summer off-campus internships
+
+Aim of using our web app:
+A college student who has not yet chosen a major and is struggling to identify their strengths and interests might use this web application to explore different career paths and gain insight into the skills and experience required for different jobs.
+
+
+
+UCSD Graduate Student - 
+Name: Jennie
+Major: Communication (undergraduate) -> MFA program (Visual Arts)
+Hobbies: Reading books, watching movies with friends, drinking coffee
+Current Learning interests: 
+“I decided to transfer to MFA when pursuing my master degree since I took many good visual courses during my undergraduates. In addition, I have began to learn drawing at 5 years-old and now master the drawing skills. I found how fascinated I was when I appreciate arts histories and modern arts practices.”
+Looking for: a off-campus job or pursuing phD degree
+
+Aim of using our web app:
+A college student who was pursuing a master degree by switching careers after bachelor graduation might use the application to assess their transferable skills and explore new career options based on their interests and experience.
+
+
+University of Toronto Graduate Student - 
+Name: Rachel
+Year: Second-year Master's student 
+Major: History
+Hobbies: Photography, reading, hiking, listening to podcasts... 
+Current Study Interest: 
+"My focus is on the social and cultural history of early modern Europe, specifically the 16th century. I am fascinated by the ways in which ordinary people navigated social and political changes during this period."
+Looking for: research assistant positions
+
+Aim of using our web app:
+A graduate student who is interested in exploring career opportunities beyond academia and wants to utilize their research skills might use this web application to discover potential career paths in fields such as data analysis, market research, or policy analysis. They hope to gain a better understanding of the transferable skills they possess and how they can apply them in different settings.
+
+
 
 ## Risks and Rabbitholes ##
 
-### Risks of Input + Output Specificity
+### Risks from User Input
 
-- Careful on how specific replies are (how closely related to the topic in the question/statement)
-- Decipherability of the input (question/statement, type of question)
+
+- Semi-contradictory input (ex: I am good at math and science. I struggle with linear algebra and physics)
+- Noting appreciation (or lack thereof) of what they study
+- Rabbit Hole: noting if they’re more focused on what they enjoy vs. what they’re good at
+- Handling relevant information (ex: ignoring random statements such as “I have 2 siblings.”)
 - Rabbit Hole: overthinking distance in the future of the reply (1 day vs. 1 year)
-- Ethical boundaries of the input (screening of the input)
-- Ethical boundaries of the replies are safe, not too negative (Twitter is known to be harsh)
-- Boundary: limiting replies to just text currently 
+- Ethical boundaries of the input (screening of the input, handling input contain discriminatory, insulting and violent content, NSFW information/making it clear we do not predict NSFW work)
 - Handling question/statement deciphering if libraries go down
 - Ignore character limit (bounded to library limit)
+- How to guide users to ask job-related questions by giving the corresponding prompt (example: ask me anything about your future job/ You can ask “what will my future job be like”)
 
-### Risk of Visual Specificity ###
 
-- Rabbit holes: Focusing too much on Twitter number similarity (amount of replies, relation between view count to retweet count to like count)
-- Boundary: Make sure the color and typography to be similar to twitter, and should implement the visual specificity after having a confirmed color palette and typography palette
+
+### Risks from Output ###
+
+- Without access to API, general job types are needed (Engineer, Manager, Finance worker, Health worker, etc.)
+- Cannot reuse questions
+- Should indicate that users cannot ask questions while answers are being generated 
+- Discerning context of user answers and questions to see if it’s related to prior question
+- Risk: should have a clear moment at which follow-up questions are unnecessary
+- Boundary 2: Should have a clear moment at which a predicted job is made (cannot continuously asking questions forever)
+- Job Type Boundary: ignore grad school, law school, medical school (can be relevant in descriptions)
+- Job Type Boundary 2: Only jobs that benefit from attending college
+
+### Risks from Visual Specificy ###
+
+- Rabbit holes: Focusing too much on Reddit number similarity (amount of replies, relation between reply count to upvote count)
+- Boundary: Ignore attempts at making a special design for the subreddit (use the general subreddit background)
 - Boundary part 2: Decide on Dark Mode or Light Mode, not both
 - Make username input requirement obvious
 - Rabbit Hole: How the output is printed, such as line by line, all at once, character by character (possible future issue)
 
 ### Overextensions / If We had More Time ###
-- Menu to allow users to use other social media platform UI’s (Reddit, Instagram, WeChat, etc.)
-- Use Popular Twitter users reply as predictors to generate  output
+- Menu to allow users to use other social media platform UI’s (Twitter, Instagram, WeChat, etc.)
+- Include other strong descriptions of a future after undergrad (grad school, law school, etc.)
+- Add old reddit UI
 - Adding voice features for outputs to increase engagement and accessibility
-- Combine voice with popular twitter users
-- Alter reply based on how far in the future
-- Allow for multiple replies (multiple future selves, multiple popular twitter users)
-- Adding on using AI, do  want to develop an algorithm that can better provide meaningful and relevant response facilitating 
+- Alter reply based on how far in the future after college
+- Allow for multiple job possibilities (multiple future selves)
+- Rabbit Hole: Integrating other platforms with the app may raise issues. ex: possible compatibility issues when integrating the app with web browser on computers vs. phones
+- Adding on using AI, do  want to develop an algorithm that can better provide meaningful and relevant response facilitating
+- Describing how successful the person will be at their job
+- Account for much younger/older students (high schoolers, students starting college when older)
+
+
 
 ## Figma Diagrams and Wireframes ##
 - https://tinyurl.com/timelesstwitterfigma
 <br>
 <br>
-![](https://res.cloudinary.com/dounttx9k/image/upload/v1683319069/CSE%20110/Timeless%20Tweets/Screenshot_2023-05-05_at_1.37.46_PM_w6legr.png)
-![](https://res.cloudinary.com/dounttx9k/image/upload/v1683319045/CSE%20110/Timeless%20Tweets/Screenshot_2023-05-05_at_1.37.22_PM_khkhnd.png)
-![](https://res.cloudinary.com/dounttx9k/image/upload/v1683319027/CSE%20110/Timeless%20Tweets/Screenshot_2023-05-05_at_1.37.04_PM_q9d6fm.png)
-![](https://res.cloudinary.com/dounttx9k/image/upload/v1683319013/CSE%20110/Timeless%20Tweets/Screenshot_2023-05-05_at_1.36.49_PM_w3zp7l.png)
+![](https://res.cloudinary.com/dounttx9k/image/upload/v1683528887/CSE%20110/Reddit/Screenshot_2023-05-07_at_11.53.36_PM_qxltrt.png)
+![](https://res.cloudinary.com/dounttx9k/image/upload/v1683528885/CSE%20110/Reddit/Screenshot_2023-05-07_at_11.53.42_PM_qlnpzm.png)
+![](https://res.cloudinary.com/dounttx9k/image/upload/v1683528885/CSE%20110/Reddit/Screenshot_2023-05-07_at_11.53.56_PM_mtdxcf.png)
+
 
 
 
