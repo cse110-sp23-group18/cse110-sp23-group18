@@ -9,54 +9,45 @@ The purpose of our project is to provide a platform that gives the user a predic
 
 High School Student - 
 Name: Emily
-Grade: 11
-Interests: Reading, writing, playing video games, listening to music, volunteering at the local animal shelter…
-Current Study Interest: 
-"I'm interested in exploring different career paths related to writing 
-and storytelling. I love creating my own stories and worlds, and 
-I'm interested in finding ways to turn that passion into a career."
-Looking for: career guidance and advice
+Age: 17
+Interests: Reading, writing, listening to music, volunteering…
 
 Aim of using our web app:
-As a high school student, Emily is just starting to think about her future career options. She wants to use this web application to learn more about different career paths related to writing and storytelling, such as journalism, creative writing, and screenwriting. She hopes to gain a better understanding of what these careers entail, what skills they require, and what steps she can take now to start working towards her goals. She's also interested in finding resources and advice on how to build a portfolio and get her work noticed by potential employers.
-
-UCSD Undergraduate Student - 
-Name: Jack
-Year: Freshman
-Major: undecided
-Hobbies: skiing, climbing, badminton, watching basketball games…
-Current Study Interest: 
-“I was very interested into electronics when I was young. I like investigating how the electric circuits are composed by diving them in parts.”
-Looking for: summer off-campus internships
-
-Aim of using our web app:
-A college student who has not yet chosen a major and is struggling to identify their strengths and interests might use this web application to explore different career paths and gain insight into the skills and experience required for different jobs.
+Despite her love for writing, Sophia has been feeling unsure about her future career path. She's not sure if she wants to be a novelist, a journalist, or something else entirely. She's also concerned about the practicalities of making a living as a writer.
+One day, while browsing online, Sophia came across a tea leaves fortune telling web app that claimed to offer insight into career directions. Intrigued by the idea, Sophia decided to give it a try. Using the app, Sophia input the pattern of the tea leaves that she had just finished brewing. The app generated a reading that offered insights into her future career, which suggested that Sophia had a natural talent and that she should pursue a career in her interests.
+Excited by the prospect of pursuing her passion, Sophia continued to use the app to gain more insight into her future career. She found that the readings helped her stay focused and motivated, even when she was feeling discouraged or uncertain.
 
 
-
-UCSD Graduate Student - 
-Name: Jennie
-Major: Communication (undergraduate) -> MFA program (Visual Arts)
-Hobbies: Reading books, watching movies with friends, drinking coffee
-Current Learning interests: 
-“I decided to transfer to MFA when pursuing my master degree since I took many good visual courses during my undergraduates. In addition, I have began to learn drawing at 5 years-old and now master the drawing skills. I found how fascinated I was when I appreciate arts histories and modern arts practices.”
-Looking for: a off-campus job or pursuing phD degree
+Middle manager in a corporate setting
+Name: John
+Age:  45
+Personality: Hardworking, ambitious,  indecisive
 
 Aim of using our web app:
-A college student who was pursuing a master degree by switching careers after bachelor graduation might use the application to assess their transferable skills and explore new career options based on their interests and experience.
+John is seeking guidance on his career path. He feels that he has hit a plateau in his current job and is unsure about what steps to take next. He wants to find a fulfilling career that allows him to use his skills and experience to the fullest.
+
+Challenges: John is skeptical of fortune-telling and may be hesitant to trust the guidance provided by the app. He may also be overwhelmed by the amount of information available and may have difficulty interpreting the results. Additionally, John may be concerned about the privacy and security of his personal information.
 
 
-University of Toronto Graduate Student - 
-Name: Rachel
-Year: Second-year Master's student 
-Major: History
+Unemployed
+Name: Alex
+Age: 30
+Personality: Alex is a sensitive and introspective person who has struggled with depression and anxiety for most of his life. He feels isolated from others and has difficulty forming meaningful relationships. He is open-minded and receptive to new ideas but is also very cautious and skeptical.
+Looking for:Insights and advice based on his individual circumstances and personality. He expects the app to be easy to use and understand, and he values accuracy and reliability.
+
+Aim of using our web app:
+Alex is feeling lost and uncertain about his future. He is seeking guidance on the direction his life should take. He wants to find a sense of purpose and meaning and is hoping that the fortune-telling app can offer him insights and guidance.
+
+
+Y&G Model - 
+Name: Lila
+Age: 27
 Hobbies: Photography, reading, hiking, listening to podcasts... 
-Current Study Interest: 
-"My focus is on the social and cultural history of early modern Europe, specifically the 16th century. I am fascinated by the ways in which ordinary people navigated social and political changes during this period."
-Looking for: research assistant positions
 
-Aim of using our web app:
-A graduate student who is interested in exploring career opportunities beyond academia and wants to utilize their research skills might use this web application to discover potential career paths in fields such as data analysis, market research, or policy analysis. They hope to gain a better understanding of the transferable skills they possess and how they can apply them in different settings.
+Aim using our web application:
+Lila has been working as a model. Despite her busy schedule, Lila has always had a soft spot for love and relationships. 
+One day, while scrolling through social media, Lila came across a tea leaves fortune telling web app that claimed to offer insight into love and relationships. Using the app, Lila input the pattern of the tea leaves that she had just finished brewing. The app generated a reading that offered positive insights into her future love life, which suggested that Lila would meet someone special in the near future.
+Thanks to the tea leaves fortune telling app, Lila was able to find love and happiness in her life. She continued to use the app for fun and to gain positive insight into her future, but she knew that it was ultimately her own actions and decisions that would shape her destiny.
 
 
 
