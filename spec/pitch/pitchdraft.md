@@ -97,16 +97,12 @@ A graduate student who is interested in exploring career opportunities beyond ac
 - Rabbit Hole: How the output is printed, such as line by line, all at once, character by character (possible future issue)
 
 ### Overextensions / If We had More Time ###
-- Menu to allow users to use other social media platform UI’s (Twitter, Instagram, WeChat, etc.)
-- Include other strong descriptions of a future after undergrad (grad school, law school, etc.)
-- Add old reddit UI
+- Improved animations/user interactions (the tea pouring looking more realistic, the user needing to move the cursor in a circle to stir, buttons flash)
+- categorizing what each leave represents when predicting
+- tea leave patterns do not necessarily correspond to the same predictive lines
 - Adding voice features for outputs to increase engagement and accessibility
-- Alter reply based on how far in the future after college
-- Allow for multiple job possibilities (multiple future selves)
-- Rabbit Hole: Integrating other platforms with the app may raise issues. ex: possible compatibility issues when integrating the app with web browser on computers vs. phones
-- Adding on using AI, do  want to develop an algorithm that can better provide meaningful and relevant response facilitating
-- Describing how successful the person will be at their job
-- Account for much younger/older students (high schoolers, students starting college when older)
+- Tea leaf text interpretation has option to be in different option
+- Rabbit Hole: How the text is printed, such as line by line, all at once, character by character (possible future issue), the pattern and colors of the cup
 
 
 
