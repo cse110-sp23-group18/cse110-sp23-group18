@@ -62,7 +62,7 @@ A graduate student who is interested in exploring career opportunities beyond ac
 
 ## Risks and Rabbitholes ##
 
-### Input Difficulties
+### Input Difficulties ###
 
 - making sure the user knows what to click/know what was clicked
 - making sure it is clear what is being chosen (everything needs to be labeled)
@@ -70,27 +70,15 @@ A graduate student who is interested in exploring career opportunities beyond ac
   - button to confirm
 
 
+### Output Difficulties ###
 
+- Making sure the output is visible in the background, the user knows where it is
+- making sure the tea leaves users end up seeing is shown alongside the text animation being compatible across devices
+- the fortune outputted may not be specific enough for the user’s liking
+- transition between frames (different perspectives)  is not smooth
+- answers should apply to anything anyone would want to know in their future
+- answers should not involve violence, and are ethical 
 
-
-### Risks from Output ###
-
-- Without access to API, general job types are needed (Engineer, Manager, Finance worker, Health worker, etc.)
-- Cannot reuse questions
-- Should indicate that users cannot ask questions while answers are being generated 
-- Discerning context of user answers and questions to see if it’s related to prior question
-- Risk: should have a clear moment at which follow-up questions are unnecessary
-- Boundary 2: Should have a clear moment at which a predicted job is made (cannot continuously asking questions forever)
-- Job Type Boundary: ignore grad school, law school, medical school (can be relevant in descriptions)
-- Job Type Boundary 2: Only jobs that benefit from attending college
-
-### Risks from Visual Specificy ###
-
-- Rabbit holes: Focusing too much on Reddit number similarity (amount of replies, relation between reply count to upvote count)
-- Boundary: Ignore attempts at making a special design for the subreddit (use the general subreddit background)
-- Boundary part 2: Decide on Dark Mode or Light Mode, not both
-- Make username input requirement obvious
-- Rabbit Hole: How the output is printed, such as line by line, all at once, character by character (possible future issue)
 
 ### Overextensions / If We had More Time ###
 - Menu to allow users to use other social media platform UI’s (Twitter, Instagram, WeChat, etc.)
