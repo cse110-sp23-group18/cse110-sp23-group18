@@ -58,7 +58,7 @@ Thanks to the tea leaves fortune telling app, Lila was able to find love and hap
 - making sure the user knows what to click/know what was clicked
 - making sure it is clear what is being chosen (everything needs to be labeled)
 - make sure users can change their choices of tea type before they do the “pouring” action
-  - button to confirm
+- button to confirm
 
 
 ### Output Difficulties ###
