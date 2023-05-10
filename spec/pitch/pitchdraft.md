@@ -2,7 +2,7 @@
 
 ## Statement of Purpose ##
 
-The purpose of our project is to provide a platform that gives the user a prediction of their future job based on the user’s interests and skills. We plan to do this by implementing the art of fortune telling to make our predictions of the user’s future job. Our interface will mimic the social networking platform Reddit’s wireframe. In particular, the user will answer a series of questions which will help the “fortune teller” to make the final prediction. The reason we chose to use a platform similar to Reddit as the mode of delivering a fortune was because it is a platform that divides people into communities based on shared interests. Since the users of our page will have the shared interest of seeking to know their future job, our platform will mimic a subreddit community specific to r/MyFutureJob. Overall, the goal of this project is to create a platform that provides its users with a fun way to explore their curiosity about what the future holds while also showcasing how technology can simulate fortune telling. We aim to offer an informative and entertaining experience for users of our platform.
+The purpose of our project is to create an interactive application that emulates the art of tea leaf reading. Tea leaf reading, also known as tasseography, has been practiced for centuries as a way to gain insight into the future. However, not everyone has access to an expert tea leaf reader, and many people are interested in exploring this ancient practice on their own. Therefore our application provides an accessible and user-friendly platform for individuals to conduct their own tea leaf readings. Users can choose from a variety of tea blends, and the application will generate a unique pattern based on the way the leaves settle in the cup. 
 
 
 ## User Personas ##
@@ -62,18 +62,14 @@ A graduate student who is interested in exploring career opportunities beyond ac
 
 ## Risks and Rabbitholes ##
 
-### Risks from User Input
+### Input Difficulties
+
+- making sure the user knows what to click/know what was clicked
+- making sure it is clear what is being chosen (everything needs to be labeled)
+- make sure users can change their choices of tea type before they do the “pouring” action
+  - button to confirm
 
 
-- Semi-contradictory input (ex: I am good at math and science. I struggle with linear algebra and physics)
-- Noting appreciation (or lack thereof) of what they study
-- Rabbit Hole: noting if they’re more focused on what they enjoy vs. what they’re good at
-- Handling relevant information (ex: ignoring random statements such as “I have 2 siblings.”)
-- Rabbit Hole: overthinking distance in the future of the reply (1 day vs. 1 year)
-- Ethical boundaries of the input (screening of the input, handling input contain discriminatory, insulting and violent content, NSFW information/making it clear we do not predict NSFW work)
-- Handling question/statement deciphering if libraries go down
-- Ignore character limit (bounded to library limit)
-- How to guide users to ask job-related questions by giving the corresponding prompt (example: ask me anything about your future job/ You can ask “what will my future job be like”)
 
 
 
