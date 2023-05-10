@@ -18,7 +18,7 @@ One day, while browsing online, Sophia came across a tea leaves fortune telling 
 Excited by the prospect of pursuing her passion, Sophia continued to use the app to gain more insight into her future career. She found that the readings helped her stay focused and motivated, even when she was feeling discouraged or uncertain.
 
 
-Middle manager in a corporate setting
+Middle manager in a corporate setting -
 Name: John
 Age:  45
 Personality: Hardworking, ambitious,  indecisive
@@ -29,7 +29,7 @@ John is seeking guidance on his career path. He feels that he has hit a plateau 
 Challenges: John is skeptical of fortune-telling and may be hesitant to trust the guidance provided by the app. He may also be overwhelmed by the amount of information available and may have difficulty interpreting the results. Additionally, John may be concerned about the privacy and security of his personal information.
 
 
-Unemployed
+Unemployed -
 Name: Alex
 Age: 30
 Personality: Alex is a sensitive and introspective person who has struggled with depression and anxiety for most of his life. He feels isolated from others and has difficulty forming meaningful relationships. He is open-minded and receptive to new ideas but is also very cautious and skeptical.
