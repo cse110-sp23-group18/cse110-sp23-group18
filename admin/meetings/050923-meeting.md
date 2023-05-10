@@ -18,8 +18,8 @@ Meeting Type: Reworking our Pitch
 
 
 ### Agenda / Tasks
-- [ ] Rework Pitch
-- [ ] 
+- [ ] Rework Pitch Main Topic
+- [ ] Brainstorm Features to be Implemented
 - [ ] 
 
 ## Minutes
@@ -32,7 +32,8 @@ Meeting Type: Reworking our Pitch
 - decided to continue with fortune telling using tea leaves
 - brainstormed features that we would like to have for program (and their priority)
 - Re-works project pitch
-- Create Issues
+- update pitch markdown file
+- create Issues
 
 ### Features brainstormed
 - have animations for pouring the hot water and putting in the leaves
@@ -47,11 +48,13 @@ Meeting Type: Reworking our Pitch
 #### Questions to ask TA:
 - Can we add additional steps to the original "ritual" of fortune telling in leaves?
 
-
 #### To be discussed next time:
-
+- Each person gives briefing on what they have worked on since last meeting
 
 ### Action Items
-- 
+- Set-up Github Issues
+  - Set-Up ADR
+  - CI/CD Pipeline
+- Determine file structures and code styling
 
 Meeting ended at ____
