@@ -32,7 +32,8 @@ Meeting Type: Reworking our Pitch
 - decided to continue with fortune telling using tea leaves
 - brainstormed features that we would like to have for program (and their priority)
 - Re-works project pitch
-- Create Issues
+- update pitch markdown file
+- create Issues
 
 ### Features brainstormed
 - have animations for pouring the hot water and putting in the leaves
