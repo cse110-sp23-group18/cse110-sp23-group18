@@ -18,7 +18,8 @@ One day, while browsing online, Sophia came across a tea leaves fortune telling 
 Excited by the prospect of pursuing her passion, Sophia continued to use the app to gain more insight into her future career. She found that the readings helped her stay focused and motivated, even when she was feeling discouraged or uncertain.
 
 
-Middle manager in a corporate setting -
+
+Middle manager in a corporate setting
 Name: John
 Age:  45
 Personality: Hardworking, ambitious,  indecisive
