@@ -62,19 +62,13 @@ A graduate student who is interested in exploring career opportunities beyond ac
 
 ## Risks and Rabbitholes ##
 
-### Risks from User Input
+### Input Difficulties
 
- Including clear instructions so the user knows what to click/know what was clicked
-making sure it is clear what is being chosen (everything needs to be labeled)
-make sure users can change their choices of tea type before they do the “pouring” action
-button to confirm
-Making sure the output is visible in the background, the user knows where it is
-Making sure the tea leaves users end up seeing is shown alongside the text 
-Animation being compatible across devices
-The fortune outputted may not be specific enough for the user’s liking
-Transition between frames (different perspectives)  is not smooth
-Answers should apply to anything anyone would want to know in their future
-Answers should not involve violence, unethical and 
+- making sure the user knows what to click/know what was clicked
+- making sure it is clear what is being chosen (everything needs to be labeled)
+- make sure users can change their choices of tea type before they do the “pouring” action
+  - button to confirm
+
 
 
 
