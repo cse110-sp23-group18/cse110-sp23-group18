@@ -1,4 +1,4 @@
-# Apollo 18 Pitch: r/FindMyFutureJob #
+# Apollo 18 Pitch: Tasseography #
 
 ## Statement of Purpose ##
 
@@ -18,7 +18,8 @@ One day, while browsing online, Sophia came across a tea leaves fortune telling 
 Excited by the prospect of pursuing her passion, Sophia continued to use the app to gain more insight into her future career. She found that the readings helped her stay focused and motivated, even when she was feeling discouraged or uncertain.
 
 
-Middle manager in a corporate setting -
+
+Middle manager in a corporate setting
 Name: John
 Age:  45
 Personality: Hardworking, ambitious,  indecisive
@@ -85,9 +86,11 @@ Thanks to the tea leaves fortune telling app, Lila was able to find love and hap
 - https://tinyurl.com/timelesstwitterfigma
 <br>
 <br>
-![](https://res.cloudinary.com/dounttx9k/image/upload/v1683528887/CSE%20110/Reddit/Screenshot_2023-05-07_at_11.53.36_PM_qxltrt.png)
-![](https://res.cloudinary.com/dounttx9k/image/upload/v1683528885/CSE%20110/Reddit/Screenshot_2023-05-07_at_11.53.42_PM_qlnpzm.png)
-![](https://res.cloudinary.com/dounttx9k/image/upload/v1683528885/CSE%20110/Reddit/Screenshot_2023-05-07_at_11.53.56_PM_mtdxcf.png)
+![](https://res.cloudinary.com/dounttx9k/image/upload/v1683702425/CSE%20110/Tea%20Leaves/lo-fi_kqejk4.png)
+![](https://res.cloudinary.com/dounttx9k/image/upload/v1683702425/CSE%20110/Tea%20Leaves/tea-diagrams_kve6a8.png)
+![](https://res.cloudinary.com/dounttx9k/image/upload/v1683702280/CSE%20110/Tea%20Leaves/figma.png)
+
+
 
 
 
