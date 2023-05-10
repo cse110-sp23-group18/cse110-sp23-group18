@@ -18,9 +18,9 @@ Meeting Type: Reworking our Pitch
 
 
 ### Agenda / Tasks
-- [ ] Rework Pitch Main Topic
-- [ ] Brainstorm Features to be Implemented
-- [ ] 
+- [x] Rework Pitch Main Topic
+- [x] Brainstorm Features to be Implemented
+- [x] Make New Project Pitch Presentation
 
 ## Minutes
 
@@ -57,4 +57,4 @@ Meeting Type: Reworking our Pitch
   - CI/CD Pipeline
 - Determine file structures and code styling
 
-Meeting ended at ____
+Meeting ended at 8:55pm
