@@ -64,16 +64,18 @@ A graduate student who is interested in exploring career opportunities beyond ac
 
 ### Risks from User Input
 
+ Including clear instructions so the user knows what to click/know what was clicked
+making sure it is clear what is being chosen (everything needs to be labeled)
+make sure users can change their choices of tea type before they do the “pouring” action
+button to confirm
+Making sure the output is visible in the background, the user knows where it is
+Making sure the tea leaves users end up seeing is shown alongside the text 
+Animation being compatible across devices
+The fortune outputted may not be specific enough for the user’s liking
+Transition between frames (different perspectives)  is not smooth
+Answers should apply to anything anyone would want to know in their future
+Answers should not involve violence, unethical and 
 
-- Semi-contradictory input (ex: I am good at math and science. I struggle with linear algebra and physics)
-- Noting appreciation (or lack thereof) of what they study
-- Rabbit Hole: noting if they’re more focused on what they enjoy vs. what they’re good at
-- Handling relevant information (ex: ignoring random statements such as “I have 2 siblings.”)
-- Rabbit Hole: overthinking distance in the future of the reply (1 day vs. 1 year)
-- Ethical boundaries of the input (screening of the input, handling input contain discriminatory, insulting and violent content, NSFW information/making it clear we do not predict NSFW work)
-- Handling question/statement deciphering if libraries go down
-- Ignore character limit (bounded to library limit)
-- How to guide users to ask job-related questions by giving the corresponding prompt (example: ask me anything about your future job/ You can ask “what will my future job be like”)
 
 
 
