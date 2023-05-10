@@ -31,7 +31,7 @@ Meeting Type: Reworking our Pitch
 ### Topics Discussed in meeting
 - decided to continue with fortune telling using tea leaves
 - brainstormed features that we would like to have for program (and their priority)
-- assign tasks for project pitch
+- Re-works project pitch
 - Create Issues
 
 ### Features brainstormed
@@ -41,17 +41,17 @@ Meeting Type: Reworking our Pitch
 - at beginning at least have 10 hard coded 
 - have the option to choose different types of tea (should it determine the "type" of fortune?)
 - final animation includes tea leaves inside cup and text interpretation
-- 
+- possible user inputs: choose type of tea leaf, and question for which they care their fortune about
   
 
 #### Questions to ask TA:
-- Can we add additional steps to the "ritual" of fortune telling in leaves?
+- Can we add additional steps to the original "ritual" of fortune telling in leaves?
 
 
 #### To be discussed next time:
 
 
 ### Action Items
-- Re-do pitch presentation
+- 
 
 Meeting ended at ____
