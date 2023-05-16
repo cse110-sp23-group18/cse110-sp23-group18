@@ -1,8 +1,18 @@
 html{
     font-size: 20px;
 }
+button{
+    font-size: 20px;
+    margin:10px;
+}
+
 button:hover{
     background-color: gold;
 
+}
+
+a{
+    font-weight: bold;
+    color:rgb(208, 117, 48);
 }
 
