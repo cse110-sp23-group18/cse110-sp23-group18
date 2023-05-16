@@ -248,7 +248,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint ./source/"
+    "lint": "npx eslint ./source/ --fix"
   },
   "author": "Team Apollo",
   "license": "ISC"
