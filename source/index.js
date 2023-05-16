@@ -4,5 +4,3 @@ const y = 2;
 if (x === y) {
     console.log('oof');
 }
-
-x == 1;
