@@ -1,7 +1,5 @@
-//index.js
+// index.js
+
+function init() {}
 
 window.addEventListener('DOMContentLoaded', init);
-
-function init(){
-    
-}
