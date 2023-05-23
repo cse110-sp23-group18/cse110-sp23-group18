@@ -1,10 +1,11 @@
-html{
-    font-size: 20px;
+body{
+    background-image: url("assets/images/sample_fortune.jpg");
+    background-color: rgb(224, 224, 224);
 }
 
-body{
-    background-image: url("./assets/images/backgrounds/backgroundMobile.png");
-    background-color: antiquewhite;
+h1{
+
+    font-size: 80px;
 }
 
 h1,h2,h3{
@@ -12,22 +13,36 @@ h1,h2,h3{
     color: black;
     margin: 5px;
 }
-button{
-    font-size: 20px;
-    margin:10px;
-}
 
-button:hover{
+
+button:hover, a:hover{
     background-color: gold;
 
 }
 
 a{
+    background-color:rgb(70, 109, 47);
+    border-radius: 15px;
+    padding-top: 3mm;
+    padding-bottom: 3mm;
+    padding-right: 6mm;
+    padding-left: 6mm;
     font-weight: bold;
-    color:rgb(208, 117, 48);
+    font-size: 50px;
+    color:beige;
 }
 
 .button-container {
+    background-color: beige;
     display: flex;
     justify-content: center;
+    padding: 50px;
+}
+button{
+    background-color: transparent;
+    border-radius: 15px;
+    font-size: 40px;
+    padding: 10px;
+    margin: 15px;
+
 }
