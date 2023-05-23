@@ -1,14 +1,24 @@
 body{
-    background-image: url("assets/images/sample_fortune.jpg");
+    height: 100%;
+    width: 100%;
+    background-image: url('assets/images/backgrounds/backgroundMobile.png');
     background-color: rgb(224, 224, 224);
+    display: grid;
+}
+
+img{
+    height: 300px;
+    width: auto;
 }
 
 h1{
-
-    font-size: 80px;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    font-size: 60px;
 }
 
-h1,h2,h3{
+h2,h3{
     text-align: center;
     color: black;
     margin: 5px;
@@ -16,8 +26,7 @@ h1,h2,h3{
 
 
 button:hover, a:hover{
-    background-color: gold;
-
+    background-color: rgb(238, 205, 19);
 }
 
 a{
@@ -38,6 +47,7 @@ a{
     justify-content: center;
     padding: 50px;
 }
+
 button{
     background-color: transparent;
     border-radius: 15px;
@@ -45,4 +55,16 @@ button{
     padding: 10px;
     margin: 15px;
 
+}
+
+.teajar_oolong{
+    background-image: url('assets/images/teajars/Oolong.png');
+    background-repeat: none;
+    background-size: cover;
+}
+.teajar_green{
+    background-image: url('assets/images/teajars/Green.png');
+}
+.teajar_matcha{
+    background-image: url('assets/images/teajars/Matcha.png');
 }
