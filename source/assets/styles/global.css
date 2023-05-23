@@ -1,173 +1,69 @@
-html{
-    font-size: 20px;
+body{
+    margin-top: 150px;
+    height: 100%;
+    width: 100%;
+    background-image: url('./assets/images/backgrounds/backgroundMobile.png');
+    background-color: rgb(224, 224, 224);
+    display: grid;
 }
-h1,h2,h3{
+
+h1{
     text-align: center;
-    color: white;
+    margin: 15px;
+    padding: 15px;
+    font-size: 60px;
+}
+
+h2,h3{
+    text-align: center;
+    color: black;
     margin: 5px;
 }
-button{
-    font-size: 20px;
-    margin:10px;
-}
 
-button:hover{
-    background-color: gold;
 
+button:hover, a:hover{
+    background-color: rgb(238, 205, 19);
 }
 
 a{
+    background-color:rgb(70, 109, 47);
+    border-radius: 15px;
+    padding-top: 3mm;
+    padding-bottom: 3mm;
+    padding-right: 6mm;
+    padding-left: 6mm;
     font-weight: bold;
-    color:rgb(208, 117, 48);
+    font-size: 50px;
+    color:beige;
 }
 
 .button-container {
+    background-color: beige;
     display: flex;
     justify-content: center;
+    padding: 50px;
 }
 
-
-
-
-
-body
-{
-    background: #3a000a;
-    margin: 0;
-    padding: 0;
-}
-.cup{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 150px;
-    height: 160px;
-    background: #fff;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-.cup:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left:0;
-    height: 30px;
-    width: 100%;
-    border-radius: 50%;
-    background:#c16d31;
-    border: 7px solid #fff;
-    box-sizing: border-box;
-    transform: translateY(-50%);
-    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-}
-.cup:after{
-    content: '';
-    position: absolute;
-    top: 48%;
-    right: -50px;
-    height: 90px;
-    width: 80px;
-    border-radius: 50%;
-    background:transparent;
-    border: 12px solid #fff;
-    box-sizing: border-box;
-    transform: translateY(-50%);
-}
-.plate{
-    width:250px ;
-    height: 30px;
-    border-bottom-left-radius: 40%;
-    border-bottom-right-radius: 40%;
-    background: #fff;
-    position: absolute;
-    top: 161px;
-transform: translateX(-50px);
-}
-ul{
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: -50px;
-    transform: translateX(10%);
-    width: 100%;
-}
-ul li{
-    list-style: none;
-    width: 2px;
-    height: 40px;
-    background: #fff;
-    float: left;
-    margin: 10px;
-    animation: animate 2s infinite linear;
-}
-@keyframes animate
-{
-0%{
-transform: translateY(0);
-opacity: 1;
-filter: blur(3px);
-}
-100%{
-transform: translateY(-80px);
-opacity: 0;
-filter: blur(5px);
-}
+button{
+    background-color: transparent;
+    border-radius: 15px;
+    font-size: 40px;
+    padding: 10px;
+    margin: 15px;
 
 }
 
-ul li:nth-child(1){
-    animation-delay: .2s;
+.teajar_oolong{
+    background-image: url('./assets/images/teajars/Oolong.png');
+    background-repeat: none;
+    background-size: cover;
 }
-ul li:nth-child(2){
-    animation-delay: .6s;
+.teajar_green{
+    background-image: url('./assets/images/teajars/Green.png');
 }
-ul li:nth-child(3){
-    animation-delay: 1s;
-}
-ul li:nth-child(4){
-    animation-delay: .6s;
-}
-ul li:nth-child(5){
-    animation-delay: .2s;
+.teajar_matcha{
+    background-image: url('./assets/images/teajars/Matcha.png');
 }
 
-
-
-
-
-  
-
-  
-/*
-#tea-cup {
-    width: 200px;
-    height: 300px;
-    background-color: green; 
-    border-radius: 50% / 20% 20% 0 0;
-    position: relative;
-  }
-  
-  #tea-cup:before,
-  #tea-cup:after {
-    content: '';
-    position: absolute;
-    width: 80%;
-    height: 60px;
-    background-color: green; 
-  }
-  
-  #tea-cup:before {
-    bottom: 0;
-    left: 10%;
-    border-radius: 0 0 50% 50%;
-    transform: translateY(20px);
-  }
-  
-  #tea-cup:after {
-    top: 0;
-    left: 10%;
-    border-radius: 50% 50% 0 0;
-    transform: translateY(-20px);
-  }
-  */
+#frame1 .teapot{
+}
