@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="assets/styles/global.css">
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' type='text/css' href='./assets/styles/global.css'>
         <title>Tasseography</title>
+        <style>
+            /* The CSS rule below will be applied to the HTML element */
+        </style>
     </head>
+    
     <body>
+        <header>
+            <h1>Step 1:</h1>
+            <h2>Select Tea Leaves</h2>
+        </header>
         <main>
-            <section id="frame1">
-                <h1>Step 1:</h1>
-                <h2>Select Tea Leaves</h2>
+            <section id='frame1'>
 
-                <div class="button-container">
-                    <button id="oolong_tea">Oolong Tea</button>
-                    <button id="green_tea">Green Tea</button>
-                    <button id="black_tea">Black Tea</button>
+                <div class='button-container'>
+                    <div class='teajar_oolong'>
+                        <button id="oolong_tea">Oolong Tea</button>
+                    </div>
+                    <div class='teajar_green'>
+                        <button id='green_tea'>Green Tea</button>
+                    </div>
+                    <div class='teajar_matcha'>
+                        <button id='matcha_tea'>Matcha Tea</button>
+                    </div>
+                </div>
+                <div class='teapot'>
+                    <img src='assets/images/teapot/teapotEmpty.png' alt='empty teapot'>
                 </div>
                   
                 <h3>
-                    <a href="frame2.html" title="Go to frame 2">Next</a>
+                    <a href='frame2.html' title='Go to frame 2'>Next</a>
                 </h3>
+
             </section>
 
-              <div class="cup">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div class="plate"></div>
-        </div>
         </main>
     </body>
 </html>
