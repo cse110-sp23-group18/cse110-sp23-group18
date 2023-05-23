@@ -1,14 +1,10 @@
 body{
+    margin-top: 150px;
     height: 100%;
     width: 100%;
-    background-image: url('assets/images/backgrounds/backgroundMobile.png');
+    background-image: url('./assets/images/backgrounds/backgroundMobile.png');
     background-color: rgb(224, 224, 224);
     display: grid;
-}
-
-img{
-    height: 300px;
-    width: auto;
 }
 
 h1{
@@ -58,13 +54,16 @@ button{
 }
 
 .teajar_oolong{
-    background-image: url('assets/images/teajars/Oolong.png');
+    background-image: url('./assets/images/teajars/Oolong.png');
     background-repeat: none;
     background-size: cover;
 }
 .teajar_green{
-    background-image: url('assets/images/teajars/Green.png');
+    background-image: url('./assets/images/teajars/Green.png');
 }
 .teajar_matcha{
-    background-image: url('assets/images/teajars/Matcha.png');
+    background-image: url('./assets/images/teajars/Matcha.png');
+}
+
+#frame1 .teapot{
 }
