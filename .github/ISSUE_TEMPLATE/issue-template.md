@@ -1,7 +1,7 @@
 ---
 name: Issue Template
 about: 'Subject of Issue: '
-title: "[ISSUE##] ISSUE NAME"
+title: ISSUE NAME
 labels: ''
 assignees: ''
 
