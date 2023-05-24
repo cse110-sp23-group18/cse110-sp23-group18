@@ -1,9 +1,12 @@
+/*
+Description: Styling specific for mobile
+*/
 @media (max-width: 768px) { /* Adjust the maximum width as needed */
     body {
         background-size: contain;
         background-image: url('../images/backgrounds/backgroundMobile.png');
-        width: 50 vx;
-        height: 50 vx;
+        background-size: 80vh;
+        background-repeat: no-repeat;
     }
 
     .teapot {
@@ -17,13 +20,16 @@
     }
   }
 
-
-@media (min-width: 1200px) {
+/*
+Description: Styling specific for desktop
+*/
+@media (min-width: 769px) {
     body{
-        background-image: url('../images/backgrounds/backgroundMobile.png');
+        background-color: antiquewhite;
+        /*background-image: 
         background-repeat: no-repeat;
-        width: 50%;
-      height: 50%;
+        background-size: 100vh;
+        */
     }
     
     h1{
@@ -38,48 +44,56 @@
         color: black;
         margin: 5px;
     }
-    
-    
-    button:hover, a:hover{
-        background-color: rgb(238, 205, 19);
-    }
-    
-    a{
-        background-color:rgb(70, 109, 47);
-        border-radius: 15px;
-        padding-top: 3mm;
-        padding-bottom: 3mm;
-        padding-right: 6mm;
-        padding-left: 6mm;
-        font-weight: bold;
-        font-size: 50px;
-        color:beige;
-    }
-    
-    .button-container {
-        display: flex;
-        justify-content: center;
-        padding: 50px;
-    }
-    
-    button{
-        background-color: transparent;
-        border-radius: 15px;
-        font-size: 40px;
-        padding: 10px;
-        margin: 15px;
-    
-    }
-    
-    .teajar_oolong{
-        background-image: url('./assets/images/teajars/Oolong.png');
-        background-repeat: none;
-        background-size: cover;
-    }
-    .teajar_green{
-        background-image: url('./assets/images/teajars/Green.png');
-    }
-    .teajar_matcha{
-        background-image: url('./assets/images/teajars/Matcha.png');
-    }
+}
+
+/*
+Description: Styling for desktop and mobile
+*/
+a{
+    background-color:rgb(70, 109, 47);
+    border-radius: 15px;
+    padding-top: 3mm;
+    padding-bottom: 3mm;
+    padding-right: 6mm;
+    padding-left: 6mm;
+    font-weight: bold;
+    font-size: 50px;
+    color:beige;
+}
+
+button:hover, a:hover{
+    background-color: rgb(238, 205, 19);
+}
+
+.start-button{
+    padding-top: 40%;
+    padding-bottom: 40%;
+    position: relative;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+button{
+    background-color: transparent;
+    border-radius: 15px;
+    font-size: 40px;
+    padding: 10px;
+    margin: 15px;
+
+}
+
+.teajar_oolong{
+    background-image: url('./assets/images/teajars/Oolong.png');
+    background-repeat: none;
+    background-size: cover;
+}
+.teajar_green{
+    background-image: url('./assets/images/teajars/Green.png');
+}
+.teajar_matcha{
+    background-image: url('./assets/images/teajars/Matcha.png');
 }
