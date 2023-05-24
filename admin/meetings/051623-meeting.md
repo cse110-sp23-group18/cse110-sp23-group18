@@ -4,7 +4,7 @@
 
 Location: PC East
 Time: Tuesday, May 16 6:30pm
-Meeting Type: Reworking our Pitch
+Meeting Type: Team Updates and Discussion
 
 ### Attendance
 
