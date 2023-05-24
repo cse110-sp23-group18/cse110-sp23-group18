@@ -32,8 +32,8 @@ Description: Styling specific for desktop
     
     h2,h3{
         text-align: center;
-        color: black;
-        margin: 5px;
+        padding: 2px;
+
     }
 }
 
@@ -70,7 +70,8 @@ button:hover, a:hover{
 .button-container {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 10px;
+    margin-top: -2.5cm;
 }
 
 button{
@@ -87,8 +88,9 @@ h1{
 }
 
 .container{
-    position: relative;
-    width: 50%;
+    display: flex;
+    padding:10px;
+    margin-top: 1cm;
 }
 
 .teapot img{
@@ -104,7 +106,7 @@ h1{
     height: 20vh;
     width: auto;
     left: 20vw;
-    top: -5vh;
+    top: -3vh;
 }
 
 .teajar_oolong{
