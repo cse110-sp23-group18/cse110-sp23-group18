@@ -9,16 +9,6 @@ Description: Styling specific for mobile
         background-repeat: no-repeat;
     }
 
-    .teapot {
-        height: 10vx;
-        width: 10px;
-    }
-
-    .teacup {
-        height: 10vx;
-        width: 10px;
-    }
-
 }
 
 /*
@@ -53,12 +43,17 @@ Description: Styling for desktop and mobile
 a{
     background-color:rgb(70, 109, 47);
     border-radius: 15px;
-    padding-top: 3mm;
-    padding-bottom: 3mm;
-    padding-right: 6mm;
-    padding-left: 6mm;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+    padding-right: 4mm;
+    padding-left: 4mm;
+
+    margin-top: 90%;
+    margin-left: 80%;
+    margin-block-end: 10%;
+
     font-weight: bold;
-    font-size: 50px;
+    font-size: 30px;
     color:beige;
 }
 
@@ -66,10 +61,10 @@ button:hover, a:hover{
     background-color: rgb(238, 205, 19);
 }
 
-.start-button{
-    margin-top: 50%;
-    margin-left: 35%;
-
+.start-button a{
+    margin-top: 50vh;
+    margin-left: 35vw;
+    font-size: 8vw;
 }
 
 .button-container {
@@ -81,15 +76,35 @@ button:hover, a:hover{
 button{
     background-color: transparent;
     border-radius: 15px;
-    font-size: 40px;
+    font-size: 20px;
     padding: 10px;
-    margin: 15px;
-
+    margin: 5px;
 }
 
 h1{
     padding-top: 40%;
-    padding-left: 30%;
+    padding-left: 30vw;
+}
+
+.container{
+    position: relative;
+    width: 50%;
+}
+
+.teapot img{
+    position: relative;
+    height: 30vh;
+    width: auto;
+    left: 50vw;
+    top: 20vh;
+}
+
+.teacup img{
+    position: relative;
+    height: 20vh;
+    width: auto;
+    left: 20vw;
+    top: -5vh;
 }
 
 .teajar_oolong{
