@@ -1,9 +1,9 @@
 body{
     margin-top: 150px;
-    height: 100%;
     width: 100%;
-    background-image: url('./assets/images/backgrounds/backgroundMobile.png');
-    background-color: rgb(224, 224, 224);
+    background-image: url('../images/backgrounds/backgroundMobile.png');
+    background-position: center;
+    background-size: contain;
     display: grid;
 }
 
