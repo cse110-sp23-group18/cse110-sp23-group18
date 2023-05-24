@@ -84,15 +84,26 @@ Meeting Type: Restructuring and Next Steps
 
 -   Will be managed by Pramesh
 -   Will be following the MADR manual instructions from [here](https://adr.github.io/madr/)
+-   Pramesh made a branch `branch-adr` and uploaded some ADR records in markdown format
 
 ### Naming Conventions
 
 -   Naming conventions will be in `admin/guidelines` and the ADR
 -   Images will be in camelCase, images will have the number after
+-   Most things will be camelCase
+
+### Standups
+
+-   Brian will make a slack channel for standup updates
+-   People will update everyday around 8-9pm
+
+### Changelogs
+
+-   Changelogs will be automatically generated
 
 ### Others
 
 -   Will be meeting later this week too to sync up again
 -   [LettuceMeet](https://lettucemeet.com/l/wReLL)
 
-Meeting ended at X:XXpm.
+Meeting ended at 8:00pm.
