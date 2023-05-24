@@ -5,7 +5,7 @@ Description: Styling specific for mobile
     body {
         background-size: contain;
         background-image: url('../images/backgrounds/backgroundMobile.png');
-        background-size: 80vh;
+        background-size: 100vw;
         background-repeat: no-repeat;
     }
 
@@ -18,7 +18,8 @@ Description: Styling specific for mobile
         height: 10vx;
         width: 10px;
     }
-  }
+
+}
 
 /*
 Description: Styling specific for desktop
@@ -66,9 +67,9 @@ button:hover, a:hover{
 }
 
 .start-button{
-    padding-top: 40%;
-    padding-bottom: 40%;
-    position: relative;
+    margin-top: 50%;
+    margin-left: 35%;
+
 }
 
 .button-container {
@@ -84,6 +85,11 @@ button{
     padding: 10px;
     margin: 15px;
 
+}
+
+h1{
+    padding-top: 40%;
+    padding-left: 30%;
 }
 
 .teajar_oolong{
