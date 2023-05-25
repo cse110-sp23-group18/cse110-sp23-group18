@@ -1,11 +1,14 @@
-.container {
+
+.frame2-container {
     display: flex;
     position: relative;
-    top: 100px;
+    top: 170px;
+    left: 10px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
+
 .item {
     display: flex;
     flex: 1;
@@ -13,21 +16,20 @@
 }
 
 .teacup img {
-    max-width: 70%;
+    max-width: 50%;
     position: relative;
     height: auto;
 }
-
-.teapot img{
-    position: relative;
-    left: -30px;
-    max-width: 130%;
-    position: relative;
-    height: auto;
+.teacup img:hover {
+    transform: scale(1.15);
 }
 
-.teapot button{
-    width: 100px;
-    height: 50px;
-    font-size: 18px;
+
+.teapot img {
+    position: relative;
+    max-width: 80%;
+    height: auto;
+}
+.teapot img:hover {
+    transform: scale(1.15);
 }
