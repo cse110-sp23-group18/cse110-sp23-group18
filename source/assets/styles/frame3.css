@@ -22,10 +22,10 @@
 .teacup img:hover {
     transform: scale(1.15);
 }
-.teapot img{
+.teapot img {
     position: relative;
     left: -15px;
-    max-width: 100%;
+    max-width: 130%;
     position: relative;
     height: auto;
 }
@@ -34,9 +34,14 @@
 }
 .pour button{
     position: relative;
-    right: 10px;
+    right: -10px;
     width: 60px;
     height: 40px;
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-top: 1.5mm;
+    padding-bottom: 2mm;
+    padding-right: 4mm;
+    padding-left: 1.5mm;
 }
