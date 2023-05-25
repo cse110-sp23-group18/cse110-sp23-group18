@@ -1,21 +1,37 @@
-.container {
-    display: flex;
+
+h1 {
+    padding: 10px;
     position: relative;
-    top: 100px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    /*padding:10px;
-    margin-top: 1cm;*/
+    text-align: center;
+    font-size: 10vx;
 }
-.item {
-    display: flex;
-    flex: 1;
-    align-self: auto;
+h2 {
+    position: relative;
+    text-align: center;
 }
 
-.teacup img {
-    max-width: 70%;
+.prediction img {
     position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     height: auto;
+}
+
+a{
+    background-color:rgb(70, 109, 47);
+    border-radius: 15px;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+    padding-right: 4mm;
+    padding-left: 4mm;
+    position: relative;
+    font-weight: bold;
+    font-size: 30px;
+    color:beige;
+}
+
+button:hover, a:hover{
+    background-color: rgb(238, 205, 19);
 }
