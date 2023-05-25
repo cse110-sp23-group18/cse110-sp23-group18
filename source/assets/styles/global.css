@@ -32,8 +32,10 @@ button:hover, a:hover{
 }
 
 .start-button a{
-    margin-top: 50vh;
-    margin-left: 35vw;
+    padding: 10px;
+    top: 20px;
+    position: relative;
+    text-align: center;
     font-size: 8vw;
 }
 

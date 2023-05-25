@@ -1,7 +1,9 @@
-.container {
+
+.frame4-container {
     display: flex;
     position: relative;
     top: 100px;
+    left: 10px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -13,15 +15,21 @@
 }
 
 .teacup img {
-    max-width: 70%;
+    max-width: 50%;
     position: relative;
     height: auto;
 }
+.teacup img:hover {
+    transform: scale(1.15);
+}
 
-.teapot img{
+
+.teapot img {
     position: relative;
-    left: -30px;
-    max-width: 130%;
-    position: relative;
+    max-width: 90%;
     height: auto;
+
+}
+.teapot img:hover {
+    transform: scale(1.15);
 }
