@@ -6,8 +6,8 @@
  * Last modified by: Kavi Nelakonda (May 22, 2023)
  */
 
-//import PREDICTIONS from "/predictions.json" assert {type: "json"};
 
+//import PREDICTIONS from "/predictions.json" assert {type: "json"};
 window.addEventListener("DOMContentLoaded", init);
 
  /** 
@@ -17,35 +17,44 @@ window.addEventListener("DOMContentLoaded", init);
   */
 const PREDICTIONS = [
         {
-            "text": "I see a fish, you are destined to achieve remarkable success and triumph in the realm of overseas relations",
-            "picture":"", 
+            "text": "Ah, a fish shape. The tea leaves reveal a wild journey ahead in overseas relations. Success is your destiny!",
+            "picture": "", 
         },
         {
-            "text": "Ain't no way yo future gon' look good. It's gon be rough for a homie out there. Be on the look out cuzz"
+            "text": "Oh, the leaves are shaped in a heart, it spill secrets of something amazing coming your way. True love is headed your way!",
+            "picture": "", 
         },
         {
-            "text": "Gosh darn diddly dee, it's look more south than a dog's tail on a hot sunny day. I reckon the future ain't lookin great."
+            "text": "In the tea leaves, a tiny worry in the shape of a bug appears. But fear not, it's just a passing whisper.",
+            "picture": "",
         },
         {
-            "text": "The mystical clouds continue to stay put, making it impossible for me to judge what is to come for you."
+            "text": "With the key shape, I see a readiness for newness. Prepare to welcome new ideas into your life.",
+            "picture": "",
         },
         {
-            "text": "Are you sure of what is to come? Because neither am I. Sorry to that I cannot provide insight."
+            "text": "I see a cloud in the cup. The tea leaves hint at some troubles heading your way soon. But fear not, for challenges are just part of life's wild ride!",
+            "picture": "",
         },
         {
-            "text": "Ehhhhh, I don't know. It's really hard to say. Keep it up I guess..."
+            "text": "Oh no, the tea leaves appear in the shape of a knife. Warning: fake friends lie in wait.",
+            "picture": "",
         },
         {
-            "text": "LOOKING GOOD LET'S GO YOU GOT THIS. SHOULDERS STRAIGHT AND HEAD HIGH!"
+            "text": "The leaves looking like a whale reveal a sure thing, a major project holds the guarantee of achievement. Success is on the horizon!",
+            "picture": "",
         },
         {
-            "text": "The future looks good for you."
+            "text": "In the flower-shaped tea leaves, a message emerges: someone seeks your advice.",
+            "picture": "",
         },
         {
-            "text": "Among us, you have a future that is leagues above the others in importance. Watch over your shoulder in the coming fortnight, because if you are crafty and display much valor, you may reach the apex of your life."
+            "text": "Among us, you have a future that is leagues above the others in importance. Watch over your shoulder in the coming fortnight, because if you are crafty and display much valor, you may reach the apex of your life.",
+            "picture": "",
         },
         {
-            "text": "Tis' with great honor that I get to tell you that your future will shine brighter than the sun as it rises over the hills that surround this valley."
+            "text": "Tis' with great honor that I get to tell you that your future will shine brighter than the sun as it rises over the hills that surround this valley.",
+            "picture": "",
         }
 ]; 
 
@@ -68,6 +77,7 @@ function init(){
 /**
  * Generates a random number, uses the number as a key to find a response.
  * Response text is put in the response element that is generated if it does not exist. 
+ * Picture associated with the response is put in an image elemtn that is generated if it does not exist.
  * 
  * Last Modified by: Kavi Nelakonda (May 22, 2023)
  * @returns void
@@ -75,16 +85,25 @@ function init(){
 function prediction(){
     const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
     let prediction = PREDICTIONS[randomNumber].text;
+
     console.log(prediction);
     // TODO: Determine if a response element will exist, and remove if so
-    let predictionEl =   document.querySelector('.prediction');
+    let predictionEl =  document.querySelector('.prediction');
     if(predictionEl == null){
         predictionEl = document.createElement('prediction');
     }
-
     predictionEl.innerHTML = prediction;
+
+    let predictionPic = PREDICTIONS[randomNumber].picture;
+    let predictPicEl = document.querySelector("img");
+    if(predictPicEl == null){
+        predictPicEl = document.createElement("img");
+    }
+    predictPicEl.src = predictionPic;
+
     let bodyEl = document.querySelector("body");
     bodyEl.appendChild(predictionEl);
+    bodyEl.appendChild(predictPicEl);
 }
 
 
