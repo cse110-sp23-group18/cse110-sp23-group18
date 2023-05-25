@@ -5,6 +5,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    /*padding:10px;
+    margin-top: 1cm;*/
 }
 .item {
     display: flex;
@@ -14,14 +16,6 @@
 
 .teacup img {
     max-width: 70%;
-    position: relative;
-    height: auto;
-}
-
-.teapot img{
-    position: relative;
-    left: -30px;
-    max-width: 130%;
     position: relative;
     height: auto;
 }

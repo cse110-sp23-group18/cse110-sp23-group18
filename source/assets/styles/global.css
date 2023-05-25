@@ -67,67 +67,9 @@ button:hover, a:hover{
     font-size: 8vw;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin-top: -2.5cm;
-}
-
-button{
-    background-color: transparent;
-    border-radius: 15px;
-    font-size: 20px;
-    padding: 10px;
-    margin: 5px;
-}
-
 h1{
     padding-top: 40%;
     padding-left: 30vw;
-}
-
-
-
-/*.container img {
-  flex: 1;
-  max-width: 100%;
-  height: auto;
-
-  position: relative;
-    height: 30vh;
-    width: auto;
-    left: 50vw;
-    top: 20vh;
-}*/
-.container {
-    display: flex;
-    position: relative;
-    top: 100px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    /*padding:10px;
-    margin-top: 1cm;*/
-}
-.item {
-    display: flex;
-    flex: 1;
-    align-self: auto;
-}
-
-.teacup img {
-    max-width: 70%;
-    position: relative;
-    height: auto;
-}
-
-.teapot img{
-    position: relative;
-    left: -30px;
-    max-width: 130%;
-    position: relative;
-    height: auto;
 }
 
 .pour button{
@@ -136,17 +78,3 @@ h1{
     font-size: 18px;
 }
 
-
-
-
-.teajar_oolong{
-    background-image: url('./assets/images/teajars/Oolong.png');
-    background-repeat: none;
-    background-size: cover;
-}
-.teajar_green{
-    background-image: url('./assets/images/teajars/Green.png');
-}
-.teajar_matcha{
-    background-image: url('./assets/images/teajars/Matcha.png');
-}
