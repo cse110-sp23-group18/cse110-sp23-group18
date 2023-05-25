@@ -1,7 +1,9 @@
-.container {
+
+.frame1-container {
     display: flex;
     position: relative;
-    top: 100px;
+    top: 170px;
+    left: 10px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -13,28 +15,55 @@
 }
 
 .teacup img {
-    max-width: 70%;
+    max-width: 90%;
     position: relative;
+    right: 3vw;
+    top: 8vh;
     height: auto;
 }
+.teacup img:hover {
+    transform: scale(1.15);
+}
 
-.teapot img{
+
+.teapot img {
     position: relative;
-    left: -30px;
-    max-width: 130%;
-    position: relative;
+    max-width: 170%;
+    right: 5vw;
     height: auto;
 }
+.teapot img:hover {
+    transform: scale(1.15);
+}
 
-.teajar_oolong{
-    background-image: url('./assets/images/teajars/Oolong.png');
-    background-repeat: none;
+.teajar-container {
+    display: flex;
+    position: relative;
+    top: 50px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
-.teajar_green{
-    background-image: url('./assets/images/teajars/Green.png');
-    background-repeat: none;
+.teajar_oolong img{
+    position: relative;
+    width: 130%;
 }
-.teajar_matcha{
-    background-image: url('./assets/images/teajars/Matcha.png');
-    background-repeat: none;
+.teajar_oolong img:hover {
+    transform: scale(1.15);
+}
+
+.teajar_green img{
+    position: relative;
+    width: 130%;
+}
+.teajar_green img:hover {
+    transform: scale(1.15);
+}
+
+.teajar_matcha img{
+    position: relative;
+    width: 130%;
+}
+.teajar_matcha img:hover {
+    transform: scale(1.15);
 }
