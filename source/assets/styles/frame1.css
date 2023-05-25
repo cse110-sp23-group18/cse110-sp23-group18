@@ -49,6 +49,7 @@
 .teajar_oolong img{
     position: relative;
     width: 130%;
+    transition: opacity 0.2s;
 }
 .teajar_oolong img:hover {
     transform: scale(1.15);
