@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "auto-changelog": "^2.4.0",
     "eslint": "^8.40.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-node": "^4.1.0",
@@ -248,7 +249,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint ./source/ --fix"
+    "lint": "npx eslint ./source/ --fix",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "author": "Team Apollo",
   "license": "ISC"
