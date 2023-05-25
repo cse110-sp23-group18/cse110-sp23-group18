@@ -2,7 +2,7 @@
 .frame2-container {
     display: flex;
     position: relative;
-    top: 170px;
+    top: 120px;
     left: 10px;
     flex-direction: row;
     justify-content: space-around;
@@ -17,19 +17,27 @@
 
 .teacup img {
     max-width: 50%;
-    position: relative;
+    position: sticky;
+    left: 20vw;
     height: auto;
+
 }
 .teacup img:hover {
     transform: scale(1.15);
 }
 
-
 .teapot img {
-    position: relative;
+    position: sticky;
     max-width: 80%;
     height: auto;
 }
 .teapot img:hover {
     transform: scale(1.15);
+}
+.teapot button{
+    background-color: beige;
+}
+
+a{
+    top: 15vh;
 }
