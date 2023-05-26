@@ -15,6 +15,6 @@ Towards the beginning of the quarter, we made an introductory project on an 8-ba
 
 ### Tasseography
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/dc9232fe7fd340b7b4848cc51123380b)](https://app.codacy.com/gh/cse110-sp23-group18/cse110-sp23-group18/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Code CI](https://github.com/cse110-sp23-group18/cse110-sp23-group18/actions/workflows/code-ci.yml/badge.svg)](https://github.com/cse110-sp23-group18/cse110-sp23-group18/actions/workflows/code-ci.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/dc9232fe7fd340b7b4848cc51123380b)](https://app.codacy.com/gh/cse110-sp23-group18/cse110-sp23-group18/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 Tasseography, or tea leaf reading, is the final project of the quarter. This is a fortune-telling application we are building that will give various readings to users. A link to our project can be found [here](https://cse110-sp23-group18.github.io/cse110-sp23-group18/source/index.html).
