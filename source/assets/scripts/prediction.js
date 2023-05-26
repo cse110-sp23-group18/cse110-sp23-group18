@@ -1,9 +1,9 @@
 /**
- * @summary This file will output the predictive statements after a button is clicked. The button's event listener
- * is added upon the page loading. There is a designated set of responses that can be added/removed from.
+ * @summary This file will output the predictive statements when the page is loaded.
+ * There is a designated set of responses that can be added/removed from.
  * 
  * @author Kavi Nelakonda (May 14, 2023)
- * Last modified by: Kavi Nelakonda (May 22, 2023)
+ * Last modified by: Kavi Nelakonda (May 26, 2023)
  */
 
 
@@ -47,20 +47,19 @@ const PREDICTIONS = [
             "picture": "./assets/images/dredges/flower1.png",
         },
         {
-            "text": "Among us, you have a future that is leagues above the others in importance. Watch over your shoulder in the coming fortnight, because if you are crafty and display much valor, you may reach the apex of your life.",
+            "text": "Hmmm, the tea leaves came together to look like an acorn. It seems like your humble beginnings will turn into great things in your future.",
             "picture": "./assets/images/dredges/acorn1.png",
         },
         {
-            "text": "Tis' with great honor that I get to tell you that your future will shine brighter than the sun as it rises over the hills that surround this valley.",
+            "text": "Oh my, it's of a snake shape. Be careful of any nasty surprises that my come your way.",
             "picture": "./assets/images/dredges/snake1.png",
         }
 ]; 
 
-// By adding another response, the random number generator will automatically adjust to the amount of responses
 const PREDICTION_COUNT = Object.keys(PREDICTIONS).length;
 
 /**
- * Adds an event listener to a button
+ * Loads up the prediction with the image.
  * 
  * Last Modified by: Kavi Nelakonda (May 25, 2023)
  * @returns void
@@ -81,12 +80,12 @@ function init(){
 function prediction(){
     const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
 
-    let prediction = PREDICTIONS[randomNumber].text;
-    let predictionTxt =  document.querySelector('#predictionTxt');
+    let predictionTxt = PREDICTIONS[randomNumber].text;
+    let predictionTxtEl =  document.querySelector('#predictionTxt');
     // if(predictionEl == null){
     //     predictionEl = document.createElement('prediction');
     // }
-    predictionTxt.innerHTML = prediction;
+    predictionTxtEl.innerHTML = predictionTxt;
 
     let predictionPic = PREDICTIONS[randomNumber].picture;
     let predictPicEl = document.querySelector("#predictionImg");
@@ -96,7 +95,7 @@ function prediction(){
     predictPicEl.src = predictionPic;
 
     let predictionEl = document.querySelector(".prediction");
-    predictionEl.appendChild(predictionTxt);
+    predictionEl.appendChild(predictionTxtEl);
     predictionEl.appendChild(predictPicEl);
 }
 
