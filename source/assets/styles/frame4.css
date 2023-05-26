@@ -1,3 +1,7 @@
+/*
+Description: Styling specific for mobile
+*/
+@media (max-width: 768px) {
 h2 {
     font-size: 17px;
     top: -60px;
@@ -29,4 +33,5 @@ h2 {
 a {
     position: relative;
     top: 15px;
+}
 }

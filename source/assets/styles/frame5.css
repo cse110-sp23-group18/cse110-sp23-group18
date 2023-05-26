@@ -1,4 +1,7 @@
-
+/*
+Description: Styling specific for mobile
+*/
+@media (max-width: 768px) {
 h1 {
     padding: 10px;
     position: relative;
@@ -34,4 +37,5 @@ a{
 
 button:hover, a:hover{
     background-color: rgb(238, 205, 19);
+}
 }

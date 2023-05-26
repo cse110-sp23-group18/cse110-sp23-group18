@@ -1,3 +1,7 @@
+/*
+Description: Styling specific for mobile
+*/
+@media (max-width: 768px) {
 .frame3-container {
     display: flex;
     position: relative;
@@ -46,4 +50,5 @@
     padding-bottom: 2mm;
     padding-right: 4mm;
     padding-left: 1.5mm;
+}
 }

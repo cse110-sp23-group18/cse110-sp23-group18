@@ -1,49 +1,54 @@
-.teapot img {
-    position: sticky;
-    position: relative;
-    max-width: 30%;
-    left: 145px;
-    top: -85px;
-    height: auto;
-}
-.teapot img:hover {
-    transform: scale(1.15);
-}
+/*
+Description: Styling specific for mobile
+*/
+@media (max-width: 768px) {
+    .teapot img {
+        position: sticky;
+        position: relative;
+        max-width: 30%;
+        left: 145px;
+        top: -85px;
+        height: auto;
+    }
+    .teapot img:hover {
+        transform: scale(1.15);
+    }
 
-.frame2-container {
-    display: flex;
-    position: relative;
-    top: 50px;
-    left: 10px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.item {
-    display: flex;
-    flex: 1;
-    align-self: auto;
-} 
+    .frame2-container {
+        display: flex;
+        position: relative;
+        top: 50px;
+        left: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .item {
+        display: flex;
+        flex: 1;
+        align-self: auto;
+    } 
 
-.teacup img {
-    max-width: 35%;
-    position: sticky;
-    left: 20vw;
-    height: auto;
+    .teacup img {
+        max-width: 35%;
+        position: sticky;
+        left: 20vw;
+        height: auto;
 
-}
-.teacup img:hover {
-    transform: scale(1.15);
-}
+    }
+    .teacup img:hover {
+        transform: scale(1.15);
+    }
 
-.boil button {
-    position: relative;
-    left: -60px;
-    top: -230px;
-    font-size: 40%;
-}
+    .boil button {
+        position: relative;
+        left: -60px;
+        top: -230px;
+        font-size: 40%;
+    }
 
-a {
-    position: relative;
-    top: 80px;
+    a {
+        position: relative;
+        top: 80px;
+    }
 }
