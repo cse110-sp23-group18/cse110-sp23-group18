@@ -1,24 +1,22 @@
 /**
- * This file will output the predictive statements after a button is clicked. The button's event listener
+ * @summary This file will output the predictive statements after a button is clicked. The button's event listener
  * is added upon the page loading. There is a designated set of responses that can be added/removed from.
  * 
- * Created by: Kavi Nelakonda (May 14, 2023)
+ * @author Kavi Nelakonda (May 14, 2023)
  * Last modified by: Kavi Nelakonda (May 22, 2023)
  */
 
 
-//import PREDICTIONS from "/predictions.json" assert {type: "json"};
 window.addEventListener("DOMContentLoaded", init);
 
  /** 
-  * Generates an element after randomly choosing a response intended to predict the future
-  * 10 responses, all with different tones. 3 negative, 3 unsure, and 4 positive
+  * 10 responses, all with different tones, each corresponding with different images.
   * Adding to this adds to total number of responses. 
   */
 const PREDICTIONS = [
         {
             "text": "Ah, a fish shape. The tea leaves reveal a wild journey ahead in overseas relations. Success is your destiny!",
-            "picture": "", 
+            "picture": "hog.png", 
         },
         {
             "text": "Oh, the leaves are shaped in a heart, it spill secrets of something amazing coming your way. True love is headed your way!",
@@ -60,17 +58,15 @@ const PREDICTIONS = [
 
 // By adding another response, the random number generator will automatically adjust to the amount of responses
 const PREDICTION_COUNT = Object.keys(PREDICTIONS).length;
-console.log(PREDICTION_COUNT);
 
 /**
  * Adds an event listener to a button
  * 
- * Last Modified by: Kavi Nelakonda (May 14, 2023)
+ * Last Modified by: Kavi Nelakonda (May 25, 2023)
  * @returns void
  */
 function init(){
-    let buttonEl = document.querySelector("button");
-    buttonEl.addEventListener("click", prediction);
+    prediction();
 }
 
 
@@ -79,15 +75,13 @@ function init(){
  * Response text is put in the response element that is generated if it does not exist. 
  * Picture associated with the response is put in an image elemtn that is generated if it does not exist.
  * 
- * Last Modified by: Kavi Nelakonda (May 22, 2023)
+ * Last Modified by: Kavi Nelakonda (May 25, 2023)
  * @returns void
  */
 function prediction(){
     const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
     let prediction = PREDICTIONS[randomNumber].text;
 
-    console.log(prediction);
-    // TODO: Determine if a response element will exist, and remove if so
     let predictionEl =  document.querySelector('.prediction');
     if(predictionEl == null){
         predictionEl = document.createElement('prediction');
