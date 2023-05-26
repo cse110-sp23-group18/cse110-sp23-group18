@@ -14,6 +14,7 @@
     flex: 1;
     align-self: auto;
 }
+
 .teacup img {
     max-width: 70%;
     position: relative;
@@ -22,6 +23,7 @@
 .teacup img:hover {
     transform: scale(1.15);
 }
+
 .teapot img {
     position: relative;
     left: -15px;
@@ -31,6 +33,7 @@
 .teapot img:hover {
     transform: scale(1.15);
 }
+
 .pour button{
     position: relative;
     right: -10px;

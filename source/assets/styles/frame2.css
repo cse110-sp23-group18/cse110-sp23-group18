@@ -1,22 +1,33 @@
+.teapot img {
+    position: sticky;
+    position: relative;
+    max-width: 30%;
+    left: 145px;
+    top: -85px;
+    height: auto;
+}
+.teapot img:hover {
+    transform: scale(1.15);
+}
+
 
 .frame2-container {
     display: flex;
     position: relative;
-    top: 120px;
+    top: 50px;
     left: 10px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-
 .item {
     display: flex;
     flex: 1;
     align-self: auto;
-}
+} 
 
 .teacup img {
-    max-width: 50%;
+    max-width: 35%;
     position: sticky;
     left: 20vw;
     height: auto;
@@ -26,18 +37,13 @@
     transform: scale(1.15);
 }
 
-.teapot img {
-    position: sticky;
-    max-width: 80%;
-    height: auto;
-}
-.teapot img:hover {
-    transform: scale(1.15);
-}
-.teapot button{
-    background-color: beige;
+.boil button{
+    position: relative;
+    left: -20px;
+    top: -50px;
 }
 
-a{
-    top: 15vh;
+a {
+    position: relative;
+    top: 80px;
 }

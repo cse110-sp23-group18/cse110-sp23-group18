@@ -21,7 +21,11 @@ a{
     padding-right: 4mm;
     padding-left: 4mm;
     position: relative;
-
+    top: 160px;
+    left: -150px;
+    margin-top: 90%;
+    margin-left: 80%;
+    margin-block-end: 10%;
     font-weight: bold;
     font-size: 30px;
     color:beige;
@@ -39,18 +43,19 @@ button:hover, a:hover{
     font-size: 8vw;
 }
 
-/*   
-h1{
-    text-align: center;
-    margin: 15px;
-    padding: 15px;
-    font-size: 60px;
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: -2.5cm;
 }
-
-h2,h3{
-    text-align: center;
-    padding: 2px;
-}*/
+button{
+    background-color: transparent;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+}
 
 h1 {
     padding-top: 40%;
@@ -78,6 +83,5 @@ Description: Styling specific for desktop
         background-size: 100vh;
         */
     }
-
 }
 
