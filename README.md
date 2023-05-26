@@ -5,3 +5,5 @@ Link to [team page](https://cse110-sp23-group18.github.io/cse110-sp23-group18/ad
 Link to [team video](https://youtu.be/QWd9Dn5re64)
 <br>
 Link to [8 ball project](https://cse110-sp23-group18.github.io/cse110-sp23-group18/8ballapp/eightball.html)
+
+Link to [Tasseography](https://cse110-sp23-group18.github.io/cse110-sp23-group18/source/index.html)
