@@ -7,7 +7,6 @@
  */
 
 
-window.addEventListener("DOMContentLoaded", init);
 
  /** 
   * 10 responses, all with different tones, each corresponding with different images.
@@ -100,3 +99,4 @@ function prediction(){
 }
 
 
+window.addEventListener("DOMContentLoaded", init);
