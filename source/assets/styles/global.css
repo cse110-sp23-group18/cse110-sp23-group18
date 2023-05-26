@@ -42,7 +42,7 @@ Description: Styling specific for mobile
         top: -40px;
         text-align: center;
         left: -50px;
-        font-size: 10vx;;
+        font-size: 10vx;
     }
     h2 {
         position: relative;
@@ -102,7 +102,7 @@ Description: Styling specific for desktop
         padding: 25%;
         position: relative;
         text-align: center;
-        font-size: 5vw;
+        font-size: 250%;
         bottom: 15vh;
     }
 }
