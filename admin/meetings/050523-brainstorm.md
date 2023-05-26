@@ -20,9 +20,9 @@ Meeting Type: Brainstorm meeting
 
 ### Agenda / Tasks
 
--   [ ] Rethink Timeless Tweets idea
--   [ ] Consider logistics of app
--   [ ] Start thinking about and delegating work for the pitch
+-   Rethink Timeless Tweets idea
+-   Consider logistics of app
+-   Start thinking about and delegating work for the pitch
 
 ## Minutes
 

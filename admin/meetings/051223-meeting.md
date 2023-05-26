@@ -19,8 +19,8 @@ Meeting Type: Creating Teams and Delegating Work
 
 ### Agenda / Tasks
 
--   [ ] Delegation of work
--   [ ] Assigning the issues to people
+-   Delegation of work
+-   Assigning the issues to people
 
 ## Minutes
 

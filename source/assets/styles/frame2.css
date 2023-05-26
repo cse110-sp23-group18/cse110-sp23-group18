@@ -1,29 +1,29 @@
 /* isn't being applied?? */
-.instructions h1{
+.instructions h1 {
     color: red;
     padding-top: 50%;
     padding-left: 30%;
 }
 
-.container{
+.container {
     position: relative;
     width: 50%;
 }
 
-.teapot img{
+.teapot img {
     position: relative;
     height: 30vh;
     width: auto;
     left: 50vw;
     top: 20vh;
 }
-.container button{
+.container button {
     position: absolute;
     top: 50%;
     left: 50%;
 }
 
-.teacup img{
+.teacup img {
     position: relative;
     height: 20vh;
     width: auto;

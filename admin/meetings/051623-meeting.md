@@ -20,8 +20,8 @@ Meeting Type: Team Updates and Discussion
 
 ### Agenda / Tasks
 
--   [ ] Update on our work
--   [ ] Brainstorm questions for the midterm
+-   Update on our work
+-   Brainstorm questions for the midterm
 
 ## Minutes
 

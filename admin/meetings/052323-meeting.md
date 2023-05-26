@@ -20,15 +20,15 @@ Meeting Type: Restructuring and Next Steps
 
 ### Agenda / Tasks
 
--   [ ] Update on our work
--   [ ] Talk about -ilities and the ADR
--   [ ] Talk about restructuring team and repo to be more efficient
-    -   [ ] Changelogs
-    -   [ ] CI/CD
-    -   [ ] Naming conventions (issues, branches, file names, functions, variables, etc.)
-    -   [ ] Roadmap
-    -   [ ] Standups and sprints
--   [ ] Assigning Dev work
+-   Update on our work
+-   Talk about -ilities and the ADR
+-   Talk about restructuring team and repo to be more efficient
+    -   Changelogs
+    -   CI/CD
+    -   Naming conventions (issues, branches, file names, functions, variables, etc.)
+    -   Roadmap
+    -   Standups and sprints
+-   Assigning Dev work
 
 ## From Last Week
 
