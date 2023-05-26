@@ -1,35 +1,32 @@
-
-.frame4-container {
-    display: flex;
-    position: relative;
-    top: 100px;
-    left: 10px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+h2 {
+    font-size: 17px;
+    top: -60px;
 }
-.item {
-    display: flex;
-    flex: 1;
-    align-self: auto;
+.teapot img {
+    position: sticky;
+    position: relative;
+    max-width: 28%;
+    left: 150px;
+    top: -88px;
+    height: auto;
+}
+.teapot img:hover {
+    transform: scale(1.15);
 }
 
 .teacup img {
-    max-width: 50%;
+    max-width: 32%;
     position: relative;
     height: auto;
+    position: relative;
+    top: 10px;
+    left: 120px;
 }
 .teacup img:hover {
     transform: scale(1.15);
 }
 
-
-.teapot img {
+a {
     position: relative;
-    max-width: 90%;
-    height: auto;
-
-}
-.teapot img:hover {
-    transform: scale(1.15);
+    top: 15px;
 }
