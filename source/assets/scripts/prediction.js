@@ -57,16 +57,6 @@ const PREDICTIONS = [
 
 const PREDICTION_COUNT = Object.keys(PREDICTIONS).length;
 
-/**
- * Loads up the prediction with the image.
- * 
- * Last Modified by: Kavi Nelakonda (May 25, 2023)
- * @returns void
- */
-function init(){
-    prediction();
-}
-
 
 /**
  * Generates a random number, uses the number as a key to find a response.
@@ -98,5 +88,14 @@ function prediction(){
     predictionEl.appendChild(predictPicEl);
 }
 
+/**
+ * Loads up the prediction with the image.
+ * 
+ * Last Modified by: Kavi Nelakonda (May 25, 2023)
+ * @returns void
+ */
+function init(){
+    prediction();
+}
 
 window.addEventListener("DOMContentLoaded", init);
