@@ -24,7 +24,7 @@ jobs:
                   npm install eslint@8.10.0
 
             - name: Run ESLint
-              run: npm run lint
+              run: npx eslint ./source/
 
     analyze:
         name: Run CodeQL analysis
