@@ -20,6 +20,7 @@
     right: 3vw;
     top: 8vh;
     height: auto;
+    scale: 1;
 }
 .teacup img:hover {
     transform: scale(1.15);
@@ -32,6 +33,7 @@
     right: 5vw;
     height: auto;
     z-index: -1;
+    scale: 1;
 }
 .teapot img:hover {
     transform: scale(1.15);
@@ -50,6 +52,7 @@
     position: relative;
     width: 130%;
     transition: opacity 0.2s;
+    scale: 1;
 }
 .teajar_oolong img:hover {
     transform: scale(1.15);
@@ -58,6 +61,7 @@
 .teajar_green img{
     position: relative;
     width: 130%;
+    scale: 1;
 }
 .teajar_green img:hover {
     transform: scale(1.15);
@@ -66,7 +70,28 @@
 .teajar_matcha img{
     position: relative;
     width: 130%;
+    scale: 1;
 }
 .teajar_matcha img:hover {
     transform: scale(1.15);
 }
+
+
+ /* CSS for the flickering effect */
+ .flicker-effect {
+    transform: scale(1.15);
+    animation: flicker 0.5s ;
+    /* animation-iteration-count: infinite; */
+  }
+
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
