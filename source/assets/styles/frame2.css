@@ -10,7 +10,6 @@
     transform: scale(1.15);
 }
 
-
 .frame2-container {
     display: flex;
     position: relative;
@@ -37,7 +36,7 @@
     transform: scale(1.15);
 }
 
-.boil button{
+.boil button {
     position: relative;
     left: -20px;
     top: -50px;
