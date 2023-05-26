@@ -44,3 +44,7 @@
     padding-right: 4mm;
     padding-left: 1.5mm;
 }
+
+.teapot.lifted {
+    transform: translateY(-10px);
+  }
