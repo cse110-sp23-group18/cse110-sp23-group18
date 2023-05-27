@@ -10,30 +10,12 @@ Description: Styling specific for mobile
         background-repeat: no-repeat;
     }
 
-    button:hover, a:hover{
-        background-color: rgb(238, 205, 19);
-    }
-
     .start-button a{
         padding: 10px;
-        top: 20px;
+        top: 50vh;
         position: relative;
         text-align: center;
-        font-size: 8vw;
-    }
-
-    .button-container {
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-        margin-top: -2.5cm;
-    }
-    button{
-        background-color: transparent;
-        border-radius: 15px;
-        font-size: 20px;
-        padding: 10px;
-        margin: 5px;
+        font-size: 10vw;
     }
 
     h1 {
@@ -49,7 +31,6 @@ Description: Styling specific for mobile
         position: relative;
         top: -50px;
         text-align: center;
-
     }
 }
 
@@ -67,6 +48,9 @@ a {
     color:white;
     font-weight: bold;
 }
+button:hover, a:hover{
+    background-color: rgb(238, 205, 19);
+}
 
 /*
 Description: Styling specific for desktop
@@ -79,10 +63,6 @@ Description: Styling specific for desktop
         background-repeat: no-repeat;
     }
     
-    button:hover, a:hover{
-        background-color: rgb(238, 205, 19);
-    }
-    
     .start-button a{
         padding: 10px;
         bottom: 25vh;
@@ -90,14 +70,6 @@ Description: Styling specific for desktop
         position: relative;
         text-align: center;
         font-size: 4vw;
-    }
-    
-    button{
-        background-color: transparent;
-        border-radius: 15px;
-        font-size: 20px;
-        padding: 10px;
-        margin: 5px;
     }
     
     .website_title {

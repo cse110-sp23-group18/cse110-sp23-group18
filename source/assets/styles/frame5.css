@@ -2,17 +2,42 @@
 Description: Styling specific for mobile
 */
 @media (max-width: 768px) {
-h1 {
-    padding: 10px;
-    position: relative;
-    text-align: center;
-    font-size: 10vx;
-}
-h2 {
-    position: relative;
-    text-align: center;
+    h1 {
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        font-size: 10vx;
+    }
+    h2 {
+        position: relative;
+        text-align: center;
+    }
+
+    a{
+        background-color:black;
+        color:white;
+        border-radius: 15px;
+        padding-top: 2mm;
+        padding-bottom: 2mm;
+        padding-right: 4mm;
+        padding-left: 4mm;
+
+        position: relative;
+        top: 5vh;
+        font-weight: bold;
+        font-size: 20px;
+
+    }
+
+
 }
 
+/*
+Description: Styling specific for desktop and mobile
+*/
+button:hover, a:hover{
+    background-color: rgb(238, 205, 19);
+}
 .prediction img {
     position: relative;
     display: block;
@@ -22,20 +47,9 @@ h2 {
     height: auto;
 }
 
-a{
-    background-color:black;
-    border-radius: 15px;
-    padding-top: 2mm;
-    padding-bottom: 2mm;
-    padding-right: 4mm;
-    padding-left: 4mm;
-    position: relative;
-    font-weight: bold;
-    font-size: 30px;
-    color:white;
-}
-
-button:hover, a:hover{
-    background-color: rgb(238, 205, 19);
-}
+/*
+Description: Styling specific for desktop
+*/
+@media (min-width: 769px) {
+    
 }
