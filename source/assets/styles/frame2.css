@@ -41,15 +41,10 @@ Description: Styling specific for mobile
         transform: scale(1.15);
     }
 
-    .boil button {
-        position: relative;
-        left: -60px;
-        top: -230px;
-        font-size: 40%;
-    }
-
     a {
         position: relative;
-        top: 80px;
+        top: 15vh;
+        left: 40%;
+        right: 40%;
     }
 }

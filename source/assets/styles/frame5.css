@@ -23,7 +23,7 @@ h2 {
 }
 
 a{
-    background-color:rgb(70, 109, 47);
+    background-color:black;
     border-radius: 15px;
     padding-top: 2mm;
     padding-bottom: 2mm;
@@ -32,7 +32,7 @@ a{
     position: relative;
     font-weight: bold;
     font-size: 30px;
-    color:beige;
+    color:white;
 }
 
 button:hover, a:hover{

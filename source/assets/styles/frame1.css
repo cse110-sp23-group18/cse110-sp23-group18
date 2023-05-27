@@ -54,7 +54,9 @@ Description: Styling specific for mobile
     
     a {
         position: relative;
-        top: 5px;
+        bottom: 3vh;
+        left: 40%;
+        right: 40%;
     }
 }
 
