@@ -3,14 +3,13 @@ Description: Styling specific for mobile
 */
 @media (max-width: 768px) {
     h1 {
-        padding: 10px;
         position: relative;
         text-align: center;
-        font-size: 10vx;
     }
     h2 {
         position: relative;
         text-align: center;
+        font-size: 110%;
     }
 
     a{
@@ -23,12 +22,10 @@ Description: Styling specific for mobile
         padding-left: 4mm;
 
         position: relative;
-        top: 5vh;
+        top: 20vh;
         font-weight: bold;
         font-size: 20px;
-
     }
-
 
 }
 
@@ -38,18 +35,32 @@ Description: Styling specific for desktop and mobile
 button:hover, a:hover{
     background-color: rgb(238, 205, 19);
 }
+.prediction{
+    position: relative;
+    display: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90vw;
+}
 .prediction img {
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    height: auto;
+    max-width: 90%;
+}
+body{
+    background-color: white;
+    /*background-image: url('../images/backgrounds/backgroundDesktop.png');
+    background-size: 105%;
+    background-repeat: no-repeat;*/
 }
 
 /*
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-    
+    .prediction img{
+        width: 90vw;
+    }
 }
