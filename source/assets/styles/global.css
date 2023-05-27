@@ -1,7 +1,8 @@
 /*
 Description: Styling specific for mobile
 */
-@media (max-width: 768px) { /* Adjust the maximum width as needed */
+@media (max-width: 768px) {
+    /* Adjust the maximum width as needed */
     body {
         background-size: contain;
         background-image: url('../images/backgrounds/backgroundMobile.png');
@@ -48,14 +49,15 @@ Description: Styling specific for mobile
         position: relative;
         top: -50px;
         text-align: center;
+
     }
 }
 
 /*
 Description: Styling for desktop and mobile
 */
-a{
-    background-color:rgb(70, 109, 47);
+a {
+    background-color: rgb(70, 109, 47);
     border-radius: 15px;
     padding-top: 2%;
     padding-bottom: 2%;
