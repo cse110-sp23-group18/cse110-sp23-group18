@@ -9,31 +9,28 @@ Description: Styling specific for mobile
         background-size: 100vw;
         background-repeat: no-repeat;
     }
-}
 
-/*
-Description: Styling specific for desktop
-*/
-@media (min-width: 769px) {
-    body {
-        background-color: antiquewhite;
-        /*background-image: 
-        background-repeat: no-repeat;
-        background-size: 100vh;
-        */
+    .start-button a{
+        padding: 10px;
+        top: 50vh;
+        position: relative;
+        text-align: center;
+        font-size: 10vw;
     }
 
     h1 {
+        padding-top: 40%;
+        padding-left: 20vw;
+        position: relative;
+        top: -40px;
         text-align: center;
-        margin: 15px;
-        padding: 15px;
-        font-size: 60px;
+        left: -50px;
+        font-size: 10vx;
     }
-
-    h2,
-    h3 {
+    h2 {
+        position: relative;
+        top: -50px;
         text-align: center;
-        padding: 2px;
     }
 }
 
@@ -41,83 +38,46 @@ Description: Styling specific for desktop
 Description: Styling for desktop and mobile
 */
 a {
-    background-color: rgb(70, 109, 47);
+    background-color: black;
     border-radius: 15px;
-    padding-top: 2mm;
-    padding-bottom: 2mm;
-    padding-right: 4mm;
-    padding-left: 4mm;
-
-    margin-top: 90%;
-    margin-left: 80%;
-    margin-block-end: 10%;
-
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+    padding-left: 4%;
+    position: relative;
+    color:white;
     font-weight: bold;
-    font-size: 30px;
-    color: beige;
 }
-
-button:hover,
-a:hover {
+button:hover, a:hover{
     background-color: rgb(238, 205, 19);
 }
 
-.start-button a {
-    margin-top: 50vh;
-    margin-left: 35vw;
-    font-size: 8vw;
+/*
+Description: Styling specific for desktop
+*/
+@media (min-width: 769px) {
+    body{
+        background-size: contain;
+        background-image: url('../images/backgrounds/backgroundDesktop.png');
+        background-size: 105%;
+        background-repeat: no-repeat;
+    }
+    
+    .start-button a{
+        padding: 10px;
+        bottom: 25vh;
+        left: 45vw;
+        position: relative;
+        text-align: center;
+        font-size: 4vw;
+    }
+    
+    .website_title {
+        padding: 25%;
+        position: relative;
+        text-align: center;
+        font-size: 250%;
+        bottom: 15vh;
+    }
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin-top: -2.5cm;
-}
-
-button {
-    background-color: transparent;
-    border-radius: 15px;
-    font-size: 20px;
-    padding: 10px;
-    margin: 5px;
-}
-
-h1 {
-    padding-top: 40%;
-    padding-left: 30vw;
-}
-
-.container {
-    display: flex;
-    padding: 10px;
-    margin-top: 1cm;
-}
-
-.teapot img {
-    position: relative;
-    height: 30vh;
-    width: auto;
-    left: 50vw;
-    top: 20vh;
-}
-
-.teacup img {
-    position: relative;
-    height: 20vh;
-    width: auto;
-    left: 20vw;
-    top: -3vh;
-}
-
-.teajar_oolong {
-    background-image: url('./assets/images/teajars/Oolong.png');
-    background-repeat: none;
-    background-size: cover;
-}
-.teajar_green {
-    background-image: url('./assets/images/teajars/Green.png');
-}
-.teajar_matcha {
-    background-image: url('./assets/images/teajars/Matcha.png');
-}
