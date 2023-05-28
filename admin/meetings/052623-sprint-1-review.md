@@ -17,6 +17,7 @@ Meeting Type: Sprint Review Meeting
 -   Yulei
 -   Jessie
 -   Emily
+-   Fangyu
 
 ### Agenda / Tasks
 
@@ -31,6 +32,8 @@ Meeting Type: Sprint Review Meeting
     -   Video doesn't even need to be the
 
 ### Sprint Review Meeting
+
+#### Everyone's Updates
 
 -   Pramesh
     -   Work Done
@@ -114,5 +117,22 @@ Meeting Type: Sprint Review Meeting
         -   Research into CI/CD pipeline
     -   Will Do
         -   Integrate testing with current code as soon as that gets pushed to dev
+
+#### Screenshots and Demos
+
+-   Frame 1
+    -   ![Frame 1 Screenshot](../demos/052623-sprint-1-review/frame1.png)
+-   Frame 2
+    -   ![Frame 2 Screenshot](../demos/052623-sprint-1-review/frame2.png)
+-   Frame 3
+    -   ![Frame 3 Screenshot](../demos/052623-sprint-1-review/frame3.png)
+-   Frame 4
+    -   ![Frame 4 Screenshot](../demos/052623-sprint-1-review/frame4.png)
+-   Frame 5
+    -   ![Frame 5 Screenshot](../demos/052623-sprint-1-review/frame5.png)
+-   Jar Selection (changes sizes upon selection)
+    -   ![Jar Selection (changes size)](../demos/052623-sprint-1-review/selectJar.png)
+-   Prediction Code: all of the different responses available
+    -   ![Prediction Code](../demos/052623-sprint-1-review/predictionCode.png)
 
 Meeting ended at 1:00pm.
