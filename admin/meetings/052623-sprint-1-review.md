@@ -17,6 +17,7 @@ Meeting Type: Sprint Review Meeting
 -   Yulei
 -   Jessie
 -   Emily
+-   Fangyu
 
 ### Agenda / Tasks
 
