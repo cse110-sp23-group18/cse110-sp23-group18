@@ -32,6 +32,8 @@ Meeting Type: Sprint Review Meeting
 
 ### Sprint Review Meeting
 
+#### Everyone's Updates
+
 -   Pramesh
     -   Work Done
         -   Set up multiple ADRs
@@ -114,5 +116,20 @@ Meeting Type: Sprint Review Meeting
         -   Research into CI/CD pipeline
     -   Will Do
         -   Integrate testing with current code as soon as that gets pushed to dev
+
+#### Screenshots and Demos
+
+-   Frame 1
+    -   ![Frame 1 Screenshot](../demos/052623-sprintreview/frame1.png)
+-   Frame 2
+    -   ![Frame 2 Screenshot](../demos/052623-sprintreview/frame2.png)
+-   Frame 3
+    -   ![Frame 3 Screenshot](../demos/052623-sprintreview/frame3.png)
+-   Frame 4
+    -   ![Frame 4 Screenshot](../demos/052623-sprintreview/frame4.png)
+-   Frame 5
+    -   ![Frame 5 Screenshot](../demos/052623-sprintreview/frame5.png)
+-   Jar Selection (changes sizes upon selection)
+    -   ![Jar Selection (changes size)](../demos/052623-sprintreview/selectjar.png)
 
 Meeting ended at 1:00pm.
