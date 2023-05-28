@@ -1,7 +1,8 @@
 /*
 Description: Styling specific for mobile
 */
-@media (max-width: 768px) { /* Adjust the maximum width as needed */
+@media (max-width: 768px) {
+    /* Adjust the maximum width as needed */
     body {
         background-size: contain;
         background-image: url('../images/backgrounds/backgroundMobile.png');
@@ -9,62 +10,46 @@ Description: Styling specific for mobile
         background-repeat: no-repeat;
     }
 
+    .start-button a{
+        padding: 10px;
+        top: 50vh;
+        position: relative;
+        text-align: center;
+        font-size: 10vw;
+    }
+
+    h1 {
+        padding-top: 40%;
+        padding-left: 20vw;
+        position: relative;
+        top: -40px;
+        text-align: center;
+        left: -50px;
+        font-size: 10vx;
+    }
+    h2 {
+        position: relative;
+        top: -50px;
+        text-align: center;
+    }
 }
+
 /*
 Description: Styling for desktop and mobile
 */
-a{
-    background-color:rgb(70, 109, 47);
+a {
+    background-color: black;
     border-radius: 15px;
-    padding-top: 2mm;
-    padding-bottom: 2mm;
-    padding-right: 4mm;
-    padding-left: 4mm;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+    padding-left: 4%;
     position: relative;
-
+    color:white;
     font-weight: bold;
-    font-size: 30px;
-    color:beige;
 }
-
 button:hover, a:hover{
     background-color: rgb(238, 205, 19);
-}
-
-.start-button a{
-    padding: 10px;
-    top: 20px;
-    position: relative;
-    text-align: center;
-    font-size: 8vw;
-}
-
-/*   
-h1{
-    text-align: center;
-    margin: 15px;
-    padding: 15px;
-    font-size: 60px;
-}
-
-h2,h3{
-    text-align: center;
-    padding: 2px;
-}*/
-
-h1 {
-    padding-top: 40%;
-    padding-left: 20vw;
-    position: relative;
-    top: -40px;
-    text-align: center;
-    left: -50px;
-    font-size: 10vx;;
-}
-h2 {
-    position: relative;
-    top: -50px;
-    text-align: center;
 }
 
 /*
@@ -72,12 +57,27 @@ Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
     body{
-        background-color: antiquewhite;
-        /*background-image: 
+        background-size: contain;
+        background-image: url('../images/backgrounds/backgroundDesktop.png');
+        background-size: 105%;
         background-repeat: no-repeat;
-        background-size: 100vh;
-        */
     }
-
+    
+    .start-button a{
+        padding: 10px;
+        bottom: 25vh;
+        left: 45vw;
+        position: relative;
+        text-align: center;
+        font-size: 4vw;
+    }
+    
+    .website_title {
+        padding: 25%;
+        position: relative;
+        text-align: center;
+        font-size: 250%;
+        bottom: 15vh;
+    }
 }
 

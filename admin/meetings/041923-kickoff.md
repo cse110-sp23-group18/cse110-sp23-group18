@@ -21,10 +21,10 @@ Meeting Type: Kickoff meeting
 
 ### Agenda / Tasks
 
--   [x] Management - Group Bonding Event
--   [ ] Management - Branding, Group Page and Video
--   [ ] Management - Group Kickoff, Repo and Meeting Prep
--   [ ] Management - Group Contract
+-   Management - Group Bonding Event
+-   Management - Branding, Group Page and Video
+-   Management - Group Kickoff, Repo and Meeting Prep
+-   Management - Group Contract
 
 ## Minutes
 

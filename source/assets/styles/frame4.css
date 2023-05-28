@@ -1,35 +1,51 @@
+/*
+Description: Styling specific for mobile
+*/
+@media (max-width: 768px) {
+    h2 {
+        font-size: 17px;
+        top: -60px;
+    }
+    .teapot img {
+        position: sticky;
+        position: relative;
+        max-width: 28%;
+        left: 150px;
+        top: -88px;
+        height: auto;
+    }
 
-.frame4-container {
-    display: flex;
-    position: relative;
-    top: 100px;
-    left: 10px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.item {
-    display: flex;
-    flex: 1;
-    align-self: auto;
+    .teacup img {
+        max-width: 40%;
+        position: relative;
+        height: auto;
+        position: relative;
+        top: 10px;
+        left: 120px;
+    }
+
+    a {
+        position: relative;
+        top: 13vh;
+        left: 40%;
+        right: 40%;
+    }
 }
 
-.teacup img {
-    max-width: 50%;
-    position: relative;
-    height: auto;
+/*
+Description: Styling specific for desktop and mobile
+*/
+
+.teapot img:hover {
+    transform: scale(1.15);
 }
 .teacup img:hover {
     transform: scale(1.15);
 }
 
-
-.teapot img {
-    position: relative;
-    max-width: 90%;
-    height: auto;
-
-}
-.teapot img:hover {
-    transform: scale(1.15);
+/*
+Description: Styling specific for desktop
+*/
+@media (min-width: 769px) {
+    
 }

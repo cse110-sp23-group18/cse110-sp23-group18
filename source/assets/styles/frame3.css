@@ -1,8 +1,47 @@
+/*
+Description: Styling specific for mobile
+*/
+@media (max-width: 768px) {
+    .frame3-container {
+        top: 8vh;
+    }
+
+    .item {
+        display: flex;
+        flex: 1;
+        align-self: auto;
+    }
+
+    .teacup img {
+        max-width: 70%;
+        left: 8vw;
+        top: 10vh;
+        position: relative;
+        height: auto;
+    }
+
+    .teapot img {
+        position: relative;
+        max-width: 120%;
+        right: 15vw;
+        height: auto;
+    }
+
+    a {
+        position: relative;
+        top: 17vh;
+        left: 40%;
+        right: 40%;
+    }
+
+}
+
+/*
+Description: Styling specific for desktop and mobile
+*/
 .frame3-container {
     display: flex;
     position: relative;
-    top: 150px;
-    left: 20px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -12,42 +51,17 @@
     flex: 1;
     align-self: auto;
 }
-.teacup img {
-    max-width: 70%;
-    position: relative;
-    height: auto;
+
+.teapot img:hover {
+    transform: scale(1.15);
 }
 .teacup img:hover {
     transform: scale(1.15);
 }
-.teapot img {
-    position: relative;
-    left: -15px;
-    max-width: 130%;
-    height: auto;
+
+/*
+Description: Styling specific for desktop
+*/
+@media (min-width: 769px) {
+    
 }
-.teapot img:hover {
-    transform: scale(1.15);
-}
-.pour button{
-    position: relative;
-    right: -10px;
-    width: 60px;
-    height: 40px;
-    font-size: 22px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    padding-top: 1.5mm;
-    padding-bottom: 2mm;
-    padding-right: 4mm;
-    padding-left: 1.5mm;
-}
-
-
-
-.hidden {
-    display: none;
-  }
-
-
-  
