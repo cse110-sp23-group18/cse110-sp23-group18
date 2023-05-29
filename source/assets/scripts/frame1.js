@@ -5,6 +5,7 @@ function init() {
   var oolong_image = document.getElementById('oolong');
   var matcha_image = document.getElementById('matcha');
   var green_image = document.getElementById('green');
+  var link = document.getElementById('next');
   
   // intialize all chosen value to be false
   var oolong_is_chosen = false;
@@ -16,6 +17,7 @@ function init() {
   // select current image and deselect other images
   // else deselect current image
   oolong_image.addEventListener('click', function() {
+    link.style.display = 'inline';
     if (!oolong_is_chosen) {
       oolong_is_chosen = true;
       oolong_image.style.transform = 'scale(1.25)';
@@ -37,6 +39,7 @@ function init() {
   });
   
   matcha_image.addEventListener('click', function() {
+    link.style.display = 'inline';
     if (!matcha_is_chosen) {
       matcha_is_chosen = true;
       matcha_image.style.transform = 'scale(1.25)';
@@ -57,6 +60,7 @@ function init() {
   });
   
   green_image.addEventListener('click', function() {
+    link.style.display = 'inline';
     if (!green_is_chosen) {
       green_is_chosen = true;
       green_image.style.transform = 'scale(1.25)';
