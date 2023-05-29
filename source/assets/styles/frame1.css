@@ -1,4 +1,3 @@
-
 /*
 Description: Styling specific for mobile
 */
@@ -11,7 +10,7 @@ Description: Styling specific for mobile
         top: -85px;
         height: auto;
     }
-    
+
     .frame1-container {
         top: -20px;
         left: -3vw;
@@ -23,23 +22,23 @@ Description: Styling specific for mobile
         top: -1vh;
         height: auto;
     }
-    
-    .teajar_oolong img{
+
+    .teajar_oolong img {
         position: relative;
         width: 130%;
         transition: opacity 0.2s;
     }
-    
-    .teajar_green img{
+
+    .teajar_green img {
         position: relative;
         width: 130%;
     }
-    
-    .teajar_matcha img{
+
+    .teajar_matcha img {
         position: relative;
         width: 130%;
     }
-    
+
     a {
         position: relative;
         bottom: 3vh;
@@ -80,19 +79,17 @@ Description: Styling specific for desktop and mobile
     transform: scale(1.2);
 }
 
-
 /*
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-
-    header h1{
+    header h1 {
         position: relative;
         text-align: center;
         font-size: 40px;
         top: 22vh;
     }
-    header h2{
+    header h2 {
         position: relative;
         text-align: center;
         font-size: 30px;
@@ -105,7 +102,6 @@ Description: Styling specific for desktop
         height: auto;
         top: 11vh;
         left: 46vw;
-
     }
     .teacup img {
         max-width: 7%;
@@ -115,18 +111,18 @@ Description: Styling specific for desktop
         left: 28vw;
     }
 
-    .teajar_oolong img{
+    .teajar_oolong img {
         position: relative;
         width: 70%;
         transition: opacity 0.2s;
     }
 
-    .teajar_green img{
+    .teajar_green img {
         position: relative;
         width: 70%;
     }
 
-    .teajar_matcha img{
+    .teajar_matcha img {
         position: relative;
         width: 70%;
     }
