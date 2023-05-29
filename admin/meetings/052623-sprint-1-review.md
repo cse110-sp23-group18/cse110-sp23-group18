@@ -4,7 +4,7 @@
 
 Location: Geisel 1st Floor
 Time: Friday, May 26 12:00pm
-Meeting Type: Sprint Review Meeting
+Meeting Type: Sprint 1 Review Meeting
 
 ### Attendance
 
