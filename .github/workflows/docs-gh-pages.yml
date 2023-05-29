@@ -3,8 +3,6 @@ name: JSDocs with GitHub Pages
 on:
     push:
         branches: ['prod', 'dev']
-    pull_request:
-        branches: ['prod', 'dev']
 
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
