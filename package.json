@@ -1,6 +1,7 @@
 {
     "devDependencies": {
         "auto-changelog": "^2.4.0",
+        "docdash": "^2.0.1",
         "eslint": "^8.40.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-node": "^4.1.0",
@@ -12,6 +13,7 @@
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
         "jsdoc": "^4.0.2",
+        "jsdoc-to-markdown": "^8.0.0",
         "prettier": "^2.8.8",
         "stylelint-prettier": "^3.0.0"
     },
@@ -253,7 +255,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "npx eslint ./source/ --fix",
         "version": "auto-changelog -p && git add CHANGELOG.md",
-        "jsdoc": "jsdoc -c jsdoc.json --verbose"
+        "jsdoc": "jsdoc -a all -c jsdoc.json -r ./source/ -d docs/jsdoc --verbose && find ./source/ -name \"*.js\" -exec jsdoc2md {} \\; > ./docs/devdocs.md;"
     },
     "author": "Team Apollo",
     "license": "ISC"
