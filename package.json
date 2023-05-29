@@ -255,7 +255,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "npx eslint ./source/ --fix",
         "version": "auto-changelog -p && git add CHANGELOG.md",
-        "jsdoc": "jsdoc -a all -c jsdoc.json -r ./source/ -d docs/jsdoc --verbose && find ./source/ -name \"*.js\" -exec jsdoc2md {} \\; > ./docs/devdocs.md;"
+        "jsdoc": "find ./source/ -name \"*.js\" -exec jsdoc2md {} \\; > ./docs/devdocs.md;"
     },
     "author": "Team Apollo",
     "license": "ISC"
