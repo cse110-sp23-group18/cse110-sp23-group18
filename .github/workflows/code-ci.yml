@@ -26,6 +26,23 @@ jobs:
             - name: Run ESLint
               run: npx eslint ./source/
 
+    stylelint:
+        name: Run stylelint scanning
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            security-events: write
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Install stylelint
+              run: |
+                  npm install stylelint
+
+            - name: Run stylelint
+              run: npx stylelint ./source/**/*.css
+
     analyze:
         name: Run CodeQL analysis
         runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
