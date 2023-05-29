@@ -1,5 +1,5 @@
 // frame1.js
-
+// Jessie Ouyang jeouyang@ucsd.edu
 function init() {
     // get image element representing types of tea jars
   var oolong_image = document.getElementById('oolong');
