@@ -20,7 +20,7 @@ Meeting Type: Brainstorm meeting
 
 ### Agenda / Tasks
 
--   [ ] Brainstorm
+-   Brainstorm
 
 ## Minutes
 

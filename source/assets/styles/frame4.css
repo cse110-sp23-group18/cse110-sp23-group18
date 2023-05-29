@@ -1,0 +1,50 @@
+/*
+Description: Styling specific for mobile
+*/
+@media (max-width: 768px) {
+    h2 {
+        font-size: 17px;
+        top: -60px;
+    }
+    .teapot img {
+        position: sticky;
+        position: relative;
+        max-width: 28%;
+        left: 150px;
+        top: -88px;
+        height: auto;
+    }
+
+    .teacup img {
+        max-width: 40%;
+        position: relative;
+        height: auto;
+        position: relative;
+        top: 10px;
+        left: 120px;
+    }
+
+    a {
+        position: relative;
+        top: 13vh;
+        left: 40%;
+        right: 40%;
+    }
+}
+
+/*
+Description: Styling specific for desktop and mobile
+*/
+
+.teapot img:hover {
+    transform: scale(1.15);
+}
+.teacup img:hover {
+    transform: scale(1.15);
+}
+
+/*
+Description: Styling specific for desktop
+*/
+@media (min-width: 769px) {
+}

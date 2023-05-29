@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset='UTF-8' />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <link rel='shortcut icon' href='assets/images/teacup/teacupSide.png' type='image/png' />
         <title>Tasseography</title>
+
+        <!-- Main Stylesheet & Scripts-->
+        <link rel='stylesheet' href='./assets/styles/global.css'/>
+        <link rel='stylesheet' href='./assets/styles/frame4.css'/>
+        <script src='./assets/scripts/frame4.js' type='module'></script>
+
     </head>
+    
     <body>
+        <header>
+            <h1>Step 4:</h1>
+            <h2>Your tea is ready. Click mug to drink tea and reveal your fortune.</h2>
+        </header>
         <main>
             <section id="frame4">
-                <h1>Your Fortune</h1>
-                <p>(Sample Fortune)</p>
-                <h2>Bird Wings represent freedom. Whatever answers you seek for, 
-                    know that you alwways have a choice to fly to different places.</h2>
-                <img src="assets/images/sample_fortune.jpg" alt="leaves representing good fortune"/>
-                <h2>
-                    <a href="frame1.html" title="Start New Fortune">Get New Fortune</a>
-                </h2>
+                <div class="teapot">
+                    <img src='assets/images/teapot/teapotEmpty.png' alt='boiling teapot'/>
+                </div>
+                    <div class="teacup">
+                        <img src='assets/images/teacup/teacupside.png' alt='topview of teacup'>
+                    </div>
             </section>
         </main>
+        <a href="frame5.html" title="Go to frame 5">Next</a>
     </body>
 </html>
