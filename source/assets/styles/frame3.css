@@ -33,7 +33,6 @@ Description: Styling specific for mobile
         left: 40%;
         right: 40%;
     }
-
 }
 
 /*
@@ -64,5 +63,4 @@ Description: Styling specific for desktop and mobile
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-    
 }

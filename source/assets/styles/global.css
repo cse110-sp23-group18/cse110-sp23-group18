@@ -10,7 +10,7 @@ Description: Styling specific for mobile
         background-repeat: no-repeat;
     }
 
-    .start-button a{
+    .start-button a {
         padding: 10px;
         top: 50vh;
         position: relative;
@@ -45,10 +45,11 @@ a {
     padding-right: 4%;
     padding-left: 4%;
     position: relative;
-    color:white;
+    color: white;
     font-weight: bold;
 }
-button:hover, a:hover{
+button:hover,
+a:hover {
     background-color: rgb(238, 205, 19);
 }
 
@@ -56,14 +57,14 @@ button:hover, a:hover{
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-    body{
+    body {
         background-size: contain;
         background-image: url('../images/backgrounds/backgroundDesktop.png');
         background-size: 105%;
         background-repeat: no-repeat;
     }
-    
-    .start-button a{
+
+    .start-button a {
         padding: 10px;
         bottom: 25vh;
         left: 45vw;
@@ -71,7 +72,7 @@ Description: Styling specific for desktop
         text-align: center;
         font-size: 4vw;
     }
-    
+
     .website_title {
         padding: 25%;
         position: relative;
@@ -80,4 +81,3 @@ Description: Styling specific for desktop
         bottom: 15vh;
     }
 }
-
