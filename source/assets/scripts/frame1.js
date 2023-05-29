@@ -1,16 +1,13 @@
 // frame1.js
+const image = document.querySelector('image');
 
 function init() {}
 
 window.addEventListener('DOMContentLoaded', init);
 
-const oolong = document.getElementById('oolong');
-const matcha = document.getElementById('matcha');
-const green = document.getElementById('green');
-
-image.addEventListener('click', () => {
-    flickerImage();
-});
+// const oolong = document.getElementById('oolong');
+// const matcha = document.getElementById('matcha');
+// const green = document.getElementById('green');
 
 function flickerImage() {
     const opacity = window.getComputedStyle(image).getPropertyValue('opacity');
@@ -23,3 +20,7 @@ function flickerImage() {
 
     setTimeout(flickerImage, 200); // Adjust the delay between flickers (in milliseconds) as desired
 }
+
+image.addEventListener('click', () => {
+    flickerImage();
+});
