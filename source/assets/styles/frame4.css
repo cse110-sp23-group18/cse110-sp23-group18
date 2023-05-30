@@ -37,13 +37,13 @@ Description: Styling specific for mobile
 Description: Styling specific for desktop and mobile
 */
 
-.teapot img:hover {
+/* .teapot img:hover {
     transform: scale(1.15);
 }
 
 .teacup img:hover {
     transform: scale(1.15);
-}
+} */
 
 /*
 Description: Styling specific for desktop

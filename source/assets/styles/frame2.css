@@ -45,8 +45,7 @@ Description: Styling specific for desktop and mobile
     align-items: center;
     height: 90vh;
 }
-.header {
-}
+
 .frame-two-container {
     display: flex;
     flex-direction: column;
@@ -55,12 +54,10 @@ Description: Styling specific for desktop and mobile
     width: 100%;
     height: 40vh;
 }
-.teacup img:hover {
+
+/* .teapotImg:hover {
     transform: scale(1.15);
-}
-.teapot img:hover {
-    transform: scale(1.15);
-}
+} */
 
 /*
 Description: Styling specific for desktop
