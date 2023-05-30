@@ -35,7 +35,6 @@ Description: Styling specific for mobile
     }
 
 }
-
 /*
 Description: Styling specific for desktop and mobile
 */
@@ -58,6 +57,25 @@ Description: Styling specific for desktop and mobile
 .teacup img:hover {
     transform: scale(1.15);
 }
+
+.pour button{
+    position: relative;
+    right: -10px;
+    width: 60px;
+    height: 40px;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-top: 1.5mm;
+    padding-bottom: 2mm;
+    padding-right: 4mm;
+    padding-left: 1.5mm;
+}
+
+.hidden {
+    display: none;
+  }
+
 
 /*
 Description: Styling specific for desktop

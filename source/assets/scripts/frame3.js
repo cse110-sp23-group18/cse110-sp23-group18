@@ -16,16 +16,22 @@ function liftTeapot() {
     setTimeout(() => {
       teapotImage.classList.add('hidden'); // Hide the teapot image
       pouringImage.classList.remove('hidden'); // Show the pouring GIF
+      pouringImage.addEventListener('animationiteration', () => {
+        pouringImage.style.animationIterationCount = '1'; // Set iteration count to 1
+      }, { once: true });
    
       // pourImage.addEventListener('animationiteration', () => {
       //   pourImage.style.animationIterationCount = '1'; // Set iteration count to 1
       // }, { once: true });
     }, 1000); // Adjust the delay as needed (1s = 1000ms)
   }, 10);
+
+
+
 }
 
 window.onload = function () {
-  const move = document.getElementById('the button');
+  const move = document.getElementById('teapotImage');
   move.onclick = liftTeapot;
 };
 
