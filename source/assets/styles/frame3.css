@@ -33,7 +33,6 @@ Description: Styling specific for mobile
         left: 40%;
         right: 40%;
     }
-
 }
 /*
 Description: Styling specific for desktop and mobile
@@ -45,6 +44,7 @@ Description: Styling specific for desktop and mobile
     justify-content: space-around;
     align-items: center;
 }
+
 .item {
     display: flex;
     flex: 1;
@@ -54,32 +54,13 @@ Description: Styling specific for desktop and mobile
 .teapot img:hover {
     transform: scale(1.15);
 }
+
 .teacup img:hover {
     transform: scale(1.15);
 }
-
-.pour button{
-    position: relative;
-    right: -10px;
-    width: 60px;
-    height: 40px;
-    font-size: 22px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    padding-top: 1.5mm;
-    padding-bottom: 2mm;
-    padding-right: 4mm;
-    padding-left: 1.5mm;
-}
-
-.hidden {
-    display: none;
-  }
-
 
 /*
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-    
 }

@@ -6,6 +6,7 @@ Description: Styling specific for mobile
         font-size: 17px;
         top: -60px;
     }
+
     .teapot img {
         position: sticky;
         position: relative;
@@ -39,6 +40,7 @@ Description: Styling specific for desktop and mobile
 .teapot img:hover {
     transform: scale(1.15);
 }
+
 .teacup img:hover {
     transform: scale(1.15);
 }
@@ -47,5 +49,4 @@ Description: Styling specific for desktop and mobile
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-    
 }
