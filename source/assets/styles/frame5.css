@@ -12,9 +12,9 @@ Description: Styling specific for mobile
         font-size: 110%;
     }
 
-    a{
-        background-color:black;
-        color:white;
+    a {
+        background-color: black;
+        color: white;
         border-radius: 15px;
         padding-top: 2mm;
         padding-bottom: 2mm;
@@ -26,16 +26,15 @@ Description: Styling specific for mobile
         font-weight: bold;
         font-size: 20px;
     }
-
 }
 
 /*
 Description: Styling specific for desktop and mobile
 */
-button:hover, a:hover{
+button:hover,
+a:hover {
     background-color: rgb(238, 205, 19);
 }
-
 .prediction {
     position: relative;
     display: relative;
@@ -73,7 +72,7 @@ body{
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-    .prediction img{
+    .prediction img {
         width: 90vw;
     }
 }

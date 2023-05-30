@@ -4,7 +4,7 @@
 
 Location: Geisel 1st Floor
 Time: Friday, May 26 12:00pm
-Meeting Type: Sprint Review Meeting
+Meeting Type: Sprint 1 Review Meeting
 
 ### Attendance
 
@@ -126,6 +126,12 @@ Meeting Type: Sprint Review Meeting
     -   ![Frame 2 Screenshot](../demos/052623-sprint-1-review/frame2.png)
 -   Frame 3
     -   ![Frame 3 Screenshot](../demos/052623-sprint-1-review/frame3.png)
+-   Frame 3 Animation Part 1
+    -   ![Frame 3 Animation Part 1](../demos/052623-sprint-1-review/frame3Animate1.png)
+-   Frame 3 Animation Part 2
+    -   ![Frame 3 Animation Part 2](../demos/052623-sprint-1-review/frame3Animate2.png)
+-   Frame 3 Animation Part 3
+    -   ![Frame 3 Animation Part 3](../demos/052623-sprint-1-review/frame3Animate3.png)=
 -   Frame 4
     -   ![Frame 4 Screenshot](../demos/052623-sprint-1-review/frame4.png)
 -   Frame 5

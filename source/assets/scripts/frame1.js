@@ -30,7 +30,6 @@ function init() {
       matcha_is_chosen = false;
       matcha_image.style.transform = 'scale(1)';
       matcha_image.classList.remove('flicker-effect');
-  
     } else {
       oolong_is_chosen = false;
       oolong_image.style.transform = 'scale(1)';
@@ -84,5 +83,3 @@ function init() {
   }
   
   window.addEventListener('DOMContentLoaded', init);
-  
-  

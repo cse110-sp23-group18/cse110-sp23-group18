@@ -28,5 +28,3 @@ window.onload = function () {
   const move = document.getElementById('the button');
   move.onclick = liftTeapot;
 };
-
-
