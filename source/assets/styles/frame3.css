@@ -34,7 +34,6 @@ Description: Styling specific for mobile
         right: 40%;
     }
 }
-
 /*
 Description: Styling specific for desktop and mobile
 */
@@ -52,11 +51,20 @@ Description: Styling specific for desktop and mobile
     align-self: auto;
 }
 
-.teapot img:hover {
+/* .teapotImg:hover {
     transform: scale(1.15);
 }
+
 .teacup img:hover {
     transform: scale(1.15);
+} */
+
+.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
 }
 
 /*
