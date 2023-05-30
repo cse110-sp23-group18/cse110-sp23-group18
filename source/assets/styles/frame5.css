@@ -6,6 +6,7 @@ Description: Styling specific for mobile
         position: relative;
         text-align: center;
     }
+
     h2 {
         position: relative;
         text-align: center;
@@ -16,10 +17,7 @@ Description: Styling specific for mobile
         background-color: black;
         color: white;
         border-radius: 15px;
-        padding-top: 2mm;
-        padding-bottom: 2mm;
-        padding-right: 4mm;
-        padding-left: 4mm;
+        padding: 2mm 4mm;
 
         position: relative;
         top: 20vh;
@@ -35,6 +33,7 @@ button:hover,
 a:hover {
     background-color: rgb(238, 205, 19);
 }
+
 .prediction {
     position: relative;
     display: relative;
@@ -42,6 +41,7 @@ a:hover {
     margin-right: auto;
     max-width: 90vw;
 }
+
 .prediction img {
     position: relative;
     display: block;
@@ -49,6 +49,7 @@ a:hover {
     margin-right: auto;
     max-width: 90%;
 }
+
 body {
     background-color: white;
     /*background-image: url('../images/backgrounds/backgroundDesktop.png');

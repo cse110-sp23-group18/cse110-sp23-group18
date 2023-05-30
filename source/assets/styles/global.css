@@ -40,14 +40,12 @@ Description: Styling for desktop and mobile
 a {
     background-color: black;
     border-radius: 15px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-right: 4%;
-    padding-left: 4%;
+    padding: 2% 4%;
     position: relative;
     color: white;
     font-weight: bold;
 }
+
 button:hover,
 a:hover {
     background-color: rgb(238, 205, 19);
