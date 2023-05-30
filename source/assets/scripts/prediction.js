@@ -10,7 +10,7 @@
  * 10 responses, all with different tones, each corresponding with different images.
  * Adding to this adds to total number of responses.
  */
-module.exports = prediction;
+
 
 const PREDICTIONS = [
     {
@@ -93,3 +93,4 @@ function init() {
 
 window.addEventListener('DOMContentLoaded', init);
 
+module.exports = prediction;
