@@ -8,83 +8,59 @@
  */
 
 /**
+ * Constants of the string representation for each tea type. Useful for
+ * refactoring code and preventing spelling errors with strings.
+ */
+const TEAS = {
+    oolong: 'oolong',
+    matcha: 'matcha',
+    green: 'green',
+    none: 'none',
+};
+
+let chosenJar = TEAS.none;
+
+/**
+ * The function that handles the logic for and animates everything when
+ * selecting a jar
+ *
+ * @param {string} teaType the type of the tea from the TEAS constant
+ */
+function selectJar(teaType) {
+    const linkEle = document.getElementById('next');
+
+    chosenJar = chosenJar === teaType ? TEAS.none : teaType;
+
+    Object.keys(TEAS).forEach((tea) => {
+        const teaEle = document.getElementById(TEAS[tea]);
+
+        if (!teaEle) return;
+
+        if (tea === chosenJar) {
+            teaEle.style.transform = 'scale(1.5)';
+            teaEle.classList.add('flicker-effect');
+        } else {
+            teaEle.style.transform = 'scale(1)';
+            teaEle.classList.remove('flicker-effect');
+        }
+    });
+
+    linkEle.style.display = chosenJar === teaType ? 'inline' : 'none';
+}
+
+/**
  * The initialization function that runs when the window loads
  */
 function init() {
-    // get image element representing types of tea jars
-    const oolongImage = document.getElementById('oolong');
-    const matchaImage = document.getElementById('matcha');
-    const greenImage = document.getElementById('green');
-    const link = document.getElementById('next');
-    // intialize all chosen value to be false
-    let isOolongChosen = false;
-    let isMatchaChosen = false;
-    let isGreenChosen = false;
-    // when one image is clicked,
-    // if it has not been chosen
-    // select current image and deselect other images
-    // else deselect current image
-    oolongImage.addEventListener('click', () => {
-        link.style.display = 'inline';
-        if (!isOolongChosen) {
-            isOolongChosen = true;
-            oolongImage.style.transform = 'scale(1.15)';
-            // set current
-            oolongImage.classList.add('flicker-effect');
-            // remove other options
-            isGreenChosen = false;
-            greenImage.style.transform = 'scale(1)';
-            greenImage.classList.remove('flicker-effect');
-            isMatchaChosen = false;
-            matchaImage.style.transform = 'scale(1)';
-            matchaImage.classList.remove('flicker-effect');
-        } else {
-            isOolongChosen = false;
-            oolongImage.style.transform = 'scale(1)';
-            oolongImage.classList.remove('flicker-effect');
-        }
-    });
+    // adds event listeners to all tea jars
+    Object.keys(TEAS).forEach((tea) => {
+        const teaEle = document.getElementById(TEAS[tea]);
 
-    matchaImage.addEventListener('click', () => {
-        link.style.display = 'inline';
-        if (!isMatchaChosen) {
-            isMatchaChosen = true;
-            matchaImage.style.transform = 'scale(1.15)';
-            // set current
-            matchaImage.classList.add('flicker-effect');
-            // remove other options
-            isOolongChosen = false;
-            oolongImage.style.transform = 'scale(1)';
-            oolongImage.classList.remove('flicker-effect');
-            isGreenChosen = false;
-            greenImage.style.transform = 'scale(1)';
-            greenImage.classList.remove('flicker-effect');
-        } else {
-            isMatchaChosen = false;
-            matchaImage.style.transform = 'scale(1)';
-            matchaImage.classList.remove('flicker-effect');
-        }
-    });
+        if (!teaEle) return;
 
-    greenImage.addEventListener('click', () => {
-        link.style.display = 'inline';
-        if (!isGreenChosen) {
-            isGreenChosen = true;
-            greenImage.style.transform = 'scale(1.15)';
-            // set current
-            greenImage.classList.add('flicker-effect');
-            // remove other options
-            isOolongChosen = false;
-            oolongImage.style.transform = 'scale(1)';
-            oolongImage.classList.remove('flicker-effect');
-            isMatchaChosen = false;
-            matchaImage.style.transform = 'scale(1)';
-            matchaImage.classList.remove('flicker-effect');
-        } else {
-            isGreenChosen = false;
-            greenImage.style.transform = 'scale(1)';
-            greenImage.classList.remove('flicker-effect');
-        }
+        teaEle.addEventListener('click', () => {
+            selectJar(TEAS[tea]);
+        });
     });
 }
 
