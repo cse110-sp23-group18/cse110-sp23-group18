@@ -1,5 +1,15 @@
-// frame1.js
-// Jessie Ouyang jeouyang@ucsd.edu
+/**
+ * @summary This file provides the scripting for the first frame of the file.
+ * This includes animations when clicking on tea jars and transitions to
+ * the next frame (frame 2)
+ *
+ * @author Jessie Ouyang (May ??, 2023)
+ * Last modified by: Grant Cheng (May 29, 2023)
+ */
+
+/**
+ * The initialization function that runs when the window loads
+ */
 function init() {
     // get image element representing types of tea jars
     const oolongImage = document.getElementById('oolong');
