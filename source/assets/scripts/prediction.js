@@ -73,10 +73,6 @@ function prediction() {
     const predictionPic = PREDICTIONS[randomNumber].picture;
     const predictPicEl = document.querySelector('#predictionImg');
     predictPicEl.src = predictionPic;
-
-    const predictionEl = document.querySelector('.prediction');
-    predictionEl.appendChild(predictionTxtEl);
-    predictionEl.appendChild(predictPicEl);
 }
 
 /**

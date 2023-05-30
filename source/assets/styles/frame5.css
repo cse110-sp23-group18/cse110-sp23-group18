@@ -44,21 +44,24 @@ a:hover {
     max-width: 90vw;
 }
 
-.image_layers {
+.image-layers {
     position: relative;
     display: relative;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 90vw;
+    width: 90vw;
+    height: 90vw;
 }
 
 .image-overlay {
     position: absolute;
+    max-width: 100%;
     z-index: 2;
 }
 
 .image-predict {
     position: absolute;
+    max-width: 50%;
+    left: 25%;
+    top: 25%;
     z-index: 1;
 }
 
