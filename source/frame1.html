@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset='UTF-8' />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <link rel='shortcut icon' href='assets/images/teacup/teacupSide.png' type='image/png' />
-        <title>Tasseography</title>
 
-        <!-- Main Stylesheet & Scripts-->
-        <link rel='stylesheet' href='./assets/styles/global.css'/>
-        <link rel='stylesheet' href='./assets/styles/frame1.css'/>
-        <!--<script src='./assets/scripts/index.js' type='module'></script>-->
-        <script src='./assets/scripts/frame1.js' type='module'></script>
-    </head>
-    
-    <body>
-        <header>
-            <h1>Step 1:</h1>
-            <h2>Select Tea Leaves</h2>
-        </header>
-        <main>
-            <section id='frame1'>
-                <div class="teapot">
-                    <img src='assets/images/teapot/teapotEmpty.png' alt='boiling teapot'/>
+<head>
+    <meta charset='UTF-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='shortcut icon' href='assets/images/teacup/teacupSide.png' type='image/png' />
+    <title>Tasseography</title>
+
+    <!-- Main Stylesheet & Scripts-->
+    <link rel='stylesheet' href='./assets/styles/global.css' />
+    <link rel='stylesheet' href='./assets/styles/frame1.css' />
+    <!--<script src='./assets/scripts/index.js' type='module'></script>-->
+    <script src='./assets/scripts/frame1.js' type='module'></script>
+</head>
+
+<body>
+    <main>
+
+        <section class='frame-one'>
+            <div class="header">
+                <h1>Step 1:</h1>
+                <h2>Select Tea Leaves</h2>
+            </div>
+            <div class="teapot">
+                <img src='assets/images/teapot/teapotEmpty.png' alt='boiling teapot' />
+            </div>
+            <div class="teacup">
+                <img src='assets/images/teacup/teacupSide.png' alt='sideview of teacup'>
+            </div>
+            <div class="frame-one-container">
+                <div class='teajar-oolong' id="oolong">
+                    <img src="assets/images/teajars/oolongJar.png" class='oolong' id="oolong" />
+                    <!--<button id="oolong_tea">Oolong Tea</button>-->
                 </div>
-                <div class="teacup">
-                    <img src='assets/images/teacup/teacupSide.png' alt='sideview of teacup'>
+                <div class='teajar-green' id="green">
+                    <img src="assets/images/teajars/greenJar.png" class='green' id="green" />
+                    <!--<button id='green_tea'>Green Tea</button>-->
                 </div>
-                <div class="frame1-container">
-                    <div class='teajar_oolong' id="oolong">
-                        <img src="assets/images/teajars/Oolong.png" class='oolong'/>
-                        <!--<button id="oolong_tea">Oolong Tea</button>--> 
-                    </div>
-                    <div class='teajar_green' id="green">
-                        <img src="assets/images/teajars/Green.png" class='green'/>
-                        <!--<button id='green_tea'>Green Tea</button>--> 
-                    </div>
-                    <div class='teajar_matcha' id="matcha">
-                        <img src="assets/images/teajars/Matcha.png" class='matcha'/>
-                        <!--<button id='matcha_tea'>Matcha Tea</button>--> 
-                    </div>
+                <div class='teajar-matcha' id="matcha">
+                    <img src="assets/images/teajars/matchaJar.png" class='matcha' id="matcha" />
+                    <!--<button id='matcha_tea'>Matcha Tea</button>-->
                 </div>
-            </section>
-        </main>
-        <a href='frame2.html' title='Go to frame 2'>Next</a>
-    </body>
+            </div>
+            <a href='frame2.html' title='Go to frame 2' id='next' style="display: none;">Confirm Selection</a>
+        </section>
+    </main>
+</body>
+
 </html>
