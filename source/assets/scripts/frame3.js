@@ -1,12 +1,13 @@
 function liftTeapot() {
     const teapot = document.querySelector('.teapot');
-    // const pourImage = document.getElementById('pouringImage');
+    const teapotImage = document.getElementById('teapotImage');
+    const pouringImage = document.getElementById('pouringImage');
 
     teapot.style.transition = 'none'; // Disable transition temporarily
     teapot.style.transform = 'translateY(0)'; // Set teapot to original position
     teapotImage.classList.remove('hidden');
     pouringImage.classList.add('hidden');
-    void teapot.offsetWidth; // Trigger reflow to apply the style immediately
+    // void teapot.offsetWidth; // Trigger reflow to apply the style immediately
 
     teapot.classList.add('lifted'); // Add the 'lifted' class to teapot element
     setTimeout(() => {
@@ -25,6 +26,8 @@ function liftTeapot() {
 }
 
 window.onload = function () {
-    const move = document.getElementById('the button');
-    move.onclick = liftTeapot;
+    // const move = document.getElementById('the button');
+    // move.onclick = liftTeapot;
+    const teapot = document.getElementById('teapotImage');
+    teapot.addEventListener('click', liftTeapot);
 };

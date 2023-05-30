@@ -45,6 +45,7 @@ Description: Styling specific for desktop and mobile
     justify-content: space-around;
     align-items: center;
 }
+
 .item {
     display: flex;
     flex: 1;
@@ -54,8 +55,13 @@ Description: Styling specific for desktop and mobile
 .teapot img:hover {
     transform: scale(1.15);
 }
+
 .teacup img:hover {
     transform: scale(1.15);
+}
+
+.hidden {
+    display: none;
 }
 
 /*
