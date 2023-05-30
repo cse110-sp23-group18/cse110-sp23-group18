@@ -20,7 +20,7 @@ function init() {
     link.style.display = 'inline';
     if (!oolong_is_chosen) {
       oolong_is_chosen = true;
-      oolong_image.style.transform = 'scale(1.25)';
+      oolong_image.style.transform = 'scale(1.15)';
       // set current 
       oolong_image.classList.add('flicker-effect');
       // remove other options
@@ -42,7 +42,7 @@ function init() {
     link.style.display = 'inline';
     if (!matcha_is_chosen) {
       matcha_is_chosen = true;
-      matcha_image.style.transform = 'scale(1.25)';
+      matcha_image.style.transform = 'scale(1.15)';
       // set current 
       matcha_image.classList.add('flicker-effect');
       // remove other options
@@ -63,7 +63,7 @@ function init() {
     link.style.display = 'inline';
     if (!green_is_chosen) {
       green_is_chosen = true;
-      green_image.style.transform = 'scale(1.25)';
+      green_image.style.transform = 'scale(1.15)';
       // set current 
       green_image.classList.add('flicker-effect');
       //remove other options

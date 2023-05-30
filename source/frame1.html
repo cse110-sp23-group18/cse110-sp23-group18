@@ -15,34 +15,35 @@
     </head>
     
     <body>
-        <header>
-            <h1>Step 1:</h1>
-            <h2>Select Tea Leaves</h2>
-        </header>
         <main>
-            <section id='frame1'>
+            
+            <section class='frame-one'>
+                <div class="header">
+                    <h1>Step 1:</h1>
+                    <h2>Select Tea Leaves</h2>
+                </div>
                 <div class="teapot">
                     <img src='assets/images/teapot/teapotEmpty.png' alt='boiling teapot' />
                 </div>
                 <div class="teacup">
                     <img src='assets/images/teacup/teacupSide.png' alt='sideview of teacup'>
                 </div>
-                <div class="frame1-container">
-                    <div class='teajar_oolong' id="oolong">
+                <div class="frame-one-container">
+                    <div class='teajar-oolong' id="oolong">
                         <img src="assets/images/teajars/Oolong.png" class='oolong' id="oolong"/>
                         <!--<button id="oolong_tea">Oolong Tea</button>--> 
                     </div>
-                    <div class='teajar_green' id="green">
+                    <div class='teajar-green' id="green">
                         <img src="assets/images/teajars/Green.png" class='green' id="green"/>
                         <!--<button id='green_tea'>Green Tea</button>--> 
                     </div>
-                    <div class='teajar_matcha' id="matcha">
+                    <div class='teajar-matcha' id="matcha">
                         <img src="assets/images/teajars/Matcha.png" class='matcha' id="matcha"/>
                         <!--<button id='matcha_tea'>Matcha Tea</button>--> 
                     </div>
                 </div>
+                <a href='frame2.html' title='Go to frame 2' id='next' style="display: none;">Confirm Selection</a>
             </section>
         </main>
-        <a href='frame2.html' title='Go to frame 2' id='next' style="display: none;">Confirm Selection</a>
     </body>
 </html>
