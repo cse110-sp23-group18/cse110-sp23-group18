@@ -13,7 +13,7 @@
 function liftTeapot() {
     const teapot = document.querySelector('.teapot');
     const teapotImage = document.getElementById('teapotImage');
-    // const pouringImage = document.getElementById('pouringImage');
+    const pouringImage = document.getElementById('pouringImage');
 
     teapot.style.transition = 'none'; // Disable transition temporarily
     teapot.style.transform = 'translateY(0)'; // Set teapot to original position
