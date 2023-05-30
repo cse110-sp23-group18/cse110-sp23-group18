@@ -13,8 +13,20 @@
 function init() {
     const teacupImage = document.getElementById('teacup');
     const link = document.getElementById('next');
+    let isEnlarged = false;
+
+    function toggleSize() {
+        teacupImage.classList.toggle('enlarged');
+        isEnlarged = !isEnlarged;
+
+        if (isEnlarged) {
+            setTimeout(toggleSize, 1500); // Wait for 1 second and toggle again
+        } else {
+            setTimeout(toggleSize, 1300); // Wait for 0.5 seconds and toggle again
+        }
+    }
     teacupImage.addEventListener('click', () => {
-        teacupImage.style.transform = 'scale(1.5)';
+        toggleSize();
         link.style.display = 'inline';
     });
 }

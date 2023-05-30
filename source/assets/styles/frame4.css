@@ -23,6 +23,7 @@ Description: Styling specific for mobile
         position: relative;
         top: 10px;
         left: 120px;
+        transition: transform 1.5s ease-in-out;
     }
 
     a {
@@ -32,7 +33,9 @@ Description: Styling specific for mobile
         right: 40%;
     }
 }
-
+.teacup img.enlarged {
+    transform: scale(1.5);
+}
 /*
 Description: Styling specific for desktop and mobile
 */
