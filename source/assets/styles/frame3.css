@@ -59,6 +59,10 @@ Description: Styling specific for desktop and mobile
     transform: scale(1.15);
 }
 
+.hidden {
+    display: none;
+}
+
 /*
 Description: Styling specific for desktop
 */
