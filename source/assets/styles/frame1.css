@@ -9,13 +9,13 @@ Description: Styling specific for mobile
         justify-content: start;
         height: 30vh;
     }
-    .header h1 {    
+    .header h1 {
     }
 
     .header h2 {
         font-size: 20px;
     }
-    
+
     .frame-one-container {
     }
     .teacup img {
@@ -33,28 +33,27 @@ Description: Styling specific for mobile
         top: -85px;
         height: auto;
     }
-    
-    .teajar-oolong img{
+
+    .teajar-oolong img {
         position: relative;
         width: 100%;
         transition: opacity 0.2s;
     }
-    
-    .teajar-green img{
+
+    .teajar-green img {
         position: relative;
         width: 100%;
     }
-    
-    .teajar-matcha img{
+
+    .teajar-matcha img {
         position: relative;
         width: 100%;
     }
 
     a {
-       margin-top: 3rem;
-       text-decoration: none;
+        margin-top: 3rem;
+        text-decoration: none;
     }
-    
 }
 
 /*
@@ -65,7 +64,6 @@ Description: Styling specific for desktop and mobile
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 .frame-one-container {
     display: flex;
@@ -79,7 +77,6 @@ Description: Styling specific for desktop and mobile
     flex: 1;
     align-self: auto;
 }
-
 
 .teapot img:hover {
     transform: scale(1.15);
@@ -97,24 +94,24 @@ Description: Styling specific for desktop and mobile
     transform: scale(1.2);
 }
 
- /* CSS for the flickering effect */
- .flicker-effect {
+/* CSS for the flickering effect */
+.flicker-effect {
     transform: scale(1.15);
-    animation: flicker 0.5s ;
+    animation: flicker 0.5s;
     /* animation-iteration-count: infinite; */
-  }
+}
 
-  @keyframes flicker {
+@keyframes flicker {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
     50% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 /*
 Description: Styling specific for desktop
@@ -148,18 +145,18 @@ Description: Styling specific for desktop
         left: 28vw;
     }
 
-    .teajar-oolong img{
+    .teajar-oolong img {
         position: relative;
         width: 70%;
         transition: opacity 0.2s;
     }
 
-    .teajar-green img{
+    .teajar-green img {
         position: relative;
         width: 70%;
     }
 
-    .teajar-matcha img{
+    .teajar-matcha img {
         position: relative;
         width: 70%;
     }

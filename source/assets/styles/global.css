@@ -2,11 +2,10 @@
 Font Face Declaration
 */
 
-
 @font-face {
     font-family: 'Comic Story';
     src: url(../fonts/comic_story.ttf);
-  }
+}
 
 /*
 Description: Styling specific for mobile
@@ -30,7 +29,7 @@ Description: Styling specific for mobile
         text-align: center;
         font-size: 10vw;
     }
-/*
+    /*
     h1 {
         padding-top: 40%;
         padding-left: 20vw;
@@ -59,7 +58,6 @@ Description: Styling specific for mobile
 /*
 Description: Styling for desktop and mobile
 */
-
 
 a {
     background-color: black;
