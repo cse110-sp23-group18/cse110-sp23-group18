@@ -15,6 +15,7 @@ Meeting Type: Work Meeting
 -   Kavi
 -   Shuyi
 -   Yulei
+-   Fangyu
 
 ### Agenda / Tasks
 
