@@ -1,0 +1,166 @@
+/*
+Description: Styling specific for mobile
+*/
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        height: 30vh;
+    }
+    .header h1 {
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .frame-one-container {
+    }
+    .teacup img {
+        max-width: 30%;
+        position: relative;
+        left: 35vw;
+        top: -1vh;
+        height: auto;
+    }
+    .teapot img {
+        position: sticky;
+        position: relative;
+        max-width: 30%;
+        left: 145px;
+        top: -85px;
+        height: auto;
+    }
+
+    .teajar-oolong img {
+        position: relative;
+        width: 100%;
+        transition: opacity 0.2s;
+    }
+
+    .teajar-green img {
+        position: relative;
+        width: 100%;
+    }
+
+    .teajar-matcha img {
+        position: relative;
+        width: 100%;
+    }
+
+    a {
+        margin-top: 3rem;
+        text-decoration: none;
+    }
+}
+
+/*
+Description: Styling specific for desktop and mobile
+*/
+
+.frame-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.frame-one-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.item {
+    display: flex;
+    flex: 1;
+    align-self: auto;
+}
+
+.teajar-green img:hover {
+    transform: scale(1.2);
+}
+.teajar-oolong img:hover {
+    transform: scale(1.2);
+}
+.teajar-matcha img:hover {
+    transform: scale(1.2);
+}
+
+/* CSS for the flickering effect */
+.flicker-effect {
+    transform: scale(1.15);
+    animation: flicker 0.5s;
+    /* animation-iteration-count: infinite; */
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*
+Description: Styling specific for desktop
+*/
+@media (min-width: 769px) {
+    header h1 {
+        position: relative;
+        text-align: center;
+        font-size: 40px;
+        top: 22vh;
+    }
+    header h2 {
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+        top: 22vh;
+    }
+
+    .teapot img {
+        position: relative;
+        max-width: 15%;
+        height: auto;
+        top: 11vh;
+        left: 46vw;
+    }
+    .teacup img {
+        max-width: 7%;
+        position: relative;
+        height: auto;
+        bottom: 2vh;
+        left: 28vw;
+    }
+
+    .teajar-oolong img {
+        position: relative;
+        width: 70%;
+        transition: opacity 0.2s;
+    }
+
+    .teajar-green img {
+        position: relative;
+        width: 70%;
+    }
+
+    .teajar-matcha img {
+        position: relative;
+        width: 70%;
+    }
+
+    a {
+        padding: 10px;
+        left: 80vw;
+        bottom: 5vh;
+        position: relative;
+        text-align: center;
+        font-size: 4vw;
+    }
+}

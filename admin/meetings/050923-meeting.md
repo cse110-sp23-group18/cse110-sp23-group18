@@ -19,9 +19,9 @@ Meeting Type: Reworking our Pitch
 
 ### Agenda / Tasks
 
--   [x] Rework Pitch Main Topic
--   [x] Brainstorm Features to be Implemented
--   [x] Make New Project Pitch Presentation
+-   Rework Pitch Main Topic
+-   Brainstorm Features to be Implemented
+-   Make New Project Pitch Presentation
 
 ## Minutes
 

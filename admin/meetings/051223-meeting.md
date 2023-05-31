@@ -4,7 +4,7 @@
 
 Location: Giesel 1st East
 Time: Friday, May 12 4:00pm
-Meeting Type: Reworking our Pitch
+Meeting Type: Creating Teams and Delegating Work
 
 ### Attendance
 
@@ -19,14 +19,10 @@ Meeting Type: Reworking our Pitch
 
 ### Agenda / Tasks
 
--   [ ] Delegation of work
--   [ ] Assigning the issues to people
+-   Delegation of work
+-   Assigning the issues to people
 
 ## Minutes
-
-### Links to Important Documents
-
--   [Google Docs with more details](https://docs.google.com/document/d/1JezWzzdS7xpDPmtYzGWAP4wgzL_Lw-7Lxp0NKwXPNgI/edit#)
 
 ### Topics Discussed in meeting
 

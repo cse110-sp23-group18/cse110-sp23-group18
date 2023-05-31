@@ -10,8 +10,6 @@
  * 10 responses, all with different tones, each corresponding with different images.
  * Adding to this adds to total number of responses.
  */
-
-
 const PREDICTIONS = [
     {
         text: 'Ah, a fish shape. The tea leaves reveal a wild journey ahead in overseas relations. Success is your destiny!',
@@ -75,10 +73,6 @@ function prediction() {
     const predictionPic = PREDICTIONS[randomNumber].picture;
     const predictPicEl = document.querySelector('#predictionImg');
     predictPicEl.src = predictionPic;
-
-    const predictionEl = document.querySelector('.prediction');
-    predictionEl.appendChild(predictionTxtEl);
-    predictionEl.appendChild(predictPicEl);
 }
 
 /**
@@ -92,5 +86,3 @@ function init() {
 }
 
 window.addEventListener('DOMContentLoaded', init);
-
-module.exports = prediction;
