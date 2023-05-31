@@ -38,11 +38,17 @@ function liftTeapot() {
                     teapot.style.transform = 'translateY(0) scale(0.8)'; // Move teapot back to original position and scale down to 80%
                     setTimeout(() => {
                         teapotImage.addEventListener('click', liftTeapot);
-                    }, 800);
+                        // Transition to next HTML Frame
+                        setTimeout(() => {
+                            location.href="./frame4.html";
+                        }, 400)
+                    }, 1600);
                 }, 800); // Adjust the delay as needed (1s = 1000ms)
             }, 3500); // Adjust the delay as needed (1s = 1000ms)
         }, 1000); // Adjust the delay as needed (1s = 1000ms)
-    }, 10);
+    }, 90);
+
+    
 }
 
 window.onload = function () {

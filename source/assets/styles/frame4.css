@@ -2,35 +2,38 @@
 Description: Styling specific for mobile
 */
 @media (max-width: 768px) {
+    .header {
+        height: 30vh;
+    }
+    h1 {
+        text-align: center;
+    }
     h2 {
-        font-size: 17px;
-        top: -60px;
+        margin-top: 4.8rem;
+        font-size: 20px;
+        text-align: center;
     }
 
     .teapot img {
-        position: sticky;
         position: relative;
-        max-width: 28%;
-        left: 150px;
-        top: -88px;
+        max-width: 30%;
+        left: 38vw;
+        top: calc(160px - 30vh);
         height: auto;
     }
 
     .teacup img {
-        max-width: 40%;
-        position: relative;
+        max-width: 35%;
         height: auto;
         position: relative;
-        top: 10px;
-        left: 120px;
-        transition: transform 1.5s ease-in-out;
+        left: 32vw;
+        top: 10vh;
     }
 
     a {
         position: relative;
-        top: 13vh;
-        left: 40%;
-        right: 40%;
+        top: 16vh;
+        text-decoration: none;
     }
 }
 .teacup img.enlarged {
