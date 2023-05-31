@@ -27,6 +27,19 @@
     "description": "Fortune telling tea reading website made by Team Apollo",
     "version": "1.0.0",
     "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "lint": "npx eslint ./source/ --fix && npx stylelint ./source/**/*.css --fix",
+        "version": "auto-changelog -p && git add CHANGELOG.md",
+        "jsdoc2md": "find ./source/ -name \"*.js\" -exec jsdoc2md {} \\; > ./docs/devdocs.md;",
+        "jsdocjs": "jsdoc -a all -c jsdoc.json -r ./source/ -d docs/jsdoc --verbose",
+        "jsdoc": "npm run jsdoc2md"
+    },
+    "jest": {
+        "preset": "jest-puppeteer",
+        "verbose": true,
+        "testRegex": "./source/assets/test/*.*.js$"
+    },
     "dependencies": {
         "acorn": "^8.8.2",
         "acorn-jsx": "^5.3.2",
@@ -53,6 +66,7 @@
         "callsites": "^3.1.0",
         "chalk": "^4.1.2",
         "chardet": "^0.7.0",
+        "chromium": "^3.0.3",
         "cli-cursor": "^3.1.0",
         "cli-width": "^3.0.0",
         "color-convert": "^2.0.1",
@@ -256,14 +270,6 @@
         "wrappy": "^1.0.2",
         "write": "^1.0.3",
         "yocto-queue": "^0.1.0"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "npx eslint ./source/ --fix && npx stylelint ./source/**/*.css --fix",
-        "version": "auto-changelog -p && git add CHANGELOG.md",
-        "jsdoc2md": "find ./source/ -name \"*.js\" -exec jsdoc2md {} \\; > ./docs/devdocs.md;",
-        "jsdocjs": "jsdoc -a all -c jsdoc.json -r ./source/ -d docs/jsdoc --verbose",
-        "jsdoc": "npm run jsdoc2md"
     },
     "author": "Team Apollo",
     "license": "ISC"
