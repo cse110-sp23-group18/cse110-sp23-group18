@@ -15,8 +15,12 @@ function init() {
 
     teapotEle.addEventListener('click', () => {
         teapotEle.src = 'assets/images/gifs/teapotSteaming.gif';
-        linkEle.style.display = 'inline';
+        //linkEle.style.display = 'inline';
+        setTimeout(() => { location.href="./frame3.html" }, 5000);
+        
     });
+
 }
 
 window.addEventListener('DOMContentLoaded', init);
+
