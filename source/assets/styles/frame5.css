@@ -74,6 +74,7 @@ a:hover {
 
 body {
     background-color: white;
+    background-image: none;
     /*background-image: url('../images/backgrounds/backgroundDesktop.png');
     background-size: 105%;
     background-repeat: no-repeat;*/
