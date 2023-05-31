@@ -1,4 +1,4 @@
-const prediction = require('./source/assets/scripts/prediction.js');
+const prediction = require('../scripts/prediction.js');
 
 describe('prediction', () => {
     it('should update the prediction text and image elements with a random prediction', () => {
