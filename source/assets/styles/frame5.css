@@ -6,51 +6,75 @@ Description: Styling specific for mobile
         position: relative;
         text-align: center;
     }
+
     h2 {
         position: relative;
         text-align: center;
         font-size: 110%;
     }
 
-    a{
-        background-color:black;
-        color:white;
+    a {
+        background-color: black;
+        color: white;
         border-radius: 15px;
-        padding-top: 2mm;
-        padding-bottom: 2mm;
-        padding-right: 4mm;
-        padding-left: 4mm;
+        padding: 2mm 4mm;
 
         position: relative;
         top: 20vh;
         font-weight: bold;
         font-size: 20px;
     }
-
 }
 
 /*
 Description: Styling specific for desktop and mobile
 */
-button:hover, a:hover{
+button:hover,
+a:hover {
     background-color: rgb(238, 205, 19);
 }
-.prediction{
+
+.prediction {
     position: relative;
     display: relative;
     margin-left: auto;
     margin-right: auto;
     max-width: 90vw;
 }
-.prediction img {
+
+.image-layers {
     position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 90%;
+    display: relative;
+    width: 90vw;
+    height: 90vw;
 }
-body{
+
+.image-overlay {
+    position: absolute;
+    max-width: 100%;
+    z-index: 2;
+}
+
+.image-predict {
+    position: absolute;
+    max-width: 50%;
+    left: 25%;
+    top: 25%;
+    z-index: 1;
+}
+
+@keyframes playOnce {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000px 0;
+    }
+}
+
+body {
     background-color: white;
+    background-image: none;
     /*background-image: url('../images/backgrounds/backgroundDesktop.png');
     background-size: 105%;
     background-repeat: no-repeat;*/
@@ -60,7 +84,7 @@ body{
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-    .prediction img{
+    .prediction img {
         width: 90vw;
     }
 }
