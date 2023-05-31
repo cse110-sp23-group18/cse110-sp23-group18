@@ -66,6 +66,7 @@ a {
     position: relative;
     color: white;
     font-weight: bold;
+    text-decoration: none;
 }
 
 button:hover,
