@@ -29,6 +29,11 @@ function init() {
         toggleSize();
         link.style.display = 'inline';
     });
+
+    const startButton = document.querySelector('#next');
+    startButton.addEventListener('click', () => {
+        localStorage.setItem('frame4', 'true');
+    });
 }
 
 window.addEventListener('DOMContentLoaded', init);

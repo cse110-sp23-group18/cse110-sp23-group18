@@ -3,7 +3,7 @@
  * There is a designated set of responses that can be added/removed from.
  *
  * @author Kavi Nelakonda (May 14, 2023)
- * Last modified by: Kavi Nelakonda (May 29, 2023)
+ * Last modified by: Kavi Nelakonda (May 31, 2023)
  */
 
 /**
@@ -55,22 +55,31 @@ const PREDICTIONS = [
 
 const PREDICTION_COUNT = Object.keys(PREDICTIONS).length;
 
+function allFramesReached() {
+    return (
+        localStorage.getItem('index') === 'true' &&
+        localStorage.getItem('frame1') === 'true' &&
+        localStorage.getItem('frame2') === 'true' &&
+        localStorage.getItem('frame3') === 'true' &&
+        localStorage.getItem('frame4') === 'true'
+    );
+}
+
 /**
  * Generates a random number, uses the number as a key to find a response.
  * Response text is put in the response element that is generated if it does not exist.
  * Picture associated with the response is put in an image elemtn that is generated if it does not exist.
  *
- * Last Modified by: Kavi Nelakonda (May 29, 2023)
+ * Last Modified by: Kavi Nelakonda (May 31, 2023)
  * @returns void
  */
 function prediction() {
-    console.log(localStorage.length);
     let predictionTxt;
     let predictionPic;
     const predictionTxtEl = document.querySelector('#prediction-txt');
-    const predictPicEl = document.querySelector('#predictionImg');
+    const predictPicEl = document.querySelector('#prediction-img');
 
-    if (localStorage.length === 0) {
+    if (allFramesReached()) {
         const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
         predictionTxt = PREDICTIONS[randomNumber].text;
         predictionPic = PREDICTIONS[randomNumber].picture;
@@ -84,15 +93,16 @@ function prediction() {
     predictPicEl.src = localStorage.getItem('picture');
 
     const predictionEl = document.querySelector('.prediction');
-    predictionEl.appendChild(predictionTxtEl);
     predictionEl.appendChild(predictPicEl);
+    predictionEl.appendChild(predictionTxtEl);
+    localStorage.setItem('index', 'false');
 }
 
 /**
  * Loads up the prediction with the image.
  * Loads up the button that restarts the project and clears local storage.
  *
- * Last Modified by: Kavi Nelakonda (May 29, 2023)
+ * Last Modified by: Kavi Nelakonda (May 30, 2023)
  * @returns void
  */
 function init() {
@@ -101,6 +111,10 @@ function init() {
     //     localStorage.clear();
     // });
     prediction();
+    const restartButton = document.querySelector('#restart');
+    restartButton.addEventListener('click', () => {
+        localStorage.setItem('index', 'false');
+    });
 }
 
 window.addEventListener('DOMContentLoaded', init);
