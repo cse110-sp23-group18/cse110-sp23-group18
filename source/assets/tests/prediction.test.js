@@ -1,18 +1,17 @@
-// Import the necessary modules/functions for testing
-const { prediction, PREDICTIONS } = require('.source/assets/scripts/prediction.js');
+const prediction = require('./source/assets/scripts/prediction.js');
 
 // Mock the necessary DOM elements and properties
 document.querySelector = jest.fn((selector) => {
   if (selector === '#predictionTxt') {
-    return {
+      return {
       innerHTML: '',
     };
   } else if (selector === '#predictionImg') {
-    return {
+      return {
       src: '',
     };
   } else if (selector === '.prediction') {
-    return document.createElement('div');
+      return document.createElement('div');
   }
 });
 

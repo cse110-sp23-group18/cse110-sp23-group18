@@ -53,6 +53,7 @@
         "callsites": "^3.1.0",
         "chalk": "^4.1.2",
         "chardet": "^0.7.0",
+        "chromium": "^3.0.3",
         "cli-cursor": "^3.1.0",
         "cli-width": "^3.0.0",
         "color-convert": "^2.0.1",
@@ -267,7 +268,8 @@
     },
     "jest": {
         "preset": "jest-puppeteer",
-        "verbose": true
+        "verbose": true,
+        "testRegex": "./source/assets/test/*.*.js$"
     },
     "author": "Team Apollo",
     "license": "ISC"
