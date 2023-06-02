@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset='UTF-8' />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <link rel='shortcut icon' href='assets/images/teacup/teacupSide.png' type='image/png' />
-        <title>Tasseography</title>
 
-        <!-- Main Stylesheet & Scripts-->
+<head>
+    <meta charset='UTF-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='shortcut icon' href='assets/images/teacup/teacupSide.png' type='image/png' />
+    <title>Tasseography</title>
 
-        <link rel='stylesheet' href='./assets/styles/global.css'/>
-        <link rel='stylesheet' href='./assets/styles/frame3.css'/>
-        <script src='./assets/scripts/frame3.js' type='module'></script>
+    <!-- Main Stylesheet & Scripts-->
 
-    </head>
-    
-    <body>
-        <header>
-            <h1>Step 3:</h1>
-            <h2>Click kettle to pour water</h2>
-        </header>
-        <main>
-            <section id="frame3">
-                <div class="frame3-container">
-                    <div class="teacup item">
-                        <img src='assets/images/teacup/teacupSide.png' alt='sideview of teacup' class/>
-                    </div>
-                    <div class="teapot item">
-                        <img src='assets/images/teapot/teapotEmpty.png' alt='empty teapot' class = 'teapot_img' />
-                    </div>
+    <link rel='stylesheet' href='./assets/styles/global.css' />
+    <link rel='stylesheet' href='./assets/styles/frame3.css' />
+    <script src='./assets/scripts/frame3.js' type='module'></script>
+
+</head>
+
+<body>
+    <main>
+        <section id="frame3">
+            <div class="header">
+                <h1>Step 3:</h1>
+                <h2>Click kettle to pour water</h2>
+            </div>
+            <div class="frame3-container">
+                <div class="teacup item">
+                    <img src='assets/images/teacup/teacupSide.png' alt='sideview of teacup' />
                 </div>
-            </section>
-        </main>
-        <a href="frame4.html" title="Go to frame 4">Next</a>
-    </body>
+                <div class="teapot item">
+                    <img src='assets/images/teapot/teapotEmpty.png' alt='empty teapot' class='teapotImg'
+                        id="teapotImage" />
+                    <img src="assets/images/gifs/teapotPouring.gif" alt='Pouring' id="pouringImage" class="hidden">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!---<a href="frame4.html" title="Go to frame 4">Next</a> -->
+</body>
+
 </html>
