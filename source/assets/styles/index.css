@@ -1,19 +1,19 @@
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .website-title {
-  padding-top: 14vh;
+    padding-top: 14vh;
 }
 
 main {
-  margin-top: 36vh;
+    margin-top: 36vh;
 }
 
 .start-button a {
-  font-size: 8vw;
-  padding: 10px;
+    font-size: 8vw;
+    padding: 10px;
 }

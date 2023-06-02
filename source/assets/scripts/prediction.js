@@ -3,7 +3,7 @@
  * There is a designated set of responses that can be added/removed from.
  *
  * @author Kavi Nelakonda (May 14, 2023)
- * Last modified by: Kavi Nelakonda (May 26, 2023)
+ * Last modified by: Kavi Nelakonda (May 31, 2023)
  */
 
 /**
@@ -20,7 +20,7 @@ const PREDICTIONS = [
         picture: './assets/images/dredges/heart1.png',
     },
     {
-        text: "In the tea leaves, a tiny worry in the shape of a bug appears. But fear not, it's just a passing whisper.",
+        text: 'In the tea leaves, a tiny worry in the shape of a bug appears. But fear not, it is just a passing whisper.',
         picture: './assets/images/dredges/bug1.png',
     },
     {
@@ -28,7 +28,7 @@ const PREDICTIONS = [
         picture: './assets/images/dredges/key1.png',
     },
     {
-        text: "I see a cloud in the cup. The tea leaves hint at some troubles heading your way soon. But fear not, for challenges are just part of life's wild ride!",
+        text: 'I see a cloud in the cup. The tea leaves hint at some troubles heading your way soon. But fear not, for challenges are just part of life is wild ride!',
         picture: './assets/images/dredges/cloud1.png',
     },
     {
@@ -48,41 +48,73 @@ const PREDICTIONS = [
         picture: './assets/images/dredges/acorn1.png',
     },
     {
-        text: "Oh my, it's of a snake shape. Be careful of any nasty surprises that may come your way.",
+        text: 'Oh my, it is of a snake shape. Be careful of any nasty surprises that may come your way.',
         picture: './assets/images/dredges/snake1.png',
     },
 ];
 
 const PREDICTION_COUNT = Object.keys(PREDICTIONS).length;
 
+function allFramesReached() {
+    return (
+        localStorage.getItem('index') === 'true' &&
+        localStorage.getItem('frame1') === 'true' &&
+        localStorage.getItem('frame2') === 'true' &&
+        localStorage.getItem('frame3') === 'true' &&
+        localStorage.getItem('frame4') === 'true'
+    );
+}
+
 /**
  * Generates a random number, uses the number as a key to find a response.
  * Response text is put in the response element that is generated if it does not exist.
  * Picture associated with the response is put in an image elemtn that is generated if it does not exist.
  *
- * Last Modified by: Kavi Nelakonda (May 25, 2023)
+ * Last Modified by: Kavi Nelakonda (May 31, 2023)
  * @returns void
  */
 function prediction() {
-    const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
+    let predictionTxt;
+    let predictionPic;
+    const predictionTxtEl = document.querySelector('#prediction-txt');
+    const predictPicEl = document.querySelector('#prediction-img');
 
-    const predictionTxt = PREDICTIONS[randomNumber].text;
-    const predictionTxtEl = document.querySelector('#predictionTxt');
-    predictionTxtEl.innerHTML = predictionTxt;
+    if (allFramesReached()) {
+        const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
+        predictionTxt = PREDICTIONS[randomNumber].text;
+        predictionPic = PREDICTIONS[randomNumber].picture;
 
-    const predictionPic = PREDICTIONS[randomNumber].picture;
-    const predictPicEl = document.querySelector('#predictionImg');
-    predictPicEl.src = predictionPic;
+        localStorage.setItem('text', predictionTxt);
+        localStorage.setItem('picture', predictionPic);
+    }
+
+    predictionTxtEl.innerHTML = localStorage.getItem('text');
+
+    predictPicEl.src = localStorage.getItem('picture');
+
+    const predictionEl = document.querySelector('.prediction');
+    predictionEl.appendChild(predictPicEl);
+    predictionEl.appendChild(predictionTxtEl);
+    localStorage.setItem('index', 'false');
 }
 
 /**
  * Loads up the prediction with the image.
+ * Loads up the button that restarts the project and clears local storage.
  *
- * Last Modified by: Kavi Nelakonda (May 25, 2023)
+ * Last Modified by: Kavi Nelakonda (May 30, 2023)
  * @returns void
  */
 function init() {
+    // const restartButton = document.querySelector('#restart');
+    // restartButton.addEventListener('click', function(){
+    //     localStorage.clear();
+    // });
     prediction();
+    const restartButton = document.querySelector('#restart');
+    restartButton.addEventListener('click', () => {
+        localStorage.setItem('index', 'false');
+    });
 }
 
 window.addEventListener('DOMContentLoaded', init);

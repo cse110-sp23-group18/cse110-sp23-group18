@@ -4,7 +4,7 @@
  * the next frame (frame 2)
  *
  * @author Jessie Ouyang (May ??, 2023)
- * Last modified by: Grant Cheng (May 29, 2023)
+ * Last modified by: Kavi Nelakonda (May 31, 2023)
  */
 
 /**
@@ -61,6 +61,11 @@ function init() {
         teaEle.addEventListener('click', () => {
             selectJar(TEAS[tea]);
         });
+    });
+
+    const nextButton = document.querySelector('#next');
+    nextButton.addEventListener('click', () => {
+        localStorage.setItem('frame1', 'true');
     });
 }
 

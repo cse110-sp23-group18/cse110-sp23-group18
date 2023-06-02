@@ -27,8 +27,15 @@ function init() {
     }
     teacupImage.addEventListener('click', () => {
         toggleSize();
-        setTimeout(() => { location.href="./frame5.html" }, 800);
+        setTimeout(() => {
+            window.location.href = './frame5.html';
+        }, 800);
         link.style.display = 'inline';
+    });
+
+    const startButton = document.querySelector('#next');
+    startButton.addEventListener('click', () => {
+        localStorage.setItem('frame4', 'true');
     });
 }
 

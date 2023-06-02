@@ -74,6 +74,10 @@ Description: Styling specific for desktop and mobile
     display: none;
 }
 
+.hidden {
+    display: none;
+}
+
 /*
 Description: Styling specific for desktop
 */

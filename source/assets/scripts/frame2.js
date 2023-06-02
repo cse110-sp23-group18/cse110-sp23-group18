@@ -11,16 +11,14 @@
  */
 function init() {
     const teapotEle = document.getElementById('teapot');
-    const linkEle = document.getElementById('next');
-
+  
     teapotEle.addEventListener('click', () => {
         teapotEle.src = 'assets/images/gifs/teapotSteaming.gif';
-        //linkEle.style.display = 'inline';
-        setTimeout(() => { location.href="./frame3.html" }, 5000);
-        
-    });
-
+        // linkEle.style.display = 'inline';
+        setTimeout(() => {
+            location.href = './frame3.html';
+        }, 5000);
+        localStorage.setItem('frame2', 'true');
 }
 
 window.addEventListener('DOMContentLoaded', init);
-
