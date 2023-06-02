@@ -27,6 +27,9 @@ function init() {
     }
     teacupImage.addEventListener('click', () => {
         toggleSize();
+        setTimeout(() => {
+            window.location.href = './frame5.html';
+        }, 800);
         link.style.display = 'inline';
     });
 

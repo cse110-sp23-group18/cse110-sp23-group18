@@ -43,14 +43,13 @@ function liftTeapot() {
                         teapotImage.addEventListener('click', liftTeapot);
                         // Transition to next HTML Frame
                         setTimeout(() => {
-                            location.href = './frame4.html';
+                            window.location.href = './frame4.html';
                         }, 400);
                     }, 1600);
                 }, 800); // Adjust the delay as needed (1s = 1000ms)
             }, 3500); // Adjust the delay as needed (1s = 1000ms)
         }, 1000); // Adjust the delay as needed (1s = 1000ms)
     }, 90);
-
     localStorage.setItem('frame3', 'true'); // shows that frame 3 has been reached
 }
 
