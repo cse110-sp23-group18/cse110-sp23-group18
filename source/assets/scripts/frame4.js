@@ -12,7 +12,6 @@
  */
 function init() {
     const teacupImage = document.getElementById('teacup');
-    const link = document.getElementById('next');
     let isEnlarged = false;
 
     function toggleSize() {
@@ -27,7 +26,10 @@ function init() {
     }
     teacupImage.addEventListener('click', () => {
         toggleSize();
-        link.style.display = 'inline';
+        localStorage.setItem('frame4', 'true');
+        setTimeout(() => {
+            window.location.href = './frame5.html';
+        }, 800);
     });
 }
 

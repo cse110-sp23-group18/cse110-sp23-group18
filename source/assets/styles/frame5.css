@@ -42,6 +42,12 @@ a:hover {
     max-width: 90vw;
 }
 
+#prediction-img {
+    position: absolute;
+    top: 14%;
+    left: 30%;
+}
+
 .image-layers {
     position: relative;
     display: relative;

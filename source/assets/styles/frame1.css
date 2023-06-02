@@ -79,13 +79,13 @@ Description: Styling specific for desktop and mobile
 }
 
 .teajar-green img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .teajar-oolong img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .teajar-matcha img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* CSS for the flickering effect */

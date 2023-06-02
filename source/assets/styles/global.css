@@ -21,14 +21,6 @@ Description: Styling specific for mobile
 
         font-family: 'Comic Story';
     }
-
-    .start-button a {
-        padding: 10px;
-        top: 50vh;
-        position: relative;
-        text-align: center;
-        font-size: 10vw;
-    }
     /*
     h1 {
         padding-top: 40%;
@@ -58,7 +50,7 @@ Description: Styling specific for mobile
 /*
 Description: Styling for desktop and mobile
 */
-
+/*
 a {
     background-color: black;
     border-radius: 15px;
@@ -67,6 +59,18 @@ a {
     color: white;
     font-weight: bold;
     text-decoration: none;
+}
+*/
+
+a {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    height: 24px;
+    text-align: center;
+    padding: 12px;
 }
 
 button:hover,
