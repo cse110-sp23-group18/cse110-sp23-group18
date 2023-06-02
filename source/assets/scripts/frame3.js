@@ -3,11 +3,14 @@
  * This includes the pouring of the tea from the teapot into the teacup and
  * providing transitions to the next frame (frame 4)
  *
+ * Last Modfied: Kavi Nelakonda, May 31, 2023
  * @author Shuyi Han? (May ??, 2023)
  */
 
 /**
  * The function that animates the lifting and pouring of the teapot
+ *
+ * Last Modified: Kavi Nelakonda (May 31, 2023)
  */
 function liftTeapot() {
     const teapot = document.querySelector('.teapot');
@@ -47,6 +50,7 @@ function liftTeapot() {
             }, 3500); // Adjust the delay as needed (1s = 1000ms)
         }, 1000); // Adjust the delay as needed (1s = 1000ms)
     }, 90);
+    localStorage.setItem('frame3', 'true'); // shows that frame 3 has been reached
 }
 
 window.onload = function () {
