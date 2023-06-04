@@ -12,6 +12,10 @@
  *
  * Last Modified: Kavi Nelakonda (May 31, 2023)
  */
+
+const pouringSound = new Audio();
+pouringSound.src = './assets/audios/pouring_tea.mp3';
+pouringSound.preload = 'auto';
 function liftTeapot() {
     const teapot = document.querySelector('.teapot');
     const teapotImage = document.getElementById('teapotImage');
@@ -50,7 +54,14 @@ function liftTeapot() {
             }, 3500); // Adjust the delay as needed (1s = 1000ms)
         }, 1000); // Adjust the delay as needed (1s = 1000ms)
     }, 90);
+
+    setTimeout(() => {
+        pouringSound.currentTime = 0; // Reset the audio to start from the beginning
+        pouringSound.play();
+    }, 2200);
     localStorage.setItem('frame3', 'true'); // shows that frame 3 has been reached
+
+    // Wait for 2 seconds before playing the pouring tea sound effect
 }
 
 window.onload = function () {
