@@ -1,6 +1,9 @@
 {
     "devDependencies": {
+        "@babel/core": "^7.21.8",
+        "@babel/preset-env": "^7.21.5",
         "auto-changelog": "^2.4.0",
+        "babel-jest": "^27.5.1",
         "docdash": "^2.0.1",
         "eslint": "^8.40.0",
         "eslint-config-airbnb": "^19.0.4",
@@ -12,16 +15,14 @@
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
+        "jest": "^27.5.1",
+        "jest-localstorage-mock": "^2.4.26",
+        "jest-puppeteer": "^6.2.0",
         "jsdoc": "^4.0.2",
         "jsdoc-to-markdown": "^8.0.0",
         "prettier": "^2.8.8",
-        "stylelint-prettier": "^3.0.0",
-        "@babel/core": "^7.21.8",
-        "@babel/preset-env": "^7.21.5",
-        "babel-jest": "^27.5.1",
-        "jest": "^27.5.1",
-        "jest-puppeteer": "^6.2.0",
-        "puppeteer": "^18.1.0"
+        "puppeteer": "^18.1.0",
+        "stylelint-prettier": "^3.0.0"
     },
     "name": "team-apollo-tea-readings",
     "description": "Fortune telling tea reading website made by Team Apollo",
@@ -269,7 +270,10 @@
     "jest": {
         "preset": "jest-puppeteer",
         "verbose": true,
-        "testRegex": "./source/assets/test/*.*.js$"
+        "testRegex": "./source/assets/test/*.*.js$",
+        "setupFilesAfterEnv": [
+            "./jest.setup.js"
+        ]
     },
     "author": "Team Apollo",
     "license": "ISC"
