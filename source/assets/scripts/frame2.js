@@ -1,6 +1,6 @@
 /**
  * @summary This file provides the scripting for the second frame of the file.
- * This includes providing transitions to the next frame (frame 3)
+ * This includes providing transitions to the next frame (frame-3)
  *
  * @author Jessie Ouyang (May ??, 2023)
  * Last modified by: Grant Cheng (May 29, 2023)
