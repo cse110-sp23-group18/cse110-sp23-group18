@@ -63,4 +63,28 @@ Description: Styling specific for desktop and mobile
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
+    .header {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .frame-two-container{
+        position: relative;
+        top: 20vh;
+        left: 13vw;
+        height: 80%;
+        width: auto;
+    }
+    .teapot img{
+        display: flex;
+        position: relative;
+        width: 45%;
+    }
+
+    .teacup img{
+        display: flex;
+        position: relative;
+        width: 40%;
+        top: 5vh;
+    }
 }
