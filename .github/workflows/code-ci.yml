@@ -88,6 +88,10 @@ jobs:
               run: |
                   npm install jest babel-jest @babel/core @babel/preset-env puppeteer jest-puppeteer
 
+            - name: Check deps
+              run: |
+                  ldd chrome | grep not
+
             - name: Run tests
               run: |
                   npm run test
