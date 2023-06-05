@@ -86,7 +86,7 @@ jobs:
 
             - name: Install Jest
               run: |
-                  npm install jest jest-puppeteer
+                  npm install jest babel-jest @babel/core @babel/preset-env puppeteer jest-puppeteer
 
             - name: Run tests
               run: |
