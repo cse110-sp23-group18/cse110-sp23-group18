@@ -21,6 +21,14 @@ const TEAS = {
 let chosenJar = TEAS.none;
 
 /**
+ * Gets the chosenJar variable so that tests can access the variable
+ * @returns the chosenJar variable
+ */
+function getChosenJar() {
+    return chosenJar
+}
+
+/**
  * The function that handles the logic for and animates everything when
  * selecting a jar
  *
@@ -70,3 +78,13 @@ function init() {
 }
 
 window.addEventListener('DOMContentLoaded', init);
+
+try {
+    module.exports = {
+        TEAS,
+        getChosenJar,
+        selectJar,
+    };
+} catch (e) {
+    console.warn('Modules not exported');
+}
