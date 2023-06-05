@@ -74,3 +74,20 @@ jobs:
               uses: github/codeql-action/analyze@v2
               with:
                   category: '/language:${{matrix.language}}'
+    test:
+        name: Run Jest tests
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            security-events: write
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v3
+
+            - name: Install Jest
+              run: |
+                  npm install jest jest-puppeteer
+
+            - name: Run tests
+              run: |
+                  npm run test
