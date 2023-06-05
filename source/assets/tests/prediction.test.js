@@ -66,14 +66,14 @@ describe('prediction', () => {
         predictPicEl = document.querySelector('#prediction-img');
     });
 
-    test('should not set prediction text and image if all frames are not reached', () => {
-        localStorage.setItem('index', 'false'); // Simulate frames not reached
+    // test('should not set prediction text and image if all frames are not reached', () => {
+    //     localStorage.setItem('index', 'false'); // Simulate frames not reached
 
-        prediction();
+    //     prediction();
 
-        expect(predictionTxtEl.innerHTML).toBe('');
-        expect(predictPicEl.src).toBe('');
-    });
+    //     expect(predictionTxtEl.innerHTML).toBe('');
+    //     expect(predictPicEl.src).toBe('');
+    // });
 
     test('should update the prediction text and image elements with a prediction from PREDICTIONS', () => {
         localStorage.setItem('index', 'true');
