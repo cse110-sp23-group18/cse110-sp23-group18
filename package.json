@@ -271,6 +271,7 @@
         "preset": "jest-puppeteer",
         "verbose": true,
         "testRegex": "./source/assets/test/*.*.js$",
+        "testEnvironment": "jsdom",
         "setupFilesAfterEnv": [
             "./jest.setup.js"
         ]

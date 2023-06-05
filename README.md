@@ -17,6 +17,6 @@ Towards the beginning of the quarter, we made an introductory project on an 8-ba
 
 [![Code CI](https://github.com/cse110-sp23-group18/cse110-sp23-group18/actions/workflows/code-ci.yml/badge.svg)](https://github.com/cse110-sp23-group18/cse110-sp23-group18/actions/workflows/code-ci.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/dc9232fe7fd340b7b4848cc51123380b)](https://app.codacy.com/gh/cse110-sp23-group18/cse110-sp23-group18/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Netlify Status](https://api.netlify.com/api/v1/badges/857a8c65-7ba5-4510-b08d-38bb7b81d90a/deploy-status)](https://app.netlify.com/sites/apollo18-tealeaves/deploys)
 
-Tasseography, or tea leaf reading, is the final project of the quarter. This is a fortune-telling application we are building that will give various readings to users. A link to our project can be found [here](https://apollo18-tealeaves.netlify.app/source/index.html).
+Tasseography, or tea leaf reading, is the final project of the quarter. This is a fortune-telling application we are building that will give various readings to users. A link to our project can be found [here](https://apollo18-tealeaves.netlify.app).
 
 For development and contributions to this project, docs can be found [here](./docs/devdocs.md).

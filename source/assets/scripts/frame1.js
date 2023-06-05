@@ -25,7 +25,7 @@ let chosenJar = TEAS.none;
  * @returns the chosenJar variable
  */
 function getChosenJar() {
-    return chosenJar
+    return chosenJar;
 }
 
 /**

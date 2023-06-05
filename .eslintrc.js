@@ -3,7 +3,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
-        jest: true
+        jest: true,
     },
     plugins: ['prettier'],
     extends: ['airbnb', 'prettier', 'plugin:node/recommended'],
@@ -20,4 +20,12 @@ module.exports = {
         'object-shorthand': 'off',
         'class-methods-use-this': 'off',
     },
+    overrides: [
+        {
+            files: ['**/*.test.js'],
+            env: {
+                jest: true,
+            },
+        },
+    ],
 };

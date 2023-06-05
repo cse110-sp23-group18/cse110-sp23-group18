@@ -2,11 +2,7 @@
  * @jest-environment jsdom
  */
 
-const {
-    TEAS,
-    getChosenJar,
-    selectJar,
-} = require('../scripts/frame1');
+const { TEAS, getChosenJar, selectJar } = require('../scripts/frame1');
 
 describe('selectJar', () => {
     let linkEle;
@@ -24,13 +20,13 @@ describe('selectJar', () => {
                 if (selector === '#oolong') {
                     return oolongEle;
                 }
-                else if (selector === '#green') {
+                if (selector === '#green') {
                     return greenEle;
                 }
-                else if (selector === '#matcha') {
+                if (selector === '#matcha') {
                     return matchaEle;
                 }
-                else if (selector === '#next') {
+                if (selector === '#next') {
                     return linkEle;
                 }
 
@@ -59,14 +55,14 @@ describe('selectJar', () => {
         oolongEle = document.querySelector('#oolong');
         greenEle = document.querySelector('#green');
         matchaEle = document.querySelector('#matcha');
-        linkEle = document.querySelector('#next')
+        linkEle = document.querySelector('#next');
     });
 
     test('should select the green jar and cause the continue button to show up', () => {
         // Link element should start off hidden and chosenJar should be none
         expect(linkEle.style.display).toBe('none');
-        expect(getChosenJar()).toBe(TEAS.none)
-        
+        expect(getChosenJar()).toBe(TEAS.none);
+
         // Select the green jar
         selectJar(TEAS.green);
 
@@ -100,7 +96,7 @@ describe('selectJar', () => {
 
         // Verify that the chosenJar is set correctly and that link is hidden
         expect(linkEle.style.display).toBe('none');
-        expect(getChosenJar()).toBe(TEAS.none)
+        expect(getChosenJar()).toBe(TEAS.none);
     });
 
     test('should switch the chosen jar if selected again', () => {
@@ -110,6 +106,6 @@ describe('selectJar', () => {
 
         // Verify that the chosenJar is set correctly and that link is hidden
         expect(linkEle.style.display).toBe('inline');
-        expect(getChosenJar()).toBe(TEAS.matcha)
+        expect(getChosenJar()).toBe(TEAS.matcha);
     });
 });
