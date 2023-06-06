@@ -88,6 +88,8 @@ Description: Styling specific for desktop
         background-size: 105%;
         background-repeat: no-repeat;
         background-position: center;
+
+        font-family: 'Comic Story';
     }
 
     .start-button a {
