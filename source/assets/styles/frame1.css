@@ -9,15 +9,9 @@ Description: Styling specific for mobile
         justify-content: start;
         height: 30vh;
     }
-    .header h1 {
-    }
 
     .header h2 {
         font-size: 20px;
-    }
-
-    .frame-one-container {
-
     }
 
     .teacup img {
@@ -33,6 +27,8 @@ Description: Styling specific for mobile
         max-width: 30%;
         left: 145px;
         top: -85px;
+        left: calc(110px + 4vh);
+        top: calc(190px - 32.5vh);
         height: auto;
     }
 
