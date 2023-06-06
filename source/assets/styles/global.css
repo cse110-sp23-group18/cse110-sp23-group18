@@ -87,7 +87,7 @@ Description: Styling specific for desktop
         background-image: url('../images/backgrounds/backgroundDesktop.png');
         background-size: 105%;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center;
     }
 
     .start-button a {
