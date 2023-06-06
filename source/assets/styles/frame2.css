@@ -74,11 +74,17 @@ Note: still need to implement responsiveness
         flex-direction: row;
         text-align: center;
     }
-    .header h1{
-        font-size: 3vw;
+    .header h1 {
+        position: relative;
+        text-align: center;
+        font-size: 40px;
+        top: -17vh;
     }
-    .header h2{
-        font-size: 2vw;
+    .header h2 {
+        position: relative;
+        text-align: center;
+        font-size: 40px;
+        top: -5vh;
     }
 
     .teapot img{
@@ -86,14 +92,14 @@ Note: still need to implement responsiveness
         position: relative;
         width: 18vw;
         height: auto;
-        bottom: calc(190px - 15vh);
-        left: calc(110px - 15vh);
+        bottom: calc(190px - 8vh);
+        left: calc(110px - 12vh);
     }
 
     .teacup img{
         display: flex;
         position: relative;
-        width: 20vw;
+        width: 18vw;
         height: auto;
         top: calc(70px - 15vh);
     }

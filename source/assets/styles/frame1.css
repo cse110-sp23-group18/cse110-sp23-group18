@@ -126,19 +126,22 @@ Description: Styling specific for desktop
         top: 12vh;
     }
 
-    .teapot img {
+    .teapot img{
+        display: flex;
         position: relative;
-        max-width: 40%;
+        width: 18vw;
         height: auto;
-        top: 10vh;
-        left: 11vw;
+        bottom: calc(190px - 29vh);
+        left: calc(110px - 12vh);
     }
-    .teacup img {
-        max-width: 27%;
+
+    .teacup img{
+        display: flex;
         position: relative;
+        width: 7vw;
         height: auto;
-        bottom: 2vh;
-        left: 28vw;
+        left: calc(110px - 40vh);
+        top: calc(70px - 15vh);
     }
 
     .teajar-oolong img {
@@ -158,17 +161,17 @@ Description: Styling specific for desktop
     }
 
     a {
-        padding: 40px;
+        padding: 30px;
         left: 0vw;
-        bottom: -10vh;
         position: relative;
         text-align: center;
-        font-size: 4vw;
-        border-radius: 15px;
-        height: 24px;
+        font-size: 2.5vw;
+        top: 6px;
+        line-height: 20px;
     }
+
     .frame-one-container {
         margin-top: 10vh;
-        left: 2vw;
+        left: 6vw;
     }
 }
