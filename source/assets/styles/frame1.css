@@ -108,7 +108,6 @@ Description: Styling specific for desktop and mobile
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-
     .header h1 {
         position: relative;
         text-align: center;
@@ -122,7 +121,7 @@ Description: Styling specific for desktop
         top: 12vh;
     }
 
-    .teapot img{
+    .teapot img {
         display: flex;
         position: relative;
         width: 18vw;
@@ -131,7 +130,7 @@ Description: Styling specific for desktop
         left: calc(110px - 12vh);
     }
 
-    .teacup img{
+    .teacup img {
         display: flex;
         position: relative;
         width: 7vw;

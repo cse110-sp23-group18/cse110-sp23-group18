@@ -93,7 +93,8 @@ function prediction() {
     predictPicEl.src = localStorage.getItem('picture');
 
     const predictionEl = document.querySelector('.prediction');
-    predictionEl.appendChild(predictPicEl);
+    const imageLayers = document.querySelector('.image-layers');
+    imageLayers.appendChild(predictPicEl);
     predictionEl.appendChild(predictionTxtEl);
     localStorage.setItem('index', 'false');
 }

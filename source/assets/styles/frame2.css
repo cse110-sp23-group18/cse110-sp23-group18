@@ -64,7 +64,7 @@ Description: Styling specific for desktop
 Note: still need to implement responsiveness
 */
 @media (min-width: 769px) {
-    .frame-two{
+    .frame-two {
         position: relative;
         flex-direction: row;
     }
@@ -87,7 +87,7 @@ Note: still need to implement responsiveness
         top: -5vh;
     }
 
-    .teapot img{
+    .teapot img {
         display: flex;
         position: relative;
         width: 18vw;
@@ -96,7 +96,7 @@ Note: still need to implement responsiveness
         left: calc(110px - 12vh);
     }
 
-    .teacup img{
+    .teacup img {
         display: flex;
         position: relative;
         width: 18vw;

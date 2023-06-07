@@ -97,8 +97,8 @@ Description: Styling specific for desktop
         top: 20px;
         /*top: 5vh;*/
     }
-    
-    .teacup img{
+
+    .teacup img {
         display: flex;
         position: relative;
         width: 35%;
