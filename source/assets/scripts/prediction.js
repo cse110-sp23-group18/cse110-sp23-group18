@@ -4,7 +4,7 @@
  * Requires users to go through every page in order to get a new prediction.
  *
  * @author Kavi Nelakonda (May 14, 2023)
- * Last modified by: Kavi Nelakonda (June 2, 2023)
+ * Last modified by: Kavi Nelakonda (June 6, 2023)
  */
 
 /**
@@ -56,11 +56,10 @@ const PREDICTIONS = [
 
 const PREDICTION_COUNT = Object.keys(PREDICTIONS).length;
 
-
 /**
  * All of the frames are keys associated with a value of true or false in localStorage.
  * The function checks if the value is true for each of these keys.
- * 
+ *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  * @returns true if all frames have been reached, false if not
  */
@@ -77,7 +76,7 @@ function allFramesReached() {
 /**
  * Generates a random number, uses the number as a key to find a response.
  * Response text is put in the response element that is generated if it does not exist.
- * Picture associated with the response is put as an image element source 
+ * Picture associated with the response is put as an image element source
  * that is generated if it does not exist.
  *
  * Last Modified by: Kavi Nelakonda (June 2, 2023)
@@ -97,10 +96,11 @@ function prediction() {
         localStorage.setItem('text', predictionTxt);
         localStorage.setItem('picture', predictionPic);
     }
-    if(localStorage.getItem('text') != null){
+    if (localStorage.getItem('text') != null) {
         predictionTxtEl.innerHTML = localStorage.getItem('text');
     } else {
-        predictionTxtEl.innerHTML = 'You did not go thorugh the proper process!';
+        predictionTxtEl.innerHTML =
+            'You did not go thorugh the proper process!';
     }
     predictPicEl.src = localStorage.getItem('picture');
 
@@ -115,14 +115,14 @@ function prediction() {
  * Loads up the button that restarts the project and
  * index is changed to not visited in localStorage.
  *
- * Last Modified by: Kavi Nelakonda (June 2, 2023)
+ * Last Modified by: Kavi Nelakonda (June 6, 2023)
  * @returns void
  */
 function init() {
     setTimeout(() => {
         prediction();
     }, 3000);
-    
+
     const restartButton = document.querySelector('#restart');
     restartButton.addEventListener('click', () => {
         localStorage.setItem('index', 'false');
@@ -131,6 +131,9 @@ function init() {
 
 window.addEventListener('DOMContentLoaded', init);
 
+/**
+ * Allows testing files to be able access the functions.
+ */
 try {
     module.exports = {
         prediction,

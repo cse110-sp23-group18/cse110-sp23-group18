@@ -2,7 +2,7 @@
  * @summary This file provides the scripting for the third frame of the file.
  * This includes the pouring of the tea from the teapot into the teacup and
  * providing transitions to the next frame (frame 4)
- * 
+ *
  * @author Shuyi Han? (May ??, 2023)
  * Last Modfied: Kavi Nelakonda, June 2, 2023
  */
@@ -11,7 +11,7 @@
  * The function that animates the lifting and pouring of the teapot
  * After the animation is over, the frame is changed to visited in localStroage, and
  * the user is moved to frame 4.
- * 
+ *
  * Last Modified: Kavi Nelakonda (June 2, 2023)
  */
 function liftTeapot() {

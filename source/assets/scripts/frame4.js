@@ -11,7 +11,7 @@
  * The initialization function that runs when the window loads
  * When the teacup is clicked, frame 4 is changed visited in localStroage
  * and the user is moved to frame 5
- * 
+ *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  * @returns void
  */

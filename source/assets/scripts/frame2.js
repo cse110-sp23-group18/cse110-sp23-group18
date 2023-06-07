@@ -9,7 +9,7 @@
 /**
  * The initialization function that runs when the window loads
  * The gif runs, and then frame 2 is changed to visited in localStorage
- * 
+ *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
 function init() {

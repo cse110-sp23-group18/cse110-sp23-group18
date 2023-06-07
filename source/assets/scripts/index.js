@@ -8,7 +8,7 @@
 /**
  * @summary The javascript file associated with the opening page of the program. init is called on load
  * All the other frames are changed to having not been visited.
- * 
+ *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
 function init() {
