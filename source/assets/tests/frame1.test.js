@@ -1,92 +1,114 @@
-// Import the necessary dependencies for testing
-const jsdom = require('jsdom');
+/**
+ * @jest-environment jsdom
+ */
 
-// Load the file and create a virtual DOM
-const html = `
-<!DOCTYPE html>
-<html>
-  <body>
-    <div id="oolong"></div>
-    <div id="matcha"></div>
-    <div id="green"></div>
-    <a id="next"></a>
-  </body>
-</html>
-`;
-const window  = new jsdom(html);
-global.document = window.document;
-global.window = window;
-
-// Load the file for testing
-const { selectJar, init, TEAS } = require('./source/assets/scripts/frame1.js');
+const { TEAS, getChosenJar, selectJar } = require('../scripts/frame1');
 
 describe('selectJar', () => {
-  beforeEach(() => {
-    // Reset chosenJar to none before each test
-    chosenJar = TEAS.none;
+    let linkEle;
+    let oolongEle;
+    let greenEle;
+    let matchaEle;
 
-    // Reset the classList and style for each tea element
-    Object.keys(TEAS).forEach((tea) => {
-      const teaEle = document.getElementById(TEAS[tea]);
-      teaEle.classList.remove('flicker-effect');
-      teaEle.style.transform = 'scale(1)';
+    beforeEach(() => {
+        jest.resetModules();
+
+        // Mock the necessary global objects
+        global.document = {
+            body: document.createElement('body'),
+            querySelector: jest.fn().mockImplementation((selector) => {
+                if (selector === '#oolong') {
+                    return oolongEle;
+                }
+                if (selector === '#green') {
+                    return greenEle;
+                }
+                if (selector === '#matcha') {
+                    return matchaEle;
+                }
+                if (selector === '#next') {
+                    return linkEle;
+                }
+
+                return null;
+            }),
+        };
+
+        document.body.innerHTML = `
+            <div class="frame-one-container">
+                <div class='teajar-oolong' id="oolong">
+                    <img src="assets/images/teajars/oolongJar.png" class='oolong' id="oolong" />
+                    <!--<button id="oolong_tea">Oolong Tea</button>-->
+                </div>
+                <div class='teajar-green' id="green">
+                    <img src="assets/images/teajars/greenJar.png" class='green' id="green" />
+                    <!--<button id='green_tea'>Green Tea</button>-->
+                </div>
+                <div class='teajar-matcha' id="matcha">
+                    <img src="assets/images/teajars/matchaJar.png" class='matcha' id="matcha" />
+                    <!--<button id='matcha_tea'>Matcha Tea</button>-->
+                </div>
+            </div>
+            <a href='frame2.html' title='Go to frame 2' id='next' style="display: none;">Confirm Selection</a>
+        `;
+
+        oolongEle = document.querySelector('#oolong');
+        greenEle = document.querySelector('#green');
+        matchaEle = document.querySelector('#matcha');
+        linkEle = document.querySelector('#next');
     });
 
-    // Reset the display style for the link element
-    const linkEle = document.getElementById('next');
-    linkEle.style.display = 'none';
-  });
+    test('should select the green jar and cause the continue button to show up', () => {
+        // Link element should start off hidden and chosenJar should be none
+        expect(linkEle.style.display).toBe('none');
+        expect(getChosenJar()).toBe(TEAS.none);
 
-  test('should select a tea jar and update the chosenJar value', () => {
-    selectJar(TEAS.oolong);
+        // Select the green jar
+        selectJar(TEAS.green);
 
-    expect(chosenJar).toBe(TEAS.oolong);
-  });
+        // Verify that the chosenJar is set correctly and that link is shown
+        expect(getChosenJar()).toBe(TEAS.green);
+        expect(linkEle.style.display).toBe('inline');
+    });
 
-  test('should deselect a tea jar and set chosenJar to none', () => {
-    chosenJar = TEAS.oolong;
-    selectJar(TEAS.oolong);
+    test('should select the matcha jar and cause the continue button to show up', () => {
+        // Select the matcha jar
+        selectJar(TEAS.matcha);
 
-    expect(chosenJar).toBe(TEAS.none);
-  });
+        // Verify that the chosenJar is set correctly and that link is shown
+        expect(getChosenJar()).toBe(TEAS.matcha);
+        expect(linkEle.style.display).toBe('inline');
+    });
 
-  test('should update the style and classList of selected tea jar', () => {
-    selectJar(TEAS.matcha);
+    test('should select the oolong jar and cause the continue button to show up', () => {
+        // Select the oolong jar
+        selectJar(TEAS.oolong);
 
-    const selectedTeaEle = document.getElementById(TEAS.matcha);
-    const deselectedTeaEle = document.getElementById(TEAS.oolong);
+        // Verify that the chosenJar is set correctly and that link is shown
+        expect(getChosenJar()).toBe(TEAS.oolong);
+        expect(linkEle.style.display).toBe('inline');
+    });
 
-    expect(selectedTeaEle.style.transform).toBe('scale(1.5)');
-    expect(selectedTeaEle.classList.contains('flicker-effect')).toBe(true);
-    expect(deselectedTeaEle.style.transform).toBe('scale(1)');
-    expect(deselectedTeaEle.classList.contains('flicker-effect')).toBe(false);
-  });
+    test('should deselect the jar if selected again', () => {
+        // Select the green jar twice
+        selectJar(TEAS.green);
+        selectJar(TEAS.green);
 
-  test('should display the link element when a tea jar is selected', () => {
-    selectJar(TEAS.green);
+        // Verify that the chosenJar is set correctly and that link is hidden
+        expect(linkEle.style.display).toBe('none');
+        expect(getChosenJar()).toBe(TEAS.none);
+    });
 
-    const linkEle = document.getElementById('next');
+    test('should switch the chosen jar if selected again', () => {
+        // Select the green jar then the matcha jar
+        selectJar(TEAS.green);
+        selectJar(TEAS.matcha);
 
-    expect(linkEle.style.display).toBe('inline');
-  });
-
-  test('should hide the link element when a tea jar is deselected', () => {
-    chosenJar = TEAS.green;
-    selectJar(TEAS.green);
-
-    const linkEle = document.getElementById('next');
-
-    expect(linkEle.style.display).toBe('none');
-  });
+        // Verify that the chosenJar is set correctly and that link is hidden
+        expect(linkEle.style.display).toBe('inline');
+        expect(getChosenJar()).toBe(TEAS.matcha);
+    });
 });
-
-describe('init', () => {
-  test('should add event listeners to all tea jars', () => {
-    init();
-
-    Object.keys(TEAS).forEach((tea) => {
-      const teaEle = document.getElementById(TEAS[tea]);
-      teaEle.click();
 
       expect(chosenJar).toBe(TEAS[tea]);
     });

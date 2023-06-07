@@ -1,69 +1,108 @@
-body{
-    margin-top: 150px;
-    height: 100%;
-    width: 100%;
-    background-image: url('./assets/images/backgrounds/backgroundMobile.png');
-    background-color: rgb(224, 224, 224);
-    display: grid;
+/* 
+Font Face Declaration
+*/
+
+@font-face {
+    font-family: 'Comic Story';
+    src: url(../fonts/comic_story.ttf);
 }
 
-h1{
+/*
+Description: Styling specific for mobile
+*/
+
+@media (max-width: 768px) {
+    /* Adjust the maximum width as needed */
+    body {
+        background-size: contain;
+        background-image: url('../images/backgrounds/backgroundMobile.png');
+        background-size: 100vw;
+        background-repeat: no-repeat;
+
+        font-family: 'Comic Story';
+    }
+    /*
+    h1 {
+        padding-top: 40%;
+        padding-left: 20vw;
+        position: relative;
+        top: -40px;
+        text-align: center;
+        left: -50px;
+        font-size: 10vx;
+    }
+    h2 {
+        position: relative;
+        top: -50px;
+        text-align: center;
+    }
+    */
+
+    h1 {
+        margin-right: 1.5rem;
+    }
+
+    h2 {
+        margin-top: 3.2rem;
+    }
+}
+
+/*
+Description: Styling for desktop and mobile
+*/
+/*
+a {
+    background-color: black;
+    border-radius: 15px;
+    padding: 2% 4%;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+*/
+
+a {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    height: 24px;
     text-align: center;
-    margin: 15px;
-    padding: 15px;
-    font-size: 60px;
+    padding: 12px;
 }
 
-h2,h3{
-    text-align: center;
-    color: black;
-    margin: 5px;
-}
-
-
-button:hover, a:hover{
+button:hover,
+a:hover {
     background-color: rgb(238, 205, 19);
 }
 
-a{
-    background-color:rgb(70, 109, 47);
-    border-radius: 15px;
-    padding-top: 3mm;
-    padding-bottom: 3mm;
-    padding-right: 6mm;
-    padding-left: 6mm;
-    font-weight: bold;
-    font-size: 50px;
-    color:beige;
-}
+/*
+Description: Styling specific for desktop
+*/
+@media (min-width: 769px) {
+    body {
+        background-size: contain;
+        background-image: url('../images/backgrounds/backgroundDesktop.png');
+        background-size: 105%;
+        background-repeat: no-repeat;
+    }
 
-.button-container {
-    background-color: beige;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-}
+    .start-button a {
+        padding: 10px;
+        bottom: 25vh;
+        left: 45vw;
+        position: relative;
+        text-align: center;
+        font-size: 4vw;
+    }
 
-button{
-    background-color: transparent;
-    border-radius: 15px;
-    font-size: 40px;
-    padding: 10px;
-    margin: 15px;
-
-}
-
-.teajar_oolong{
-    background-image: url('./assets/images/teajars/Oolong.png');
-    background-repeat: none;
-    background-size: cover;
-}
-.teajar_green{
-    background-image: url('./assets/images/teajars/Green.png');
-}
-.teajar_matcha{
-    background-image: url('./assets/images/teajars/Matcha.png');
-}
-
-#frame1 .teapot{
+    .website_title {
+        padding: 25%;
+        position: relative;
+        text-align: center;
+        font-size: 250%;
+        bottom: 15vh;
+    }
 }
