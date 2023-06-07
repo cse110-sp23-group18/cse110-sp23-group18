@@ -38,7 +38,7 @@ describe('Basic user flow for Website', () => {
         const nextLink = await page.$('.start-button');
         await nextLink.click();
 
-        localStorage = await page.evaluate(() => (Object.assign({}, window.localStorage)));
+        localStorage = await page.evaluate(() => ({ ...window.localStorage }));
 
         expect(localStorage.index).toBe('true');
 
