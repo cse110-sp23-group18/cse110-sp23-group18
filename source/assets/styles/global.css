@@ -50,17 +50,6 @@ Description: Styling specific for mobile
 /*
 Description: Styling for desktop and mobile
 */
-/*
-a {
-    background-color: black;
-    border-radius: 15px;
-    padding: 2% 4%;
-    position: relative;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-*/
 
 a {
     color: white;
@@ -73,6 +62,7 @@ a {
     padding: 12px;
 }
 
+/* hover */
 button:hover,
 a:hover {
     background-color: rgb(238, 205, 19);
@@ -89,6 +79,7 @@ Description: Styling specific for desktop
         background-repeat: no-repeat;
     }
 
+    /* start bubtton styling */
     .start-button a {
         padding: 10px;
         bottom: 25vh;
@@ -98,6 +89,7 @@ Description: Styling specific for desktop
         font-size: 4vw;
     }
 
+    /* title styling */
     .website_title {
         padding: 25%;
         position: relative;
