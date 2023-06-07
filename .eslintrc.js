@@ -29,6 +29,6 @@ module.exports = {
         },
     ],
     globals: {
-        page: "readonly" // Duct-tape fix to prevent linting error on jest-puppeteer test files
-    }
+        page: 'readonly', // Duct-tape fix to prevent linting error on jest-puppeteer test files
+    },
 };
