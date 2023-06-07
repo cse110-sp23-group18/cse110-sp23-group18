@@ -96,7 +96,8 @@ jobs:
             - name: Run tests with Xvfb
               run: |
                   xvfb-run -a npm test
+              env:
+                CI: true
 
             - name: Clean up Xvfb
-              run: |
-                  sudo killall Xvfb
+              uses: bcomnes/cleanup-xvfb@v1
