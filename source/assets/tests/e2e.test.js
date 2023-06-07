@@ -4,7 +4,16 @@
 
 describe('Basic user flow for Website', () => {
     // const BASE_LINK = 'http://127.0.0.1:5500/source' // test locally
-    const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app/source'; // test dev
+    const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
+
+    // The items in local storage
+    const localStorageArray = [
+        'index',
+        'frame1',
+        'frame2',
+        'frame3',
+        'frame4',
+    ];
 
     // First, visit the tasseography website
     beforeAll(async () => {
@@ -17,13 +26,6 @@ describe('Basic user flow for Website', () => {
         console.log('Checking to make sure localStorage is set correctly');
 
         // Find all relevant items in local storage and test them
-        const localStorageArray = [
-            'index',
-            'frame1',
-            'frame2',
-            'frame3',
-            'frame4',
-        ];
         let localStorage = await page.evaluate(() => ({
             ...window.localStorage,
         }));
@@ -34,28 +36,27 @@ describe('Basic user flow for Website', () => {
         // Expect none of the pages to be visited thus far
         expect(numVisited).toBe(0);
 
-        // await page.waitForNavigation();
-        const nextLink = await page.$('.start-button');
-        await nextLink.click();
+        await Promise.all([
+            page.click('a[href="frame1.html"]'),
+            page.waitForNavigation(),
+        ]);
 
         localStorage = await page.evaluate(() => ({ ...window.localStorage }));
 
         expect(localStorage.index).toBe('true');
-
-        const url = page.url();
-
-        console.log(url);
     });
 
-    it('Test the first frame of the app', async () => {});
+    it('Test the first frame of the app', async () => {
 
-    it('Test the second frame of the app', async () => {});
+    });
 
-    it('Test the third frame of the app', async () => {});
+    it('Test the second frame of the app', async () => { });
 
-    it('Test the fourth frame of the app', async () => {});
+    it('Test the third frame of the app', async () => { });
 
-    it('Test the fifth frame of the app', async () => {});
+    it('Test the fourth frame of the app', async () => { });
 
-    it('Test going back to the home page from the fifth frame', async () => {});
+    it('Test the fifth frame of the app', async () => { });
+
+    it('Test going back to the home page from the fifth frame', async () => { });
 });
