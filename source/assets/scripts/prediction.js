@@ -119,7 +119,10 @@ function prediction() {
  * @returns void
  */
 function init() {
-    prediction();
+    setTimeout(() => {
+        prediction();
+    }, 3000);
+    
     const restartButton = document.querySelector('#restart');
     restartButton.addEventListener('click', () => {
         localStorage.setItem('index', 'false');
