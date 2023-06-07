@@ -34,28 +34,28 @@ describe('Basic user flow for Website', () => {
         // Expect none of the pages to be visited thus far
         expect(numVisited).toBe(0);
 
-        await page.waitForNavigation();
+        // await page.waitForNavigation();
         const nextLink = await page.$('.start-button');
         await nextLink.click();
 
-        localStorage = await page.evaluate(() => ({ ...window.localStorage }));
+        localStorage = await page.evaluate(() => (Object.assign({}, window.localStorage)));
 
         expect(localStorage.index).toBe('true');
 
         const url = page.url();
 
-        console.log(url)
+        console.log(url);
     });
 
-    it('Test the first frame of the app', async () => { });
+    it('Test the first frame of the app', async () => {});
 
-    it('Test the second frame of the app', async () => { });
+    it('Test the second frame of the app', async () => {});
 
-    it('Test the third frame of the app', async () => { });
+    it('Test the third frame of the app', async () => {});
 
-    it('Test the fourth frame of the app', async () => { });
+    it('Test the fourth frame of the app', async () => {});
 
-    it('Test the fifth frame of the app', async () => { });
+    it('Test the fifth frame of the app', async () => {});
 
-    it('Test going back to the home page from the fifth frame', async () => { });
+    it('Test going back to the home page from the fifth frame', async () => {});
 });
