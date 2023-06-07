@@ -4,7 +4,7 @@
  * the next frame (frame 2)
  *
  * @author Jessie Ouyang (May ??, 2023)
- * Last modified by: Kavi Nelakonda (May 31, 2023)
+ * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
 
 /**
@@ -33,6 +33,8 @@ function getChosenJar() {
  * selecting a jar
  *
  * @param {string} teaType the type of the tea from the TEAS constant
+ * @auther Jessie Ouyang (May ??, 2023)
+ * Last modified by:
  */
 function selectJar(teaType) {
     const linkEle = document.getElementById('next');
@@ -57,7 +59,11 @@ function selectJar(teaType) {
 }
 
 /**
- * The initialization function that runs when the window loads
+ * The initialization function that runs when the window loads.
+ * When the button to confirm the selection is clicked, frame 1 is changed to visited
+ * in localStorage.
+ *
+ * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
 function init() {
     // adds event listeners to all tea jars
