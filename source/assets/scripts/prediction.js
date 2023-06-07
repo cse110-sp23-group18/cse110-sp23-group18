@@ -118,3 +118,14 @@ function init() {
 }
 
 window.addEventListener('DOMContentLoaded', init);
+
+try {
+    module.exports = {
+        prediction,
+        PREDICTIONS,
+        PREDICTION_COUNT,
+        allFramesReached,
+    };
+} catch (e) {
+    console.warn('Modules not exported');
+}
