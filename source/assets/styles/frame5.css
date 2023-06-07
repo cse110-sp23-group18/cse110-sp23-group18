@@ -76,9 +76,6 @@ a:hover {
 body {
     background-color: white;
     background-image: none;
-    /*background-image: url('../images/backgrounds/backgroundDesktop.png');
-    background-size: 105%;
-    background-repeat: no-repeat;*/
 }
 
 /*
@@ -93,8 +90,11 @@ Description: Styling specific for desktop
     }
 
     .image-layers {
+        position: relative;
         width: 40vh;
         height: 40vh;
+        display: flex;
+        flex-direction: column;
     }
 
     .prediction {
@@ -105,15 +105,18 @@ Description: Styling specific for desktop
     }
 
     .image-predict {
-        position: relative;
+        position: absolute;
         max-width: 50%;
         z-index: 1;
-        top: -75%;
-        left: 0;
+        left: 25%;
+        object-fit: cover;
     }
 
     .image-overlay {
-        position: relative;
+        position: absolute;
         z-index: 2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

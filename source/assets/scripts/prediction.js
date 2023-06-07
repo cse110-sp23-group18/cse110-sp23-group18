@@ -70,7 +70,7 @@ function allFramesReached() {
  * Response text is put in the response element that is generated if it does not exist.
  * Picture associated with the response is put in an image elemtn that is generated if it does not exist.
  *
- * Last Modified by: Kavi Nelakonda (May 31, 2023)
+ * Last Modified by: Grant Cheng (June 6, 2023)
  * @returns void
  */
 function prediction() {
@@ -78,6 +78,7 @@ function prediction() {
     let predictionPic;
     const predictionTxtEl = document.querySelector('#prediction-txt');
     const predictPicEl = document.querySelector('#prediction-img');
+    const revealLayerEl = document.querySelector('#reveal-layer');
 
     if (allFramesReached()) {
         const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
@@ -88,14 +89,16 @@ function prediction() {
         localStorage.setItem('picture', predictionPic);
     }
 
-    predictionTxtEl.innerHTML = localStorage.getItem('text');
-
     predictPicEl.src = localStorage.getItem('picture');
 
-    const predictionEl = document.querySelector('.prediction');
-    const imageLayers = document.querySelector('.image-layers');
-    imageLayers.appendChild(predictPicEl);
-    predictionEl.appendChild(predictionTxtEl);
+    revealLayerEl.style.transition = 'opacity 3s';
+    revealLayerEl.style.opacity = 0;
+
+    setTimeout(() => {
+        revealLayerEl.style.display = 'none';
+        predictionTxtEl.innerHTML = localStorage.getItem('text');
+    }, 3000);
+
     localStorage.setItem('index', 'false');
 }
 
@@ -107,10 +110,6 @@ function prediction() {
  * @returns void
  */
 function init() {
-    // const restartButton = document.querySelector('#restart');
-    // restartButton.addEventListener('click', function(){
-    //     localStorage.clear();
-    // });
     prediction();
     const restartButton = document.querySelector('#restart');
     restartButton.addEventListener('click', () => {
