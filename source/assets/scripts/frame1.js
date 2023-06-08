@@ -21,12 +21,23 @@ const TEAS = {
 let chosenJar = TEAS.none;
 
 /**
+ * The initialization function that runs when the window loads
+ */
+const clickSound = new Audio();
+clickSound.src = './assets/audios/select_type_of_tea.mp3';
+clickSound.preload = 'auto';
+
+const clickNextSound = new Audio();
+clickNextSound.src = './assets/audios/confirm_selection.mp3';
+clickNextSound.preload = 'auto';
+
  * Gets the chosenJar variable so that tests can access the variable
  * @returns the chosenJar variable
  */
 function getChosenJar() {
     return chosenJar;
 }
+
 
 /**
  * The function that handles the logic for and animates everything when
@@ -54,6 +65,8 @@ function selectJar(teaType) {
             teaEle.classList.remove('flicker-effect');
         }
     });
+    clickSound.currentTime = 0; // Reset the audio to start from the beginning
+    clickSound.play();
 
     linkEle.style.display = chosenJar === teaType ? 'inline' : 'none';
 }
@@ -79,6 +92,7 @@ function init() {
 
     const nextButton = document.querySelector('#next');
     nextButton.addEventListener('click', () => {
+        clickNextSound.play();
         localStorage.setItem('frame1', 'true');
     });
 }
