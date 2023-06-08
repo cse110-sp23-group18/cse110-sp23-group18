@@ -128,8 +128,9 @@ Description: Styling specific for desktop
         position: relative;
         width: 18vw;
         height: auto;
-        bottom: calc(190px - 29vh);
-        left: calc(110px - 12vh);
+        top: -12px;
+        /*bottom: calc(190px - 29vh);
+        left: calc(110px - 12vh);*/
     }
 
     .teacup img {
@@ -137,8 +138,10 @@ Description: Styling specific for desktop
         position: relative;
         width: 7vw;
         height: auto;
-        left: calc(70px - 40vh);
-        top: calc(20px - 15vh);
+        left: -200px;
+        top: -90px;
+        /*left: calc(70px - 40vh);
+        top: calc(20px - 15vh);*/
 
     }
 
