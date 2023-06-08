@@ -84,7 +84,9 @@ Note: still need to implement responsiveness
         position: relative;
         text-align: center;
         font-size: 40px;
-        top: -5vh;
+        top: -80px;
+
+        /*top: -5vh;*/
     }
 
     .teapot img {
@@ -92,8 +94,9 @@ Note: still need to implement responsiveness
         position: relative;
         width: 18vw;
         height: auto;
-        bottom: calc(190px - 8vh);
-        left: calc(110px - 12vh);
+        top: -130px;
+        /*bottom: calc(190px - 8vh);
+        left: calc(110px - 12vh);*/
     }
 
     .teacup img {
