@@ -7,13 +7,7 @@ describe('Basic user flow for Website', () => {
     const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
 
     // The items in local storage
-    const localStorageArray = [
-        'index',
-        'frame1',
-        'frame2',
-        'frame3',
-        'frame4',
-    ];
+    const localStorageArray = ['index', 'frame1', 'frame2', 'frame3', 'frame4'];
 
     // First, visit the tasseography website
     beforeAll(async () => {
@@ -46,17 +40,15 @@ describe('Basic user flow for Website', () => {
         expect(localStorage.index).toBe('true');
     });
 
-    it('Test the first frame of the app', async () => {
+    it('Test the first frame of the app', async () => {});
 
-    });
+    it('Test the second frame of the app', async () => {});
 
-    it('Test the second frame of the app', async () => { });
+    it('Test the third frame of the app', async () => {});
 
-    it('Test the third frame of the app', async () => { });
+    it('Test the fourth frame of the app', async () => {});
 
-    it('Test the fourth frame of the app', async () => { });
+    it('Test the fifth frame of the app', async () => {});
 
-    it('Test the fifth frame of the app', async () => { });
-
-    it('Test going back to the home page from the fifth frame', async () => { });
+    it('Test going back to the home page from the fifth frame', async () => {});
 });

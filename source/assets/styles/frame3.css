@@ -5,7 +5,7 @@ Description: Styling specific for mobile
     .header {
         height: 30vh;
     }
-        /* teacup image styling */
+    /* teacup image styling */
     .teacup img {
         max-width: 35%;
         height: auto;
