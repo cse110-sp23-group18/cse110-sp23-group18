@@ -46,6 +46,7 @@ a {
     padding: 12px;
 }
 
+/* hover */
 button:hover,
 a:hover {
     background-color: rgb(238, 205, 19);
@@ -65,6 +66,7 @@ Description: Styling specific for desktop
         font-family: 'Comic Story';
     }
 
+    /* start bubtton styling */
     .start-button a {
         padding: 10px;
         bottom: -10vh;
@@ -74,6 +76,7 @@ Description: Styling specific for desktop
         font-size: 4vw;
     }
 
+    /* title styling */
     .website_title {
         padding: 25%;
         position: relative;

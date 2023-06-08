@@ -5,14 +5,17 @@ body {
     justify-content: space-around;
 }
 
+/* styling for website title */
 .website-title {
     padding-top: 14vh;
 }
 
+/* main margin */
 main {
     margin-top: 36vh;
 }
 
+/* start button styling */
 .start-button a {
     font-size: 5vw;
     padding: 10px;
