@@ -9,15 +9,20 @@ Description: Styling specific for mobile
         justify-content: start;
         height: 30vh;
     }
+    
+    /* h1 styling */
     .header h1 {
     }
 
+    /* h2 styling */
     .header h2 {
         font-size: 20px;
     }
 
+    /* frame 1 styling */
     .frame-one-container {
     }
+    /* teacup image styling */
     .teacup img {
         max-width: 30%;
         position: relative;
@@ -25,6 +30,7 @@ Description: Styling specific for mobile
         top: -1vh;
         height: auto;
     }
+    /* teapot image styling */
     .teapot img {
         position: sticky;
         position: relative;
@@ -34,17 +40,18 @@ Description: Styling specific for mobile
         height: auto;
     }
 
+    /* oolong jar styling */
     .teajar-oolong img {
         position: relative;
         width: 100%;
         transition: opacity 0.2s;
     }
-
+    /* green tea jar styling */
     .teajar-green img {
         position: relative;
         width: 100%;
     }
-
+    /* matcha jar styling */
     .teajar-matcha img {
         position: relative;
         width: 100%;
@@ -59,7 +66,6 @@ Description: Styling specific for mobile
 /*
 Description: Styling specific for desktop and mobile
 */
-
 .frame-one {
     display: flex;
     flex-direction: column;
@@ -77,7 +83,7 @@ Description: Styling specific for desktop and mobile
     flex: 1;
     align-self: auto;
 }
-
+/* increase size of jar when hovering */
 .teajar-green img:hover {
     transform: scale(1.1);
 }
@@ -117,13 +123,14 @@ Description: Styling specific for desktop
         font-size: 40px;
         top: 22vh;
     }
+    /* h2  styling */
     header h2 {
         position: relative;
         text-align: center;
         font-size: 30px;
         top: 22vh;
     }
-
+    /* teapot image styling */
     .teapot img {
         position: relative;
         max-width: 15%;
@@ -131,6 +138,7 @@ Description: Styling specific for desktop
         top: 11vh;
         left: 46vw;
     }
+    /* teacup image styling */
     .teacup img {
         max-width: 7%;
         position: relative;
@@ -139,17 +147,18 @@ Description: Styling specific for desktop
         left: 28vw;
     }
 
+    /* oolong jar styling */
     .teajar-oolong img {
         position: relative;
         width: 70%;
         transition: opacity 0.2s;
     }
-
+    /* green tea styling */
     .teajar-green img {
         position: relative;
         width: 70%;
     }
-
+    /* matcha jar styling */
     .teajar-matcha img {
         position: relative;
         width: 70%;

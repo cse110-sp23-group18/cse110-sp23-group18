@@ -2,17 +2,18 @@
 Description: Styling specific for mobile
 */
 @media (max-width: 768px) {
+    /* h1 styling */
     h1 {
         position: relative;
         text-align: center;
     }
-
+    /* h2 styling */
     h2 {
         position: relative;
         text-align: center;
         font-size: 110%;
     }
-
+    /* a styling */
     a {
         background-color: black;
         color: white;
@@ -34,6 +35,7 @@ a:hover {
     background-color: rgb(238, 205, 19);
 }
 
+/* prediction styling */
 .prediction {
     position: relative;
     display: relative;
@@ -42,6 +44,7 @@ a:hover {
     max-width: 90vw;
 }
 
+/* prediction image styling */
 #prediction-img {
     position: absolute;
     top: 14%;
