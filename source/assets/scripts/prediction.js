@@ -88,7 +88,7 @@ function prediction() {
     const predictionTxtEl = document.querySelector('#prediction-txt');
     const predictPicEl = document.querySelector('#prediction-img');
     const revealLayerEl = document.querySelector('#reveal-layer');
-  
+
     if (allFramesReached()) {
         const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
         predictionTxt = PREDICTIONS[randomNumber].text;
@@ -97,7 +97,7 @@ function prediction() {
         localStorage.setItem('text', predictionTxt);
         localStorage.setItem('picture', predictionPic);
     }
-  
+
     if (localStorage.getItem('text') != null) {
         predictionTxtEl.innerHTML = localStorage.getItem('text');
     } else {

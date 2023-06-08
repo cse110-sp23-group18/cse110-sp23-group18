@@ -67,9 +67,9 @@ function selectJar(teaType) {
  */
 function init() {
     const nextButton = document.querySelector('#next');
-    /*hide 'confirm selection' button*/
+    /* hide 'confirm selection' button */
     nextButton.style.visibility = 'hidden';
-            
+
     // adds event listeners to all tea jars
     Object.keys(TEAS).forEach((tea) => {
         const teaEle = document.getElementById(TEAS[tea]);
@@ -80,12 +80,11 @@ function init() {
             selectJar(TEAS[tea]);
             /* only show button to confirm tea selection and
             move to next frame once a teajar is chosen */
-            nextButton.style.visibility = 'visible'; 
-            
+            nextButton.style.visibility = 'visible';
         });
     });
 
-    /*const nextButton = document.querySelector('#next');*/
+    /* const nextButton = document.querySelector('#next'); */
     nextButton.addEventListener('click', () => {
         localStorage.setItem('frame1', 'true');
     });
