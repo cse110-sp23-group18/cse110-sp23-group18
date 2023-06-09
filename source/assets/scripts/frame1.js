@@ -3,8 +3,8 @@
  * This includes animations when clicking on tea jars and transitions to
  * the next frame (frame 2)
  *
- * @author Jessie Ouyang (May ??, 2023)
- * Last modified by: Damaris Flores (Jun 8, 2023)
+ * @author ? (June 8, 2023)
+ * Last modified by: Shuyi Han (Jun 8, 2023)
  */
 
 /**
@@ -31,9 +31,11 @@ const clickNextSound = new Audio();
 clickNextSound.src = './assets/audios/confirm_selection.mp3';
 clickNextSound.preload = 'auto';
 
-//  * Gets the chosenJar variable so that tests can access the variable
-//  * @returns the chosenJar variable
-// //  */
+/**
+ * Gets the chosenJar variable so that tests can access the variable.
+ *
+ * @returns {string} The chosenJar variable.
+ */
 function getChosenJar() {
     return chosenJar;
 }
@@ -51,6 +53,7 @@ function selectJar(teaType) {
 
     chosenJar = chosenJar === teaType ? TEAS.none : teaType;
 
+    // Update the appearance of tea jars based on the chosen jar
     Object.keys(TEAS).forEach((tea) => {
         const teaEle = document.getElementById(TEAS[tea]);
 
@@ -64,9 +67,13 @@ function selectJar(teaType) {
             teaEle.classList.remove('flicker-effect');
         }
     });
-    clickSound.currentTime = 0; // Reset the audio to start from the beginning
+
+    // Reset the audio to start from the beginning
+    clickSound.currentTime = 0;
+    // Play click sound when selecting a jar
     clickSound.play();
 
+    // Show/hide the "confirm selection" button based on the chosen jar
     linkEle.style.display = chosenJar === teaType ? 'inline' : 'none';
 }
 
@@ -75,7 +82,7 @@ function selectJar(teaType) {
  * When the button to confirm the selection is clicked, frame 1 is changed to visited
  * in localStorage.
  *
- * Last modified by: Kavi Nelakonda (June 2, 2023)
+ * Last modified by: Shuyi (June 8, 2023)
  */
 function init() {
     const nextButton = document.querySelector('#next');
@@ -88,6 +95,7 @@ function init() {
 
         if (!teaEle) return;
 
+        // Handle click event for each tea jar
         teaEle.addEventListener('click', () => {
             selectJar(TEAS[tea]);
             /* only show button to confirm tea selection and
@@ -100,12 +108,17 @@ function init() {
     nextButton.addEventListener('click', () => {
         clickNextSound.play();
         localStorage.setItem('frame1', 'true');
+        clickNextSound.addEventListener('ended', () => {
+            // Delayed transition to another frame after the sound finishes playing
+            window.location.href = './frame2.html';
+        });
     });
 }
 
 window.addEventListener('DOMContentLoaded', init);
 
 try {
+    // Export selected functions and variables for use in other modules
     module.exports = {
         TEAS,
         getChosenJar,

@@ -3,7 +3,7 @@
  * This includes clicking the teacup to reveal fortune providing transitions to
  * the next frame (frame 5)
  *
- * @author Shuyi Han (May ??, 2023)
+ * @author Kavi (June 8, 2023)
  * Last modified by: Grant Cheng (June 2, 2023)
  */
 

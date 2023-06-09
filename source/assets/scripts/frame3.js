@@ -3,8 +3,8 @@
  * This includes the pouring of the tea from the teapot into the teacup and
  * providing transitions to the next frame (frame 4)
  *
- * @author Shuyi Han? (May ??, 2023)
- * Last Modfied: Kavi Nelakonda, June 2, 2023
+ * @author ? (May ??, 2023)
+ * Last Modfied: Shuyi Han, June 89, 2023
  */
 
 /**
@@ -15,22 +15,32 @@
  * Last Modified: Kavi Nelakonda (June 2, 2023)
  */
 
+/**
+ * Creates an Audio object for the pouring sound effect.
+ */
 const pouringSound = new Audio();
 pouringSound.src = './assets/audios/pouring_tea.mp3';
 pouringSound.preload = 'auto';
+
 function liftTeapot() {
     const teapot = document.querySelector('.teapot');
     const teapotImage = document.getElementById('teapotImage');
     const pouringImage = document.getElementById('pouringImage');
 
-    teapot.style.transition = 'none'; // Disable transition temporarily
-    teapot.style.transform = 'translateY(0)'; // Set teapot to original position
+    // Disable transition temporarily
+    teapot.style.transition = 'none';
+    // Set teapot to original position
+    teapot.style.transform = 'translateY(0)';
 
-    teapot.classList.add('lifted'); // Add the 'lifted' class to teapot element
+    // Add the 'lifted' class to teapot element
+    teapot.classList.add('lifted');
     setTimeout(() => {
-        teapot.style.transition = 'transform 1.0s ease'; // Enable transition
-        teapot.style.transform = 'translateY(-55px) translateX(-75px)'; // Move teapot upward and left
-        teapot.classList.remove('lifted'); // Remove the 'lifted' class after the transition
+        // Enable transition
+        teapot.style.transition = 'transform 1.0s ease';
+        // Move teapot upward and left
+        teapot.style.transform = 'translateY(-55px) translateX(-75px)';
+        // Remove the 'lifted' class after the transition
+        teapot.classList.remove('lifted');
         setTimeout(() => {
             teapotImage.classList.add('hidden'); // Hide the teapot image
             pouringImage.classList.remove('hidden'); // Show the pouring GI
@@ -43,8 +53,10 @@ function liftTeapot() {
                 );
                 // Move the teapot back to its original position
                 setTimeout(() => {
-                    teapot.style.transition = 'transform 1.0s ease'; // Enable transition
-                    teapot.style.transform = 'translateY(0) scale(0.8)'; // Move teapot back to original position and scale down to 80%
+                    // Enable transition
+                    teapot.style.transition = 'transform 1.0s ease';
+                    // Move teapot back to original position and scale down to 80%
+                    teapot.style.transform = 'translateY(0) scale(0.8)';
                     setTimeout(() => {
                         teapotImage.addEventListener('click', liftTeapot);
                         // Transition to next HTML Frame
@@ -57,15 +69,23 @@ function liftTeapot() {
         }, 1000); // Adjust the delay as needed (1s = 1000ms)
     }, 90);
 
-    setTimeout(() => {
-        pouringSound.currentTime = 0; // Reset the audio to start from the beginning
-        pouringSound.play();
-    }, 2200);
-    localStorage.setItem('frame3', 'true'); // shows that frame 3 has been reached
+    pouringSound.currentTime = 0;
+    // Play the audio only if it's allowed by the user agent
+    if (pouringSound.paused) {
+        pouringSound.play().catch((error) => {
+            // Handle autoplay error
+            console.error('Autoplay failed:', error);
+        });
+    }
 
-    // Wait for 2 seconds before playing the pouring tea sound effect
+    localStorage.setItem('frame3', 'true'); // shows that frame 3 has been reached
 }
 
+/**
+ * The function that executes when the window finishes loading.
+ * It retrieves the teapot element and adds a click event listener to it,
+ * triggering the liftTeapot function.
+ */
 window.onload = function () {
     const teapot = document.getElementById('teapotImage');
     teapot.addEventListener('click', liftTeapot);
