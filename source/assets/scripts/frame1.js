@@ -31,13 +31,12 @@ const clickNextSound = new Audio();
 clickNextSound.src = './assets/audios/confirm_selection.mp3';
 clickNextSound.preload = 'auto';
 
- * Gets the chosenJar variable so that tests can access the variable
- * @returns the chosenJar variable
- */
+//  * Gets the chosenJar variable so that tests can access the variable
+//  * @returns the chosenJar variable
+// //  */
 function getChosenJar() {
     return chosenJar;
 }
-
 
 /**
  * The function that handles the logic for and animates everything when

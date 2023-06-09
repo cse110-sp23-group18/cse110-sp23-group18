@@ -11,6 +11,11 @@
  *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
+
+const bgm = new Audio();
+bgm.src = './assets/audios/bgm.mp3';
+bgm.preload = 'auto';
+
 function init() {
     localStorage.setItem('index', 'false');
     localStorage.setItem('frame1', 'false');
@@ -21,7 +26,33 @@ function init() {
     const startButton = document.querySelector('.start-button');
     startButton.addEventListener('click', () => {
         localStorage.setItem('index', 'true');
+        bgm.play().catch((error) => {
+            // Handle autoplay error
+            console.error('Autoplay failed:', error);
+        });
     });
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+            const bgmPaused = localStorage.getItem('bgmPaused');
+            if (bgmPaused === 'false') {
+                bgm.play().catch((error) => {
+                    // Handle autoplay error
+                    console.error('Autoplay failed:', error);
+                });
+            }
+        } else {
+            localStorage.setItem('bgmPaused', bgm.paused ? 'true' : 'false');
+            bgm.pause();
+        }
+    });
+
+    const bgmPaused = localStorage.getItem('bgmPaused');
+    if (bgmPaused === 'false') {
+        bgm.play().catch((error) => {
+            // Handle autoplay error
+            console.error('Autoplay failed:', error);
+        });
+    }
 }
 
 window.addEventListener('DOMContentLoaded', init);
