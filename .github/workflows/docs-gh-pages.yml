@@ -28,7 +28,7 @@ jobs:
             - name: Generate Docs
               run: |
                   npm install jsdoc docdash
-                  npm run jsdocjs
+                  npm run jsdoc
             - name: Setup Pages
               uses: actions/configure-pages@v3
             - name: Build with Jekyll

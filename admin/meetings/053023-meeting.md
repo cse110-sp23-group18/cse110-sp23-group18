@@ -10,7 +10,7 @@ Meeting Type: Work Meeting
 
 -   Grant
 -   Brian
--   Baguette (Pramesh)
+-   Pramesh (Baguette)
 -   Damaris
 -   Kavi
 -   Shuyi
