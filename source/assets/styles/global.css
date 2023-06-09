@@ -49,7 +49,7 @@ a {
 /* hover */
 button:hover,
 a:hover {
-    background-color: rgb(238, 205, 19);
+    background-color: #3f4048;
 }
 
 #landing-layout,
