@@ -40,7 +40,6 @@ export function getChosenJar() {
     return chosenJar;
 }
 
-
 /**
  * The function that handles the logic for and animates everything when
  * selecting a jar
