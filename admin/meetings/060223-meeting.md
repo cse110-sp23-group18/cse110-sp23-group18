@@ -36,4 +36,4 @@ Meeting Type: Work Meeting
 -   Clean up JS Code
 -   Implement audio assets
 
-Meeting ended at 8:00pm.
+Meeting ended at 1:00pm.

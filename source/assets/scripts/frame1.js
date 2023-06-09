@@ -4,7 +4,7 @@
  * the next frame (frame 2)
  *
  * @author Jessie Ouyang (May ??, 2023)
- * Last modified by: Kavi Nelakonda (June 2, 2023)
+ * Last modified by: Damaris Flores (Jun 8, 2023)
  */
 
 /**
@@ -66,6 +66,10 @@ function selectJar(teaType) {
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
 function init() {
+    const nextButton = document.querySelector('#next');
+    /* hide 'confirm selection' button */
+    nextButton.style.visibility = 'hidden';
+
     // adds event listeners to all tea jars
     Object.keys(TEAS).forEach((tea) => {
         const teaEle = document.getElementById(TEAS[tea]);
@@ -74,10 +78,13 @@ function init() {
 
         teaEle.addEventListener('click', () => {
             selectJar(TEAS[tea]);
+            /* only show button to confirm tea selection and
+            move to next frame once a teajar is chosen */
+            nextButton.style.visibility = 'visible';
         });
     });
 
-    const nextButton = document.querySelector('#next');
+    /* const nextButton = document.querySelector('#next'); */
     nextButton.addEventListener('click', () => {
         localStorage.setItem('frame1', 'true');
     });

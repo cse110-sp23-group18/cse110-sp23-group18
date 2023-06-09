@@ -79,7 +79,7 @@ function allFramesReached() {
  * Picture associated with the response is put as an image element source
  * that is generated if it does not exist.
  *
- * Last Modified by: Kavi Nelakonda (June 2, 2023)
+ * Last Modified by: Grant Cheng (June 6, 2023)
  * @returns void
  */
 function prediction() {
@@ -87,7 +87,8 @@ function prediction() {
     let predictionPic;
     const predictionTxtEl = document.querySelector('#prediction-txt');
     const predictPicEl = document.querySelector('#prediction-img');
-    console.log(localStorage.getItem('text') == null);
+    const revealLayerEl = document.querySelector('#reveal-layer');
+
     if (allFramesReached()) {
         const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
         predictionTxt = PREDICTIONS[randomNumber].text;
@@ -96,6 +97,7 @@ function prediction() {
         localStorage.setItem('text', predictionTxt);
         localStorage.setItem('picture', predictionPic);
     }
+
     if (localStorage.getItem('text') != null) {
         predictionTxtEl.innerHTML = localStorage.getItem('text');
     } else {
@@ -104,9 +106,14 @@ function prediction() {
     }
     predictPicEl.src = localStorage.getItem('picture');
 
-    const predictionEl = document.querySelector('.prediction');
-    predictionEl.appendChild(predictPicEl);
-    predictionEl.appendChild(predictionTxtEl);
+    revealLayerEl.style.transition = 'opacity 3s';
+    revealLayerEl.style.opacity = 0;
+
+    setTimeout(() => {
+        revealLayerEl.style.display = 'none';
+        predictionTxtEl.innerHTML = localStorage.getItem('text');
+    }, 3000);
+
     localStorage.setItem('index', 'false');
 }
 
@@ -119,10 +126,7 @@ function prediction() {
  * @returns void
  */
 function init() {
-    setTimeout(() => {
-        prediction();
-    }, 3000);
-
+    prediction();
     const restartButton = document.querySelector('#restart');
     restartButton.addEventListener('click', () => {
         localStorage.setItem('index', 'false');

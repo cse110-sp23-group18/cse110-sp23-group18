@@ -33,6 +33,7 @@ class LocalStorageMock {
 describe('prediction', () => {
     let predictionTxtEl;
     let predictPicEl;
+    let revealLayerEl;
 
     beforeEach(() => {
         jest.resetModules();
@@ -47,6 +48,9 @@ describe('prediction', () => {
                 if (selector === '#prediction-img') {
                     return predictPicEl;
                 }
+                if (selector === '#reveal-layer') {
+                    return revealLayerEl;
+                }
 
                 return null;
             }),
@@ -55,15 +59,23 @@ describe('prediction', () => {
         global.localStorage = new LocalStorageMock();
 
         document.body.innerHTML = `
-            <div class="prediction">
-            <h2 id="prediction-txt"></h2>
-            <img id="prediction-img" />
+            <div class='prediction'>
+                <div class='image-layers'>
+                    <img id="prediction-img" class="image-predict" src="" />
+                    <img id='overlay-layer' class="image-overlay" src="assets/images/teacup/teacupTransparent.png" />
+                    <img id='reveal-layer' class="image-overlay" src="assets/images/teacup/teacupFull.png" />
+                </div>
+                <h2 id="prediction-txt"></h2>
             </div>
-            <a href="index.html" title="Start New Fortune" id="restart"></a>
+
+            <h2>
+                <a href="index.html" title="Start New Fortune" id="restart">Get New Fortune</a>
+            </h2>
         `;
 
         predictionTxtEl = document.querySelector('#prediction-txt');
         predictPicEl = document.querySelector('#prediction-img');
+        revealLayerEl = document.querySelector('#reveal-layer');
     });
 
     // test('should not set prediction text and image if all frames are not reached', () => {
