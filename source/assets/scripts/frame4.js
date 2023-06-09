@@ -15,6 +15,10 @@
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  * @returns void
  */
+
+const drinkingSound = new Audio();
+drinkingSound.src = './assets/audios/drinking_tea.mp3';
+drinkingSound.preload = 'auto';
 function init() {
     const teacupImage = document.getElementById('teacup');
     let isEnlarged = false;
@@ -31,10 +35,11 @@ function init() {
     }
     teacupImage.addEventListener('click', () => {
         toggleSize();
+        drinkingSound.play();
         localStorage.setItem('frame4', 'true');
         setTimeout(() => {
             window.location.href = './frame5.html';
-        }, 800);
+        }, 1180);
     });
 }
 
