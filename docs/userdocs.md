@@ -6,9 +6,10 @@ Just follow the instructions on each page! You will simulate each step of brewin
 
 ## A Sneak Peak Into One of the Fortunes
 This is what it will look like on your phone:
-<img src="/docs/doc_images/sneakPeakImagePhone.png"/>
+<img src="/doc_images/sneakPeekImagePhone.png"/>
+<br>
 This is what it will look like on your desktop:
-<img src="/docs/doc_images/sneakPeakImageDesktop.png"/>
+<img src="/doc_images/sneakPeekImageDesktop.png"/>
 
 ## FAQ
 ### I want a new fortune. How do I get one?
