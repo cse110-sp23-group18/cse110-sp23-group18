@@ -3,42 +3,17 @@
  */
 
 describe('Basic user flow for Website', () => {
-    // const BASE_LINK = 'http://127.0.0.1:5500/source' // test locally
-    const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
-
-    // The items in local storage
-    const localStorageArray = ['index', 'frame1', 'frame2', 'frame3', 'frame4'];
+    const BASE_LINK = 'http://127.0.0.1:5500/source'; // test locally
+    // const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
 
     // First, visit the tasseography website
     beforeAll(async () => {
         // await page.goto('https://apollo18-tealeaves.netlify.app'); // test prod
-        await page.goto(`${BASE_LINK}/index.html`);
+        await page.goto(`${BASE_LINK}/`);
     });
 
     // Check that index.html and index.js are functioning correctly
-    it('Landing Page', async () => {
-        console.log('Checking to make sure localStorage is set correctly');
-
-        // Find all relevant items in local storage and test them
-        let localStorage = await page.evaluate(() => ({
-            ...window.localStorage,
-        }));
-        const numVisited = localStorageArray.filter(
-            (page) => localStorage[page] === 'true'
-        ).length;
-
-        // Expect none of the pages to be visited thus far
-        expect(numVisited).toBe(0);
-
-        await Promise.all([
-            page.click('a[href="frame1.html"]'),
-            page.waitForNavigation(),
-        ]);
-
-        localStorage = await page.evaluate(() => ({ ...window.localStorage }));
-
-        expect(localStorage.index).toBe('true');
-    });
+    it('Landing Page', async () => {});
 
     it('Test the first frame of the app', async () => {});
 

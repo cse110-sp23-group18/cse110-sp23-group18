@@ -263,7 +263,8 @@
         "test": "jest",
         "lint": "npx eslint ./source/ --fix && npx stylelint ./source/**/*.css --fix",
         "version": "auto-changelog -p && git add CHANGELOG.md",
-        "jsdoc": "jsdoc -a all -c jsdoc.json -r ./source/ -d docs/jsdoc --verbose"
+        "jsdoc": "jsdoc -a all -c jsdoc.json -r ./source/ -d docs/jsdoc --verbose",
+        "build": "babel src -d dist"
     },
     "jest": {
         "preset": "jest-puppeteer",

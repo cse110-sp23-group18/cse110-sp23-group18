@@ -11,8 +11,7 @@ import initFrameFour from './frame4.js';
 
 /**
  * The function that animates the lifting and pouring of the teapot
- * After the animation is over, the frame is changed to visited in localStroage, and
- * the user is moved to frame 4.
+ * After the animation is over, the user is moved to frame 4.
  *
  * Last Modified: Kavi Nelakonda (June 2, 2023)
  */
@@ -65,7 +64,6 @@ function liftTeapot() {
             }, 3500); // Adjust the delay as needed (1s = 1000ms)
         }, 1000); // Adjust the delay as needed (1s = 1000ms)
     }, 90);
-    localStorage.setItem('frame3', 'true'); // shows that frame 3 has been reached
 }
 
 export default function initFrameThree() {

@@ -10,7 +10,7 @@ import initFrameThree from './frame3.js';
 
 /**
  * The initialization function that runs when the window loads
- * The gif runs, and then frame 2 is changed to visited in localStorage
+ * The gif runs
  *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
@@ -30,7 +30,5 @@ export default function initFrameTwo() {
             nextLayout.style.display = 'block';
             initFrameThree();
         }, 5000);
-
-        localStorage.setItem('frame2', 'true');
     });
 }

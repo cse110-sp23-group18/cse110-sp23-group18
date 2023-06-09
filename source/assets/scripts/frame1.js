@@ -4,7 +4,7 @@
  * the next frame (frame 2)
  *
  * @author Jessie Ouyang (May ??, 2023)
- * Last modified by: Damaris Flores (Jun 8, 2023)
+ * Last modified by: Grant Cheng (Jun 8, 2023)
  */
 
 import initFrameTwo from './frame2.js';
@@ -62,8 +62,6 @@ export function selectJar(teaType) {
 
 /**
  * The initialization function that runs when the window loads.
- * When the button to confirm the selection is clicked, frame 1 is changed to visited
- * in localStorage.
  *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
@@ -92,7 +90,6 @@ export default function initFrameOne() {
         const nextLayout = document.getElementById('frame2-layout');
         const nextTemplate = document.getElementById('frame2-template');
 
-        localStorage.setItem('frame1', 'true');
         thisLayout.style.display = 'none';
         thisLayout.innerHTML = '';
         nextLayout.innerHTML = nextTemplate.innerHTML;

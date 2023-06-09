@@ -57,23 +57,6 @@ export const PREDICTIONS = [
 const PREDICTION_COUNT = Object.keys(PREDICTIONS).length;
 
 /**
- * All of the frames are keys associated with a value of true or false in localStorage.
- * The function checks if the value is true for each of these keys.
- *
- * Last modified by: Kavi Nelakonda (June 2, 2023)
- * @returns true if all frames have been reached, false if not
- */
-export function allFramesReached() {
-    return (
-        localStorage.getItem('index') === 'true' &&
-        localStorage.getItem('frame1') === 'true' &&
-        localStorage.getItem('frame2') === 'true' &&
-        localStorage.getItem('frame3') === 'true' &&
-        localStorage.getItem('frame4') === 'true'
-    );
-}
-
-/**
  * Generates a random number, uses the number as a key to find a response.
  * Response text is put in the response element that is generated if it does not exist.
  * Picture associated with the response is put as an image element source
@@ -83,27 +66,16 @@ export function allFramesReached() {
  * @returns void
  */
 export function prediction() {
-    let predictionTxt;
-    let predictionPic;
     const predictionTxtEl = document.querySelector('#prediction-txt');
     const predictPicEl = document.querySelector('#prediction-img');
     const revealLayerEl = document.querySelector('#reveal-layer');
     const restartButton = document.querySelector('#restart');
 
-    if (allFramesReached()) {
-        const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
-        predictionTxt = PREDICTIONS[randomNumber].text;
-        predictionPic = PREDICTIONS[randomNumber].picture;
+    const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
+    const predictionTxt = PREDICTIONS[randomNumber].text;
+    const predictionPic = PREDICTIONS[randomNumber].picture;
 
-        localStorage.setItem('text', predictionTxt);
-        localStorage.setItem('picture', predictionPic);
-    }
-
-    if (localStorage.getItem('text') === null) {
-        predictionTxtEl.innerHTML =
-            'You did not go thorugh the proper process!';
-    }
-    predictPicEl.src = localStorage.getItem('picture');
+    predictPicEl.src = predictionPic;
 
     revealLayerEl.style.transition = 'opacity 3s';
 
@@ -113,17 +85,14 @@ export function prediction() {
 
     setTimeout(() => {
         revealLayerEl.style.display = 'none';
-        predictionTxtEl.innerHTML = localStorage.getItem('text');
+        predictionTxtEl.innerHTML = predictionTxt;
         restartButton.style.display = 'block';
     }, 3100);
-
-    localStorage.setItem('index', 'false');
 }
 
 /**
  * Loads up the prediction with the image.
- * Loads up the button that restarts the project and
- * index is changed to not visited in localStorage.
+ * Loads up the button that restarts the project.
  *
  * Last Modified by: Kavi Nelakonda (June 6, 2023)
  * @returns void
