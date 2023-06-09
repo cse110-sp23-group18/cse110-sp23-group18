@@ -1,22 +1,15 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
 /* styling for website title */
-.website-title {
+#landing-layout .website-title {
     padding-top: 14vh;
 }
 
 /* main margin */
-main {
+#landing-layout main {
     margin-top: 36vh;
 }
 
 /* start button styling */
-.start-button a {
+#landing-layout .start-button a {
     font-size: 5vw;
     padding: 10px;
 }

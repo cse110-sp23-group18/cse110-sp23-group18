@@ -7,6 +7,8 @@
  * Last Modfied: Kavi Nelakonda, June 2, 2023
  */
 
+import initFrameFour from './frame4.js';
+
 /**
  * The function that animates the lifting and pouring of the teapot
  * After the animation is over, the frame is changed to visited in localStroage, and
@@ -45,7 +47,14 @@ function liftTeapot() {
                         teapotImage.addEventListener('click', liftTeapot);
                         // Transition to next HTML Frame
                         setTimeout(() => {
-                            window.location.href = './frame4.html';
+                            document.getElementById(
+                                'frame3-layout'
+                            ).style.display = 'none';
+                            document.getElementById('frame4-layout').innerHTML =
+                                document.getElementById(
+                                    'frame4-template'
+                                ).innerHTML;
+                            initFrameFour();
                         }, 400);
                     }, 1600);
                 }, 800); // Adjust the delay as needed (1s = 1000ms)
@@ -55,7 +64,11 @@ function liftTeapot() {
     localStorage.setItem('frame3', 'true'); // shows that frame 3 has been reached
 }
 
-window.onload = function () {
+export default function initFrameThree() {
     const teapot = document.getElementById('teapotImage');
     teapot.addEventListener('click', liftTeapot);
-};
+}
+
+// window.onload = function () {
+//     init()
+// };

@@ -2,20 +2,20 @@
 Description: Styling specific for mobile
 */
 @media (max-width: 768px) {
-    .header {
+    #frame2-layout .header {
         height: 30vh;
     }
     /* h1 alignment */
-    h1 {
+    #frame2-layout h1 {
         text-align: center;
     }
     /* h2 styling */
-    h2 {
+    #frame2-layout h2 {
         margin-top: 4.2rem;
         font-size: 20px;
     }
     /* teacup image styling */
-    .teacup img {
+    #frame2-layout .teacup img {
         max-width: 35%;
         height: auto;
         position: relative;
@@ -23,7 +23,7 @@ Description: Styling specific for mobile
         top: 10vh;
     }
     /* teapot image styling */
-    .teapot img {
+    #frame2-layout .teapot img {
         position: relative;
         max-width: 30%;
         left: 38vw;
@@ -31,7 +31,7 @@ Description: Styling specific for mobile
         height: auto;
     }
 
-    a {
+    #frame2-layout a {
         position: relative;
         top: 16vh;
         text-decoration: none;
@@ -42,14 +42,14 @@ Description: Styling specific for mobile
 Description: Styling specific for desktop and mobile
 Frame 2
 */
-#frame-two {
+#frame2-layout #frame-two {
     display: flex;
     flex-direction: column;
     align-items: center;
     /*height: 90vh;*/
 }
 
-.frame-two-container {
+#frame2-layout .frame-two-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -63,23 +63,23 @@ Description: Styling specific for desktop
 Note: still need to implement responsiveness
 */
 @media (min-width: 769px) {
-    .frame-two {
+    #frame2-layout .frame-two {
         position: relative;
         flex-direction: row;
     }
 
-    .header {
+    #frame2-layout .header {
         margin-top: 14vh;
         flex-direction: row;
         text-align: center;
     }
-    .header h1 {
+    #frame2-layout .header h1 {
         position: relative;
         text-align: center;
         font-size: 40px;
         top: -17vh;
     }
-    .header h2 {
+    #frame2-layout .header h2 {
         position: relative;
         text-align: center;
         font-size: 40px;
@@ -88,7 +88,7 @@ Note: still need to implement responsiveness
         /*top: -5vh;*/
     }
 
-    .teapot img {
+    #frame2-layout .teapot img {
         display: flex;
         position: relative;
         width: 18vw;
@@ -98,7 +98,7 @@ Note: still need to implement responsiveness
         left: calc(110px - 12vh);*/
     }
 
-    .teacup img {
+    #frame2-layout .teacup img {
         display: flex;
         position: relative;
         width: 18vw;

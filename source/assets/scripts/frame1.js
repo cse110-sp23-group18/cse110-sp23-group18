@@ -7,6 +7,8 @@
  * Last modified by: Damaris Flores (Jun 8, 2023)
  */
 
+import initFrameTwo from './frame2.js';
+
 /**
  * Constants of the string representation for each tea type. Useful for
  * refactoring code and preventing spelling errors with strings.
@@ -65,7 +67,7 @@ function selectJar(teaType) {
  *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
-function init() {
+export default function initFrameOne() {
     const nextButton = document.querySelector('#next');
     /* hide 'confirm selection' button */
     nextButton.style.visibility = 'hidden';
@@ -87,10 +89,14 @@ function init() {
     /* const nextButton = document.querySelector('#next'); */
     nextButton.addEventListener('click', () => {
         localStorage.setItem('frame1', 'true');
+        document.getElementById('frame1-layout').style.display = 'none';
+        document.getElementById('frame2-layout').innerHTML =
+            document.getElementById('frame2-template').innerHTML;
+        initFrameTwo();
     });
 }
 
-window.addEventListener('DOMContentLoaded', init);
+// window.addEventListener('DOMContentLoaded', init);
 
 try {
     module.exports = {

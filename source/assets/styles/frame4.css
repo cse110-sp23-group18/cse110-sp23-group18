@@ -2,21 +2,21 @@
 Description: Styling specific for mobile
 */
 @media (max-width: 768px) {
-    .header {
+    #frame4-layout .header {
         height: 30vh;
     }
     /* h1 alignment */
-    h1 {
+    #frame4-layout h1 {
         text-align: center;
     }
     /* h2 styling */
-    h2 {
+    #frame4-layout h2 {
         margin-top: 4.8rem;
         font-size: 20px;
         text-align: center;
     }
     /* teapot styling */
-    .teapot img {
+    #frame4-layout .teapot img {
         position: relative;
         max-width: 30%;
         left: 38vw;
@@ -24,7 +24,7 @@ Description: Styling specific for mobile
         height: auto;
     }
     /* teacup styling */
-    .teacup img {
+    #frame4-layout .teacup img {
         max-width: 35%;
         height: auto;
         position: relative;
@@ -32,14 +32,14 @@ Description: Styling specific for mobile
         top: 10vh;
     }
 
-    a {
+    #frame4-layout a {
         position: relative;
         top: 16vh;
         text-decoration: none;
     }
 }
 /* enlarged teacup image */
-.teacup img.enlarged {
+#frame4-layout .teacup img.enlarged {
     transform: scale(1.5);
 }
 /*
@@ -58,20 +58,20 @@ Description: Styling specific for desktop and mobile
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-    .header h1 {
+    #frame4-layout .header h1 {
         position: relative;
         text-align: center;
         font-size: 35px;
         top: 170px;
     }
-    .header h2 {
+    #frame4-layout .header h2 {
         position: relative;
         text-align: center;
         font-size: 25px;
         top: 150px;
     }
 
-    .teacup img {
+    #frame4-layout .teacup img {
         max-width: 20%;
         height: auto;
         position: relative;
@@ -79,7 +79,7 @@ Description: Styling specific for desktop
         top: -5vh;
     }
 
-    .teapot img {
+    #frame4-layout .teapot img {
         position: relative;
         max-width: 40%;
         left: 60vw;

@@ -52,6 +52,26 @@ a:hover {
     background-color: rgb(238, 205, 19);
 }
 
+#landing-layout,
+#frame1-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#landing-layout,
+#frame1-layout,
+#frame2-layout,
+#frame3-layout,
+#frame4-layout,
+#frame5-layout {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /*
 Description: Styling specific for desktop
 */
@@ -62,11 +82,12 @@ Description: Styling specific for desktop
         background-size: 105%;
         background-repeat: no-repeat;
         background-position: center;
+        overflow: none;
 
         font-family: 'Comic Story';
     }
 
-    /* start bubtton styling */
+    /* start button styling */
     .start-button a {
         padding: 10px;
         bottom: -10vh;

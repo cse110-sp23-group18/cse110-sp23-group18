@@ -6,7 +6,7 @@ const {
     prediction,
     PREDICTIONS,
     allFramesReached,
-} = require('../scripts/prediction');
+} = require('../scripts/frame5.mjs');
 
 class LocalStorageMock {
     constructor() {

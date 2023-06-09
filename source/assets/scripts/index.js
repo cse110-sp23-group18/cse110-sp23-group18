@@ -5,6 +5,8 @@
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
 
+import initFrameOne from './frame1.js';
+
 /**
  * @summary The javascript file associated with the opening page of the program. init is called on load
  * All the other frames are changed to having not been visited.
@@ -21,6 +23,10 @@ function init() {
     const startButton = document.querySelector('.start-button');
     startButton.addEventListener('click', () => {
         localStorage.setItem('index', 'true');
+        document.getElementById('landing-layout').style.display = 'none';
+        document.getElementById('frame1-layout').innerHTML =
+            document.getElementById('frame1-template').innerHTML;
+        initFrameOne();
     });
 }
 

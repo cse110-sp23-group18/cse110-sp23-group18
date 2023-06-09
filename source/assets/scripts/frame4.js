@@ -7,6 +7,8 @@
  * Last modified by: Grant Cheng (June 2, 2023)
  */
 
+import initFrameFive from './frame5.js';
+
 /**
  * The initialization function that runs when the window loads
  * When the teacup is clicked, frame 4 is changed visited in localStroage
@@ -15,7 +17,7 @@
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  * @returns void
  */
-function init() {
+export default function initFrameFour() {
     const teacupImage = document.getElementById('teacup');
     let isEnlarged = false;
 
@@ -33,9 +35,13 @@ function init() {
         toggleSize();
         localStorage.setItem('frame4', 'true');
         setTimeout(() => {
-            window.location.href = './frame5.html';
+            document.getElementById('frame4-layout').style.display = 'none';
+            document.getElementById('frame5-layout').style.display = 'block';
+            document.getElementById('frame5-layout').innerHTML =
+                document.getElementById('frame5-template').innerHTML;
+            initFrameFive();
         }, 800);
     });
 }
 
-window.addEventListener('DOMContentLoaded', init);
+// window.addEventListener('DOMContentLoaded', init);

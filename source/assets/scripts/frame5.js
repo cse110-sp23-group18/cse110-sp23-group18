@@ -98,21 +98,22 @@ function prediction() {
         localStorage.setItem('picture', predictionPic);
     }
 
-    if (localStorage.getItem('text') != null) {
-        predictionTxtEl.innerHTML = localStorage.getItem('text');
-    } else {
+    if (localStorage.getItem('text') === null) {
         predictionTxtEl.innerHTML =
             'You did not go thorugh the proper process!';
     }
     predictPicEl.src = localStorage.getItem('picture');
 
     revealLayerEl.style.transition = 'opacity 3s';
-    revealLayerEl.style.opacity = 0;
+
+    setTimeout(() => {
+        revealLayerEl.style.opacity = 0;
+    }, 100);
 
     setTimeout(() => {
         revealLayerEl.style.display = 'none';
         predictionTxtEl.innerHTML = localStorage.getItem('text');
-    }, 3000);
+    }, 3100);
 
     localStorage.setItem('index', 'false');
 }
@@ -125,7 +126,7 @@ function prediction() {
  * Last Modified by: Kavi Nelakonda (June 6, 2023)
  * @returns void
  */
-function init() {
+export default function initFrameFive() {
     prediction();
     const restartButton = document.querySelector('#restart');
     restartButton.addEventListener('click', () => {
@@ -133,7 +134,7 @@ function init() {
     });
 }
 
-window.addEventListener('DOMContentLoaded', init);
+// window.addEventListener('DOMContentLoaded', init);
 
 /**
  * Allows testing files to be able access the functions.
