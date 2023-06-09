@@ -35,7 +35,7 @@ function init() {
         nextLayout.style.display = 'block';
         initFrameOne();
 
-        bgm.volume = 0.2;
+        bgm.volume = 0.15;
 
         bgm.play().catch((error) => {
             // Handle autoplay error
