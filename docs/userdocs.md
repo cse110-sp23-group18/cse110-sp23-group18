@@ -5,10 +5,11 @@ Our app is a simulation of tasseography. You get to choose what tea leaves to us
 Just follow the instructions on each page! You will simulate each step of brewing tea by simply tapping the right items in the frame. After you drink the tea, you will see your fortune.
 
 ## A Sneak Peak Into One of the Fortunes
-This is what it will look like on your phone:
+### This is what it will look like on your phone:
 <img src="./doc_images/sneakPeekImagePhone.png"/>
 ---
-This is what it will look like on your desktop:
+
+### This is what it will look like on your desktop:
 <img src="./doc_images/sneakPeekImageDesktop.png"/>
 
 ## FAQ
