@@ -31,28 +31,29 @@ function init() {
             console.error('Autoplay failed:', error);
         });
     });
-    document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'visible') {
-            const bgmPaused = localStorage.getItem('bgmPaused');
-            if (bgmPaused === 'false') {
-                bgm.play().catch((error) => {
-                    // Handle autoplay error
-                    console.error('Autoplay failed:', error);
-                });
-            }
-        } else {
-            localStorage.setItem('bgmPaused', bgm.paused ? 'true' : 'false');
-            bgm.pause();
-        }
-    });
-
-    const bgmPaused = localStorage.getItem('bgmPaused');
-    if (bgmPaused === 'false') {
-        bgm.play().catch((error) => {
-            // Handle autoplay error
-            console.error('Autoplay failed:', error);
-        });
-    }
 }
 
 window.addEventListener('DOMContentLoaded', init);
+
+// document.addEventListener('visibilitychange', () => {
+//     if (document.visibilityState === 'visible') {
+//         const bgmPaused = localStorage.getItem('bgmPaused');
+//         if (bgmPaused === 'false') {
+//             bgm.play().catch((error) => {
+//                 // Handle autoplay error
+//                 console.error('Autoplay failed:', error);
+//             });
+//         }
+//     } else {
+//         localStorage.setItem('bgmPaused', bgm.paused ? 'true' : 'false');
+//         bgm.pause();
+//     }
+// });
+
+// const bgmPaused = localStorage.getItem('bgmPaused');
+// if (bgmPaused === 'false') {
+//     bgm.play().catch((error) => {
+// Handle autoplay error
+//         console.error('Autoplay failed:', error);
+//     });
+// }
