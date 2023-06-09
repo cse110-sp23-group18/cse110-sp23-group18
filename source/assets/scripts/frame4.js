@@ -4,7 +4,7 @@
  * the next frame (frame 5)
  *
  * @author Shuyi Han (May ??, 2023)
- * Last modified by: Grant Cheng (June 8, 2023)
+ * Last modified by: Grant Cheng (June 9, 2023)
  */
 
 import initFrameFive from './frame5.js';

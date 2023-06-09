@@ -4,7 +4,7 @@
  * providing transitions to the next frame (frame 4)
  *
  * @author ? (May ??, 2023)
- * Last Modfied: Shuyi Han, June 89, 2023
+ * Last Modfied: Grant Cheng, June 9, 2023
  */
 
 import initFrameFour from './frame4.js';

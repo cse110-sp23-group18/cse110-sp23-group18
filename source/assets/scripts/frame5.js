@@ -4,7 +4,7 @@
  * Requires users to go through every page in order to get a new prediction.
  *
  * @author Kavi Nelakonda (May 14, 2023)
- * Last modified by: Kavi Nelakonda (June 6, 2023)
+ * Last modified by: Grant Cheng (June 9, 2023)
  */
 
 /**

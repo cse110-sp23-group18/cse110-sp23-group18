@@ -4,7 +4,7 @@
  * the next frame (frame 2)
  *
  * @author Jessie Ouyang (May ??, 2023)
- * Last modified by: Grant Cheng (Jun 8, 2023)
+ * Last modified by: Grant Cheng (Jun 9, 2023)
  */
 
 import initFrameTwo from './frame2.js';
