@@ -16,6 +16,11 @@ import initFrameFive from './frame5.js';
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  * @returns void
  */
+
+const drinkingSound = new Audio();
+drinkingSound.src = './assets/audios/drinking_tea.mp3';
+drinkingSound.preload = 'auto';
+
 export default function initFrameFour() {
     const teacupImage = document.getElementById('teacup');
     let isEnlarged = false;
@@ -32,6 +37,8 @@ export default function initFrameFour() {
     }
     teacupImage.addEventListener('click', () => {
         toggleSize();
+
+        drinkingSound.play();
         setTimeout(() => {
             const thisLayout = document.getElementById('frame4-layout');
             const nextLayout = document.getElementById('frame5-layout');
@@ -42,6 +49,6 @@ export default function initFrameFour() {
             nextLayout.innerHTML = nextTemplate.innerHTML;
             nextLayout.style.display = 'flex';
             initFrameFive();
-        }, 800);
+        }, 1180);
     });
 }

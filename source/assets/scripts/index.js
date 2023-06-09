@@ -13,8 +13,17 @@ import initFrameOne from './frame1.js';
  *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  */
+const bgm = new Audio();
+bgm.src = './assets/audios/bgm.mp3';
+bgm.preload = 'auto';
+
 function init() {
     const startButton = document.querySelector('.start-button');
+
+    /**
+     * Event listener callback function for the start button click.
+     * Sets the value of 'index' in localStorage to 'true' and plays background music.
+     */
     startButton.addEventListener('click', () => {
         const thisLayout = document.getElementById('landing-layout');
         const nextLayout = document.getElementById('frame1-layout');
@@ -25,6 +34,11 @@ function init() {
         nextLayout.innerHTML = nextTemplate.innerHTML;
         nextLayout.style.display = 'block';
         initFrameOne();
+
+        bgm.play().catch((error) => {
+            // Handle autoplay error
+            console.error('Autoplay failed:', error);
+        });
     });
 }
 

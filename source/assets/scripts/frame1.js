@@ -33,8 +33,10 @@ const clickNextSound = new Audio();
 clickNextSound.src = './assets/audios/confirm_selection.mp3';
 clickNextSound.preload = 'auto';
 
-/** Gets the chosenJar variable so that tests can access the variable
- * @returns the chosenJar variable
+/**
+ * Gets the chosenJar variable so that tests can access the variable.
+ *
+ * @returns {string} The chosenJar variable.
  */
 export function getChosenJar() {
     return chosenJar;
@@ -53,6 +55,7 @@ export function selectJar(teaType) {
 
     chosenJar = chosenJar === teaType ? TEAS.none : teaType;
 
+    // Update the appearance of tea jars based on the chosen jar
     Object.keys(TEAS).forEach((tea) => {
         const teaEle = document.getElementById(TEAS[tea]);
 
@@ -67,16 +70,19 @@ export function selectJar(teaType) {
         }
     });
 
-    clickSound.currentTime = 0; // Reset the audio to start from the beginning
+    // Reset the audio to start from the beginning
+    clickSound.currentTime = 0;
+    // Play click sound when selecting a jar
     clickSound.play();
 
+    // Show/hide the "confirm selection" button based on the chosen jar
     linkEle.style.display = chosenJar === teaType ? 'inline' : 'none';
 }
 
 /**
  * The initialization function that runs when the window loads.
  *
- * Last modified by: Kavi Nelakonda (June 2, 2023)
+ * Last modified by: Shuyi (June 8, 2023)
  */
 export default function initFrameOne() {
     const nextButton = document.querySelector('#next');
@@ -89,6 +95,7 @@ export default function initFrameOne() {
 
         if (!teaEle) return;
 
+        // Handle click event for each tea jar
         teaEle.addEventListener('click', () => {
             selectJar(TEAS[tea]);
             /* only show button to confirm tea selection and
@@ -100,15 +107,17 @@ export default function initFrameOne() {
     /* const nextButton = document.querySelector('#next'); */
     nextButton.addEventListener('click', () => {
         clickNextSound.play();
+        clickNextSound.addEventListener('ended', () => {
+            // Delayed transition to another frame after the sound finishes playing
+            const thisLayout = document.getElementById('frame1-layout');
+            const nextLayout = document.getElementById('frame2-layout');
+            const nextTemplate = document.getElementById('frame2-template');
 
-        const thisLayout = document.getElementById('frame1-layout');
-        const nextLayout = document.getElementById('frame2-layout');
-        const nextTemplate = document.getElementById('frame2-template');
-
-        thisLayout.style.display = 'none';
-        thisLayout.innerHTML = '';
-        nextLayout.innerHTML = nextTemplate.innerHTML;
-        nextLayout.style.display = 'block';
-        initFrameTwo();
+            thisLayout.style.display = 'none';
+            thisLayout.innerHTML = '';
+            nextLayout.innerHTML = nextTemplate.innerHTML;
+            nextLayout.style.display = 'block';
+            initFrameTwo();
+        });
     });
 }
