@@ -1,7 +1,15 @@
 # About Our App
-Our app is a simulation of tasseography. You get to choose what tea leaves to use to make your tea, and after going through the entire process of brewing the tea, you get to see what your future looks like! Maybe you will have a positive lookout, maybe it will be negative, and maybe, it is uncertain what the future holds. Brew and drink your tea to find out, the shape of the leaves when you have finished your cupd determine what will happen to you moving forward.
+Our app is a simulation of tasseography. You get to choose what tea leaves to use to make your tea, and after going through the entire process of brewing the tea, you get to see what your future looks like! Maybe you will have a positive lookout, maybe it will be negative, and maybe, it is uncertain what the future holds. Brew and drink your tea to find out, the shape of the leaves when you have finished your cup determine what will happen to you moving forward.
+
 ## How to Use Our App
 Just follow the instructions on each page! You will simulate each step of brewing tea by simply tapping the right items in the frame. After you drink the tea, you will see your fortune.
+
+## A Sneak Peak Into One of the Fortunes
+This is what it will look like on your phone:
+<img src="/docs/doc_images/sneakPeakImagePhone.png"/>
+This is what it will look like on your desktop:
+<img src="/docs/doc_images/sneakPeakImageDesktop.png"/>
+
 ## FAQ
 ### I want a new fortune. How do I get one?
 Once you get to the end, click the button labeled "Get New Fortune" to get a new fortune.
