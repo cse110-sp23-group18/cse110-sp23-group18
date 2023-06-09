@@ -270,10 +270,10 @@
         "preset": "jest-puppeteer",
         "verbose": true,
         "testRegex": "./source/assets/test/*.*.js$",
-        "testEnvironment": "jsdom",
-        "setupFilesAfterEnv": [
-            "./jest.setup.js"
-        ]
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        },
+        "testEnvironment": "jsdom"
     },
     "engines": {
         "node": ">=11.0.0"

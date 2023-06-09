@@ -6,33 +6,9 @@ import { TEAS, getChosenJar, selectJar } from '../scripts/frame1.js';
 
 describe('selectJar', () => {
     let linkEle;
-    let oolongEle;
-    let greenEle;
-    let matchaEle;
 
     beforeEach(() => {
         jest.resetModules();
-
-        // Mock the necessary global objects
-        global.document = {
-            body: document.createElement('body'),
-            querySelector: jest.fn().mockImplementation((selector) => {
-                if (selector === '#oolong') {
-                    return oolongEle;
-                }
-                if (selector === '#green') {
-                    return greenEle;
-                }
-                if (selector === '#matcha') {
-                    return matchaEle;
-                }
-                if (selector === '#next') {
-                    return linkEle;
-                }
-
-                return null;
-            }),
-        };
 
         document.body.innerHTML = `
             <div class="frame-one-container">
@@ -52,9 +28,6 @@ describe('selectJar', () => {
             <a href='frame2.html' title='Go to frame 2' id='next' style="display: none;">Confirm Selection</a>
         `;
 
-        oolongEle = document.querySelector('#oolong');
-        greenEle = document.querySelector('#green');
-        matchaEle = document.querySelector('#matcha');
         linkEle = document.querySelector('#next');
     });
 

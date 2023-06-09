@@ -7,28 +7,9 @@ import { prediction, PREDICTIONS } from '../scripts/frame5.js';
 describe('prediction', () => {
     let predictionTxtEl;
     let predictPicEl;
-    let revealLayerEl;
 
     beforeEach(() => {
         jest.resetModules();
-
-        // Mock the necessary global objects
-        global.document = {
-            body: document.createElement('body'),
-            querySelector: jest.fn().mockImplementation((selector) => {
-                if (selector === '#prediction-txt') {
-                    return predictionTxtEl;
-                }
-                if (selector === '#prediction-img') {
-                    return predictPicEl;
-                }
-                if (selector === '#reveal-layer') {
-                    return revealLayerEl;
-                }
-
-                return null;
-            }),
-        };
 
         document.body.innerHTML = `
             <div class='prediction'>
@@ -46,21 +27,29 @@ describe('prediction', () => {
 
         predictionTxtEl = document.querySelector('#prediction-txt');
         predictPicEl = document.querySelector('#prediction-img');
-        revealLayerEl = document.querySelector('#reveal-layer');
     });
 
-    test('should update the prediction text and image elements with a prediction from PREDICTIONS', () => {
+    test('should update the prediction text and image elements with a prediction from PREDICTIONS', async () => {
         prediction();
 
-        // Verify that the prediction text and image elements are updated correctly
-        expect(
-            PREDICTIONS.some((pred) => {
-                const imgSrc = `http://localhost/${pred.picture.slice(2)}`;
-                return (
-                    pred.text === predictionTxtEl.innerHTML &&
-                    imgSrc === predictPicEl.src
-                );
-            })
-        ).toBe(true);
+        await new Promise((resolve) => {
+            setTimeout(() => {
+                // Verify that the prediction text and image elements are updated correctly
+                expect(
+                    PREDICTIONS.some((pred) => {
+                        const imgSrc = `http://localhost/${pred.picture.slice(
+                            2
+                        )}`;
+
+                        return (
+                            pred.text === predictionTxtEl.innerHTML &&
+                            imgSrc === predictPicEl.src
+                        );
+                    })
+                ).toBe(true);
+
+                resolve();
+            }, 3500);
+        });
     });
 });
