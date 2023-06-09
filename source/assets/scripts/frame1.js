@@ -23,12 +23,23 @@ export const TEAS = {
 let chosenJar = TEAS.none;
 
 /**
- * Gets the chosenJar variable so that tests can access the variable
+ * The initialization function that runs when the window loads
+ */
+const clickSound = new Audio();
+clickSound.src = './assets/audios/select_type_of_tea.mp3';
+clickSound.preload = 'auto';
+
+const clickNextSound = new Audio();
+clickNextSound.src = './assets/audios/confirm_selection.mp3';
+clickNextSound.preload = 'auto';
+
+/** Gets the chosenJar variable so that tests can access the variable
  * @returns the chosenJar variable
  */
 export function getChosenJar() {
     return chosenJar;
 }
+
 
 /**
  * The function that handles the logic for and animates everything when
@@ -56,6 +67,9 @@ export function selectJar(teaType) {
             teaEle.classList.remove('flicker-effect');
         }
     });
+
+    clickSound.currentTime = 0; // Reset the audio to start from the beginning
+    clickSound.play();
 
     linkEle.style.display = chosenJar === teaType ? 'inline' : 'none';
 }
@@ -86,6 +100,8 @@ export default function initFrameOne() {
 
     /* const nextButton = document.querySelector('#next'); */
     nextButton.addEventListener('click', () => {
+        clickNextSound.play();
+
         const thisLayout = document.getElementById('frame1-layout');
         const nextLayout = document.getElementById('frame2-layout');
         const nextTemplate = document.getElementById('frame2-template');
