@@ -22,10 +22,15 @@ function init() {
 
     const startButton = document.querySelector('.start-button');
     startButton.addEventListener('click', () => {
+        const thisLayout = document.getElementById('landing-layout');
+        const nextLayout = document.getElementById('frame1-layout');
+        const nextTemplate = document.getElementById('frame1-template');
+
         localStorage.setItem('index', 'true');
-        document.getElementById('landing-layout').style.display = 'none';
-        document.getElementById('frame1-layout').innerHTML =
-            document.getElementById('frame1-template').innerHTML;
+        thisLayout.style.display = 'none';
+        thisLayout.innerHTML = '';
+        nextLayout.innerHTML = nextTemplate.innerHTML;
+        nextLayout.style.display = 'block';
         initFrameOne();
     });
 }

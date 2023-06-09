@@ -20,9 +20,14 @@ export default function initFrameTwo() {
     teapotEle.addEventListener('click', () => {
         teapotEle.src = 'assets/images/gifs/teapotSteaming.gif';
         setTimeout(() => {
-            document.getElementById('frame2-layout').style.display = 'none';
-            document.getElementById('frame3-layout').innerHTML =
-                document.getElementById('frame3-template').innerHTML;
+            const thisLayout = document.getElementById('frame2-layout');
+            const nextLayout = document.getElementById('frame3-layout');
+            const nextTemplate = document.getElementById('frame3-template');
+
+            thisLayout.style.display = 'none';
+            thisLayout.innerHTML = '';
+            nextLayout.innerHTML = nextTemplate.innerHTML;
+            nextLayout.style.display = 'block';
             initFrameThree();
         }, 5000);
 

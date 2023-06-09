@@ -35,13 +35,15 @@ export default function initFrameFour() {
         toggleSize();
         localStorage.setItem('frame4', 'true');
         setTimeout(() => {
-            document.getElementById('frame4-layout').style.display = 'none';
-            document.getElementById('frame5-layout').style.display = 'block';
-            document.getElementById('frame5-layout').innerHTML =
-                document.getElementById('frame5-template').innerHTML;
+            const thisLayout = document.getElementById('frame4-layout');
+            const nextLayout = document.getElementById('frame5-layout');
+            const nextTemplate = document.getElementById('frame5-template');
+
+            thisLayout.style.display = 'none';
+            thisLayout.innerHTML = '';
+            nextLayout.innerHTML = nextTemplate.innerHTML;
+            nextLayout.style.display = 'flex';
             initFrameFive();
         }, 800);
     });
 }
-
-// window.addEventListener('DOMContentLoaded', init);

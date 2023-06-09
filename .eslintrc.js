@@ -19,6 +19,11 @@ module.exports = {
         'no-process-exit': 'off',
         'object-shorthand': 'off',
         'class-methods-use-this': 'off',
+        'node/no-unsupported-features/es-syntax': [
+            'error',
+            { ignores: ['modules'] },
+        ],
+        'import/extensions': 'off',
     },
     overrides: [
         {

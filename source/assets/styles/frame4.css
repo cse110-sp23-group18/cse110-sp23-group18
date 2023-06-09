@@ -42,6 +42,7 @@ Description: Styling specific for mobile
 #frame4-layout .teacup img.enlarged {
     transform: scale(1.5);
 }
+
 /*
 Description: Styling specific for desktop and mobile
 */
@@ -58,12 +59,17 @@ Description: Styling specific for desktop and mobile
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
+    #frame4-layout {
+        overflow-y: hidden;
+    }
+
     #frame4-layout .header h1 {
         position: relative;
         text-align: center;
         font-size: 35px;
         top: 170px;
     }
+
     #frame4-layout .header h2 {
         position: relative;
         text-align: center;
@@ -85,5 +91,56 @@ Description: Styling specific for desktop
         left: 60vw;
         top: calc(450px - 30vh);
         height: auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    #frame4-layout .header h1 {
+        top: 3vh;
+    }
+    #frame4-layout .header h2 {
+        top: 11vh;
+    }
+
+    #frame4-layout .teacup img {
+        top: -20vh;
+    }
+
+    #frame4-layout .teapot img {
+        top: 11vh;
+    }
+}
+
+@media (min-width: 1600px) {
+    #frame4-layout .header h1 {
+        top: 5vh;
+    }
+    #frame4-layout .header h2 {
+        top: 14vh;
+    }
+
+    #frame4-layout .teacup img {
+        top: -16vh;
+    }
+
+    #frame4-layout .teapot img {
+        top: 24vh;
+    }
+}
+
+@media (min-width: 1920px) {
+    #frame4-layout .header h1 {
+        top: 7vh;
+    }
+    #frame4-layout .header h2 {
+        top: 18vh;
+    }
+
+    #frame4-layout .teacup img {
+        top: -3vh;
+    }
+
+    #frame4-layout .teapot img {
+        top: 33vh;
     }
 }

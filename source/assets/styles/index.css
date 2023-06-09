@@ -1,15 +1,33 @@
 /* styling for website title */
 #landing-layout .website-title {
-    padding-top: 14vh;
+    padding-top: 12vh;
 }
 
 /* main margin */
 #landing-layout main {
-    margin-top: 36vh;
+    margin-top: 25vh;
 }
 
 /* start button styling */
 #landing-layout .start-button a {
     font-size: 5vw;
     padding: 10px;
+}
+
+@media (min-width: 1280px) {
+    #landing-layout .website-title {
+        padding-top: 19vh;
+    }
+}
+
+@media (min-width: 1600px) {
+    #landing-layout .website-title {
+        padding-top: 22vh;
+    }
+}
+
+@media (min-width: 1920px) {
+    #landing-layout .website-title {
+        padding-top: 26vh;
+    }
 }

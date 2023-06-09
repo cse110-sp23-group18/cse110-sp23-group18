@@ -43,6 +43,10 @@ Description: Styling specific for desktop and mobile
     background-color: rgb(238, 205, 19);
 }
 
+#frame5-layout a {
+    height: auto;
+}
+
 /* prediction styling */
 #frame5-layout .prediction {
     position: relative;
@@ -78,19 +82,18 @@ Description: Styling specific for desktop and mobile
     background-color: white;
     background-image: none;
     display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#frame5-layout #restart {
+    display: none;
 }
 
 /*
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
-    #frame5-layout body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
     #frame5-layout .image-layers {
         position: relative;
         width: 40vh;
@@ -103,7 +106,8 @@ Description: Styling specific for desktop
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 50%;
+        width: 50vw;
+        text-align: center;
     }
 
     #frame5-layout .image-predict {

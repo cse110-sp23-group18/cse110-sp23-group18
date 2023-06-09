@@ -11,7 +11,7 @@
  * 10 responses, all with different tones, each corresponding with different images.
  * Adding to this adds to total number of responses.
  */
-const PREDICTIONS = [
+export const PREDICTIONS = [
     {
         text: 'Ah, a fish shape. The tea leaves reveal a wild journey ahead in overseas relations. Success is your destiny!',
         picture: './assets/images/dredges/fish1.png',
@@ -63,7 +63,7 @@ const PREDICTION_COUNT = Object.keys(PREDICTIONS).length;
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  * @returns true if all frames have been reached, false if not
  */
-function allFramesReached() {
+export function allFramesReached() {
     return (
         localStorage.getItem('index') === 'true' &&
         localStorage.getItem('frame1') === 'true' &&
@@ -82,12 +82,13 @@ function allFramesReached() {
  * Last Modified by: Grant Cheng (June 6, 2023)
  * @returns void
  */
-function prediction() {
+export function prediction() {
     let predictionTxt;
     let predictionPic;
     const predictionTxtEl = document.querySelector('#prediction-txt');
     const predictPicEl = document.querySelector('#prediction-img');
     const revealLayerEl = document.querySelector('#reveal-layer');
+    const restartButton = document.querySelector('#restart');
 
     if (allFramesReached()) {
         const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
@@ -113,6 +114,7 @@ function prediction() {
     setTimeout(() => {
         revealLayerEl.style.display = 'none';
         predictionTxtEl.innerHTML = localStorage.getItem('text');
+        restartButton.style.display = 'block';
     }, 3100);
 
     localStorage.setItem('index', 'false');
@@ -130,22 +132,6 @@ export default function initFrameFive() {
     prediction();
     const restartButton = document.querySelector('#restart');
     restartButton.addEventListener('click', () => {
-        localStorage.setItem('index', 'false');
+        window.location.reload();
     });
-}
-
-// window.addEventListener('DOMContentLoaded', init);
-
-/**
- * Allows testing files to be able access the functions.
- */
-try {
-    module.exports = {
-        prediction,
-        PREDICTIONS,
-        PREDICTION_COUNT,
-        allFramesReached,
-    };
-} catch (e) {
-    console.warn('Modules not exported');
 }

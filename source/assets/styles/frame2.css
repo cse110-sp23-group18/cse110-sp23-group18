@@ -73,19 +73,19 @@ Note: still need to implement responsiveness
         flex-direction: row;
         text-align: center;
     }
+
     #frame2-layout .header h1 {
         position: relative;
         text-align: center;
         font-size: 40px;
         top: -17vh;
     }
+
     #frame2-layout .header h2 {
         position: relative;
         text-align: center;
         font-size: 40px;
         top: -80px;
-
-        /*top: -5vh;*/
     }
 
     #frame2-layout .teapot img {
@@ -94,8 +94,6 @@ Note: still need to implement responsiveness
         width: 18vw;
         height: auto;
         top: -130px;
-        /*bottom: calc(190px - 8vh);
-        left: calc(110px - 12vh);*/
     }
 
     #frame2-layout .teacup img {
@@ -104,5 +102,52 @@ Note: still need to implement responsiveness
         width: 18vw;
         height: auto;
         top: calc(70px - 15vh);
+    }
+}
+
+@media (min-width: 1280px) {
+    #frame2-layout .header h1 {
+        top: -13vh;
+    }
+
+    #frame2-layout .header h2 {
+        top: -7vh;
+    }
+
+    #frame2-layout .teapot img {
+        width: 11vw;
+        top: -11vh;
+    }
+
+    #frame2-layout .teacup img {
+        top: 10vh;
+    }
+}
+
+@media (min-width: 1600px) {
+    #frame2-layout .header h1 {
+        top: -10vh;
+    }
+
+    #frame2-layout .header h2 {
+        top: 0;
+    }
+
+    #frame2-layout .teapot img {
+        top: -5vh;
+    }
+
+    #frame2-layout .teacup img {
+        top: 10vh;
+    }
+}
+
+@media (min-width: 1920px) {
+    #frame2-layout .header h2 {
+        top: 3vh;
+    }
+
+    #frame2-layout .teapot img {
+        top: -1vh;
     }
 }

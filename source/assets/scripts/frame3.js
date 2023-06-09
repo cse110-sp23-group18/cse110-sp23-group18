@@ -42,18 +42,22 @@ function liftTeapot() {
                 // Move the teapot back to its original position
                 setTimeout(() => {
                     teapot.style.transition = 'transform 1.0s ease'; // Enable transition
-                    teapot.style.transform = 'translateY(0) scale(0.8)'; // Move teapot back to original position and scale down to 80%
+                    teapot.style.transform = 'translateY(0)'; // Move teapot back to original position and scale down to 80%
                     setTimeout(() => {
                         teapotImage.addEventListener('click', liftTeapot);
                         // Transition to next HTML Frame
                         setTimeout(() => {
-                            document.getElementById(
-                                'frame3-layout'
-                            ).style.display = 'none';
-                            document.getElementById('frame4-layout').innerHTML =
-                                document.getElementById(
-                                    'frame4-template'
-                                ).innerHTML;
+                            const thisLayout =
+                                document.getElementById('frame3-layout');
+                            const nextLayout =
+                                document.getElementById('frame4-layout');
+                            const nextTemplate =
+                                document.getElementById('frame4-template');
+
+                            thisLayout.style.display = 'none';
+                            thisLayout.innerHTML = '';
+                            nextLayout.innerHTML = nextTemplate.innerHTML;
+                            nextLayout.style.display = 'block';
                             initFrameFour();
                         }, 400);
                     }, 1600);
@@ -68,7 +72,3 @@ export default function initFrameThree() {
     const teapot = document.getElementById('teapotImage');
     teapot.addEventListener('click', liftTeapot);
 }
-
-// window.onload = function () {
-//     init()
-// };

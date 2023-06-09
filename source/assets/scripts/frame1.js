@@ -13,7 +13,7 @@ import initFrameTwo from './frame2.js';
  * Constants of the string representation for each tea type. Useful for
  * refactoring code and preventing spelling errors with strings.
  */
-const TEAS = {
+export const TEAS = {
     oolong: 'oolong',
     matcha: 'matcha',
     green: 'green',
@@ -26,7 +26,7 @@ let chosenJar = TEAS.none;
  * Gets the chosenJar variable so that tests can access the variable
  * @returns the chosenJar variable
  */
-function getChosenJar() {
+export function getChosenJar() {
     return chosenJar;
 }
 
@@ -38,7 +38,7 @@ function getChosenJar() {
  * @auther Jessie Ouyang (May ??, 2023)
  * Last modified by:
  */
-function selectJar(teaType) {
+export function selectJar(teaType) {
     const linkEle = document.getElementById('next');
 
     chosenJar = chosenJar === teaType ? TEAS.none : teaType;
@@ -49,7 +49,7 @@ function selectJar(teaType) {
         if (!teaEle) return;
 
         if (tea === chosenJar) {
-            teaEle.style.transform = 'scale(1.5)';
+            teaEle.style.transform = 'scale(1.25)';
             teaEle.classList.add('flicker-effect');
         } else {
             teaEle.style.transform = 'scale(1)';
@@ -88,22 +88,15 @@ export default function initFrameOne() {
 
     /* const nextButton = document.querySelector('#next'); */
     nextButton.addEventListener('click', () => {
+        const thisLayout = document.getElementById('frame1-layout');
+        const nextLayout = document.getElementById('frame2-layout');
+        const nextTemplate = document.getElementById('frame2-template');
+
         localStorage.setItem('frame1', 'true');
-        document.getElementById('frame1-layout').style.display = 'none';
-        document.getElementById('frame2-layout').innerHTML =
-            document.getElementById('frame2-template').innerHTML;
+        thisLayout.style.display = 'none';
+        thisLayout.innerHTML = '';
+        nextLayout.innerHTML = nextTemplate.innerHTML;
+        nextLayout.style.display = 'block';
         initFrameTwo();
     });
-}
-
-// window.addEventListener('DOMContentLoaded', init);
-
-try {
-    module.exports = {
-        TEAS,
-        getChosenJar,
-        selectJar,
-    };
-} catch (e) {
-    console.warn('Modules not exported');
 }

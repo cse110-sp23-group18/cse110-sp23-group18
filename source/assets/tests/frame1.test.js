@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { TEAS, getChosenJar, selectJar } = require('../scripts/frame1');
+import { TEAS, getChosenJar, selectJar } from '../scripts/frame1.js';
 
 describe('selectJar', () => {
     let linkEle;

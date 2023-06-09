@@ -2,11 +2,11 @@
  * @jest-environment jsdom
  */
 
-const {
+import {
     prediction,
     PREDICTIONS,
     allFramesReached,
-} = require('../scripts/frame5.mjs');
+} from '../scripts/frame5.js';
 
 class LocalStorageMock {
     constructor() {
