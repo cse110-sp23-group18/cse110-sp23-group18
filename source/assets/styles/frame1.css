@@ -183,12 +183,13 @@ Description: Styling specific for desktop
     /* teapot image styling */
     #frame1-layout .teapot img {
         width: 11vw;
+        top: 15px;
     }
 
     /* teacup image styling */
     #frame1-layout .teacup img {
         width: 7vw;
-        top: -120px;
+        top: -100px;
     }
 
     #frame1-layout .frame-one-container {
