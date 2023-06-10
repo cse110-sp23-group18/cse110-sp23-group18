@@ -1,92 +1,37 @@
-/*
-Description: Styling specific for mobile
-*/
-@media (max-width: 768px) {
-    #frame1-layout .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        height: 30vh;
-    }
-
-    /* h2 styling */
-    #frame1-layout .header h2 {
-        font-size: 20px;
-    }
-    /* teacup image styling */
-    #frame1-layout .teacup img {
-        max-width: 30%;
-        position: relative;
-        left: 35vw;
-        top: -1vh;
-        height: auto;
-    }
-    /* teapot image styling */
-    #frame1-layout .teapot img {
-        position: sticky;
-        position: relative;
-        max-width: 30%;
-        left: 145px;
-        top: -85px;
-        left: calc(110px + 4vh);
-        top: calc(190px - 32.5vh);
-        height: auto;
-    }
-
-    /* oolong jar styling */
-    #frame1-layout .teajar-oolong img {
-        position: relative;
-        width: 100%;
-        transition: opacity 0.2s;
-    }
-    /* green tea jar styling */
-    #frame1-layout .teajar-green img {
-        position: relative;
-        width: 100%;
-    }
-    /* matcha jar styling */
-    #frame1-layout .teajar-matcha img {
-        position: relative;
-        width: 100%;
-    }
-
-    #frame1-layout a {
-        margin-top: 3rem;
-        text-decoration: none;
-    }
+#frame1-layout .teajar-oolong,
+#frame1-layout .teajar-green,
+#frame1-layout .teajar-matcha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/*
-Description: Styling specific for desktop and mobile
-*/
+/* tea jar styling */
+#frame1-layout .teajar-oolong img,
+#frame1-layout .teajar-green img,
+#frame1-layout .teajar-matcha img {
+    position: relative;
+    width: 100%;
+}
+
+/* increase size of jar when hovering */
+#frame1-layout .teajar-green img:hover,
+#frame1-layout .teajar-oolong img:hover,
+#frame1-layout .teajar-matcha img:hover {
+    transform: scale(1.1);
+}
+
 #frame1-layout .frame-one {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
 }
-#frame1-layout .frame-one-container {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
+
 #frame1-layout .item {
     display: flex;
     flex: 1;
     align-self: auto;
-}
-/* increase size of jar when hovering */
-#frame1-layout .teajar-green img:hover {
-    transform: scale(1.1);
-}
-#frame1-layout .teajar-oolong img:hover {
-    transform: scale(1.1);
-}
-#frame1-layout .teajar-matcha img:hover {
-    transform: scale(1.1);
 }
 
 /* CSS for the flickering effect */
@@ -108,61 +53,73 @@ Description: Styling specific for desktop and mobile
     }
 }
 
+#frame1-layout .header {
+    text-align: center;
+    margin-right: 1.5rem;
+}
+
+#frame1-layout .header h1 {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: calc(var(--img-scale) * var(--mbg-height) * 0.07);
+}
+
+#frame1-layout .header h2 {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: calc(var(--img-scale) * var(--mbg-height) * 0.13);
+}
+
+#frame1-layout .teacup img {
+    position: absolute;
+    width: 15vw;
+    top: calc(var(--img-scale) * var(--mbg-height) * 0.42);
+    left: calc(var(--img-scale) * var(--mbg-width) * 0.1);
+}
+
+#frame1-layout .teapot img {
+    position: absolute;
+    width: 25vw;
+    top: calc(var(--img-scale) * var(--mbg-height) * 0.33);
+    left: calc(var(--img-scale) * var(--mbg-width) * 0.4);
+}
+
+#frame1-layout .frame-one-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(var(--img-scale) * var(--mbg-height) * 0.64);
+}
+
+#frame1-layout a {
+    position: absolute;
+    margin-top: 3rem;
+    text-decoration: none;
+    top: calc(var(--img-scale) * var(--mbg-height) * 0.9);
+}
+
 /*
 Description: Styling specific for desktop
 */
 @media (min-width: 769px) {
     #frame1-layout .header h1 {
-        position: relative;
-        text-align: center;
         font-size: 2rem;
-        margin-top: 6vh;
+        margin-top: calc(var(--img-scale) * var(--tbg-height) * 0.06);
     }
 
     #frame1-layout .header h2 {
-        position: relative;
-        text-align: center;
         font-size: 2rem;
-        margin-top: 90px;
-    }
-
-    /* teapot image styling */
-    #frame1-layout .teapot img {
-        display: flex;
-        position: relative;
-        width: 14vw;
-        height: auto;
-        top: -3vh;
-    }
-
-    /* teacup image styling */
-    #frame1-layout .teacup img {
-        display: flex;
-        position: relative;
-        width: 7vw;
-        height: auto;
-        left: -15vw;
-        top: -15vh;
-    }
-
-    #frame1-layout .teajar-oolong,
-    #frame1-layout .teajar-green,
-    #frame1-layout .teajar-matcha {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-top: calc(var(--img-scale) * var(--tbg-height) * 0.1);
     }
 
     #frame1-layout .teajar-oolong img,
     #frame1-layout .teajar-green img,
     #frame1-layout .teajar-matcha img {
-        position: relative;
         width: 50%;
-    }
-
-    #frame1-layout .frame-one-container {
-        top: -6vh;
-        justify-content: center;
     }
 
     #frame1-layout a {
@@ -173,60 +130,61 @@ Description: Styling specific for desktop
         font-size: 2.5vw;
         line-height: 20px;
     }
-}
-
-@media (min-width: 1280px) {
-    #frame1-layout .header h2 {
-        margin-top: 12vh;
-    }
 
     /* teapot image styling */
     #frame1-layout .teapot img {
+        position: absolute;
         width: 11vw;
-        top: 15px;
+        height: auto;
+        top: calc(var(--img-scale) * var(--tbg-height) * 0.34);
+        left: calc(var(--img-scale) * var(--tbg-width) * 0.46);
     }
 
     /* teacup image styling */
     #frame1-layout .teacup img {
+        position: absolute;
         width: 7vw;
-        top: -100px;
+        top: calc(var(--img-scale) * var(--tbg-height) * 0.42);
+        left: calc(var(--img-scale) * var(--tbg-width) * 0.3);
     }
 
     #frame1-layout .frame-one-container {
-        top: -11vh;
+        justify-content: center;
+        position: absolute;
+        top: calc(var(--img-scale) * var(--tbg-height) * 0.56);
     }
 
     #frame1-layout a {
-        top: -7vh;
+        top: calc(var(--img-scale) * var(--tbg-height) * 0.47);
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1280px) {
     #frame1-layout .header h1 {
-        margin-top: 10vh;
-    }
-}
-
-@media (min-width: 1920px) {
-    #frame1-layout .header h1 {
-        margin-top: 10vh;
+        margin-top: calc(var(--img-scale) * var(--dbg-height) * 0.08);
     }
 
     #frame1-layout .header h2 {
-        margin-top: 13vh;
+        margin-top: calc(var(--img-scale) * var(--dbg-height) * 0.12);
     }
 
     /* teapot image styling */
     #frame1-layout .teapot img {
-        top: -1vh;
+        top: calc(var(--img-scale) * var(--dbg-height) * 0.31);
+        left: calc(var(--img-scale) * var(--dbg-width) * 0.45);
+    }
+
+    /* teacup image styling */
+    #frame1-layout .teacup img {
+        top: calc(var(--img-scale) * var(--dbg-height) * 0.4);
+        left: calc(var(--img-scale) * var(--dbg-width) * 0.33);
     }
 
     #frame1-layout .frame-one-container {
-        top: -7vh;
+        top: calc(var(--img-scale) * var(--dbg-height) * 0.55);
     }
 
     #frame1-layout a {
-        top: -3vh;
-        padding: 30px;
+        top: calc(var(--img-scale) * var(--dbg-height) * 0.55);
     }
 }

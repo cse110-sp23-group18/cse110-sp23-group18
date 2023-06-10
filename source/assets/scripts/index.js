@@ -1,4 +1,3 @@
-// index.js
 /**
  * Has a start button, and when clicked
  * @author Damaris Flores (May ??, 2023)

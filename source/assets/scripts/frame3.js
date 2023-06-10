@@ -31,7 +31,8 @@ function liftTeapot() {
     // Disable transition temporarily
     teapot.style.transition = 'none';
     // Set teapot to original position
-    teapot.style.transform = 'translateY(0)';
+    const initVertPos = -teapot.offsetTop + 'px';
+    teapot.style.transform = `translateY(${initVertPos})`;
 
     // Add the 'lifted' class to teapot element
     teapot.classList.add('lifted');
@@ -39,7 +40,8 @@ function liftTeapot() {
         // Enable transition
         teapot.style.transition = 'transform 1.0s ease';
         // Move teapot upward and left
-        teapot.style.transform = 'translateY(-55px) translateX(-75px)';
+        teapot.style.transform =
+            `translateY(calc(-13vh + ${initVertPos})) translateX(calc(-7vw))`;
         // Remove the 'lifted' class after the transition
         teapot.classList.remove('lifted');
         setTimeout(() => {
@@ -57,7 +59,7 @@ function liftTeapot() {
                     // Enable transition
                     teapot.style.transition = 'transform 1.0s ease';
                     // Move teapot back to original position and scale down to 80%
-                    teapot.style.transform = 'translateY(0)';
+                    teapot.style.transform = `translateY(${initVertPos})`;
                     setTimeout(() => {
                         teapotImage.addEventListener('click', liftTeapot);
                         // Transition to next HTML Frame
