@@ -3,8 +3,8 @@
  */
 
 describe('Basic user flow for Website', () => {
-    const BASE_LINK = 'http://127.0.0.1:5500/source'; // test locally
-    // const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
+    // const BASE_LINK = 'http://127.0.0.1:5500/source'; // test locally
+    const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
 
     // First, visit the tasseography website
     beforeAll(async () => {
@@ -20,7 +20,7 @@ describe('Basic user flow for Website', () => {
         // Test for if the background music is playing
         // Check that the new page has loaded
 
-        await page.click('.start-button')
+        await page.click('.start-button');
 
         // const landingSelector = '#landing-layout'
         // const frame1Selector = '#frame1-layout'
@@ -49,7 +49,7 @@ describe('Basic user flow for Website', () => {
         expect(confirmation).toBeTruthy();
 
         await confirmation.click();
-        await page.waitForTimeout(3000)
+        await page.waitForTimeout(3000);
     }, 5000);
 
     it('Test the second frame of the app', async () => {
@@ -59,7 +59,7 @@ describe('Basic user flow for Website', () => {
         const teapotEl = await page.$('#teapot');
         await teapotEl.click();
 
-        await page.waitForTimeout(7000)
+        await page.waitForTimeout(7000);
     }, 10000);
 
     it('Test the third frame of the app', async () => {
@@ -86,15 +86,15 @@ describe('Basic user flow for Website', () => {
         // Wait for a few seconds
         // Ensure that the page elements look correct
         await page.waitForTimeout(4000);
-        
+
         const predictionTxtEl = await page.$('#prediction-txt');
-        expect(predictionTxtEl).toBeTruthy();   
+        expect(predictionTxtEl).toBeTruthy();
     }, 5000);
 
     it('Test going back to the home page from the fifth frame', async () => {
         // Click on the new fortune button
         // Wait for the page to reload
         // Ensure that you are on the langing page now
-        await page.click('#restart')
+        await page.click('#restart');
     });
 });
