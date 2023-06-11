@@ -2,7 +2,7 @@
  * @summary This file provides the scripting for the second frame of the file.
  * This includes providing transitions to the next frame (frame-3)
  * @author Jessie Ouyang (May ??, 2023)
- * Last modified by: Shuyi Han (June 8, 2023)
+ * Last modified by: Grant Cheng (June 9, 2023)
  */
 
 import initFrameThree from './frame3.js';

@@ -1,8 +1,7 @@
-// index.js
 /**
  * Has a start button, and when clicked
  * @author Damaris Flores (May ??, 2023)
- * Last modified by: Grant Cheng (June 8, 2023)
+ * Last modified by: Grant Cheng (June 9, 2023)
  */
 
 import initFrameOne from './frame1.js';
@@ -35,7 +34,7 @@ function init() {
         nextLayout.style.display = 'block';
         initFrameOne();
 
-        bgm.volume = 0.2;
+        bgm.volume = 0.15;
 
         bgm.play().catch((error) => {
             // Handle autoplay error

@@ -4,6 +4,11 @@
 
 import { TEAS, getChosenJar, selectJar } from '../scripts/frame1.js';
 
+// prevents an HTMLMediaElement error
+window.HTMLMediaElement.prototype.play = () => {
+    /* do nothing */
+};
+
 describe('selectJar', () => {
     let linkEle;
 
