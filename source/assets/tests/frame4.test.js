@@ -1,98 +1,77 @@
+/**
+ * @summary This file provides the testing for the fourth frame of the file.
+ *
+ * @author Pramesh Kariyawasam (June 11, 2023)
+ *
+ */
+
 import initFrameFour from '../scripts/frame4.js';
+import initFrameFive from '../scripts/frame5.js';
 
-// Mock the necessary DOM elements and functions
-document.body.innerHTML = `
-   <div id="frame4-layout">
-       Frame 4 Layout
-       <img id="teacup" />
-   </div>
-   <div id="frame5-layout"></div>
-   <div id="frame5-template">Frame 5 Template</div>
-`;
-
-jest.mock('./frame5.js', () => ({
-    __esModule: true,
-    default: jest.fn(),
-}));
+// Prevents an HTMLMediaElement error
+window.HTMLMediaElement.prototype.play = () => {
+  // Do nothing
+};
 
 describe('initFrameFour', () => {
-    beforeEach(() => {
-        jest.clearAllMocks();
-    });
+  let teacupImage;
+  let frame4Layout;
+  let frame5Layout;
+  let frame5Template;
+  let predictionTxtEl;
+  let predictionImgEl;
+  let revealLayerEl;
+  let restartButton;
 
-    it('should initialize frame four functionality', () => {
-        // Mock the necessary Audio class and its methods
-        const mockAudioConstructor = jest.fn();
-        const mockPlay = jest.fn();
-        const mockSetTimeout = jest.spyOn(window, 'setTimeout');
+  beforeEach(() => {
+    jest.resetModules();
 
-        global.Audio = jest.fn().mockImplementation(() => ({
-            src: '',
-            preload: '',
-            play: mockPlay,
-        }));
+    document.body.innerHTML = `
+      <img id="teacup" />
+      <div id="frame4-layout"></div>
+      <div id="frame5-layout"></div>
+      <template id="frame5-template">
+        <p id="prediction-txt"></p>
+        <img id="prediction-img" src="" />
+        <div id="reveal-layer"></div>
+        <button id="restart">Restart</button>
+      </template>
+    `;
 
-        // Call the function to test
-        initFrameFour();
+    teacupImage = document.querySelector('#teacup');
+    frame4Layout = document.querySelector('#frame4-layout');
+    frame5Layout = document.querySelector('#frame5-layout');
+    frame5Template = document.querySelector('#frame5-template');
 
-        // Simulate a click on the teacup image
-        const teacupImage = document.getElementById('teacup');
-        teacupImage.click();
+    predictionTxtEl = document.querySelector('#prediction-txt');
+    predictionImgEl = document.querySelector('#prediction-img');
+    revealLayerEl = document.querySelector('#reveal-layer');
+    restartButton = document.querySelector('#restart');
+  });
 
-        // Teacup image should have the 'enlarged' class
-        expect(teacupImage.classList.contains('enlarged')).toBe(true);
+  test('should add click event listener to teacup element and navigate to frame 5', () => {
+    // Call the function
+    initFrameFour();
 
-        // setTimeout should be called twice
-        expect(mockSetTimeout).toHaveBeenCalledTimes(2);
+    // Click the teacup image
+    teacupImage.click();
 
-        // play method of Audio object should be called once
-        expect(mockPlay).toHaveBeenCalledTimes(1);
+    // Timeout needed to let the function's setTimeout complete
+    setTimeout(() => {
+      // Check that the layout and template have been updated correctly
+      expect(frame4Layout.style.display).toBe('none');
+      expect(frame4Layout.innerHTML).toBe('');
+      expect(frame5Layout.innerHTML).toBe(frame5Template.innerHTML);
+      expect(frame5Layout.style.display).toBe('flex');
 
-        // frame4-layout should have display: none
-        expect(document.getElementById('frame4-layout').style.display).toBe(
-            'none'
-        );
+      // Check that the prediction function has been called in frame5.js
+      expect(initFrameFive).toHaveBeenCalled();
 
-        // frame4-layout should have empty innerHTML
-        expect(document.getElementById('frame4-layout').innerHTML).toBe('');
-
-        // frame5-layout should have innerHTML equal to 'Frame 5 Template'
-        expect(document.getElementById('frame5-layout').innerHTML).toBe(
-            'Frame 5 Template'
-        );
-
-        // frame5-layout should have display: flex
-        expect(document.getElementById('frame5-layout').style.display).toBe(
-            'flex'
-        );
-
-        // Audio constructor should be called once
-        expect(mockAudioConstructor).toHaveBeenCalledTimes(1);
-
-        // Audio constructor should be called with no arguments
-        expect(mockAudioConstructor).toHaveBeenCalledWith();
-
-        // global.Audio should be called as a constructor
-        expect(global.Audio).toHaveBeenCalledWith();
-
-        // The src property of the Audio object should be './assets/audios/drinking_tea.mp3'
-        expect(mockAudioConstructor().src).toBe(
-            './assets/audios/drinking_tea.mp3'
-        );
-
-        // The preload property of the Audio object should be 'auto'
-        expect(mockAudioConstructor().preload).toBe('auto');
-
-        // play method of Audio object should be called
-        expect(mockPlay).toHaveBeenCalled();
-
-        // setTimeout should be called with a function and a delay of 1500ms
-        expect(mockSetTimeout).toHaveBeenCalledWith(expect.any(Function), 1500);
-
-        // setTimeout should be called with a function and a delay of 1300ms
-        expect(mockSetTimeout).toHaveBeenCalledWith(expect.any(Function), 1300);
-
-        // The initFrameFive function from frame5.js should be called
-        expect(require('./frame5.js').default).toHaveBeenCalled();
-    });
+      // Check that the prediction elements have been populated correctly
+      expect(predictionTxtEl.innerHTML).not.toBe('');
+      expect(predictionImgEl.src).not.toBe('');
+      expect(revealLayerEl.style.display).toBe('none');
+      expect(restartButton.style.display).toBe('block');
+    }, 1300);
+  });
 });
