@@ -49,6 +49,7 @@ describe('initFrameThree', () => {
         teapotEle.dispatchEvent(new Event('click'));
 
         // Wait for next event loop tick
+        // eslint-disable-next-line no-promise-executor-return
         await new Promise((r) => setTimeout(r, 0));
 
         // Assert that the styles are changed correctly after the teapot is lifted
