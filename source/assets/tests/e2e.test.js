@@ -4,12 +4,12 @@
 
 describe('Basic user flow for Website', () => {
     // const BASE_LINK = 'http://127.0.0.1:5500/source'; // test locally
-    const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
+    // const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
 
     // First, visit the tasseography website
     beforeAll(async () => {
-        // await page.goto('https://apollo18-tealeaves.netlify.app'); // test prod
-        await page.goto(`${BASE_LINK}/`);
+        await page.goto('https://apollo18-tealeaves.netlify.app'); // test prod
+        // await page.goto(`${BASE_LINK}/`);
     });
 
     it('Test the landing frame of the app', async () => {
