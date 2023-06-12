@@ -37,13 +37,9 @@ describe('prediction', () => {
                 // Verify that the prediction text and image elements are updated correctly
                 expect(
                     PREDICTIONS.some((pred) => {
-                        const imgSrc = `http://localhost/${pred.picture.slice(
-                            2
-                        )}`;
-
                         return (
                             pred.text === predictionTxtEl.innerHTML &&
-                            imgSrc === predictPicEl.src
+                            predictPicEl.src.includes(pred.picture.slice(2))
                         );
                     })
                 ).toBe(true);
