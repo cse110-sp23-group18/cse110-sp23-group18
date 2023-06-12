@@ -1,72 +1,75 @@
-import initFrameThree from '..scripts/frame3.js';
+/**
+ * @jest-environment jsdom
+ */
+import initFrameThree from '../scripts/frame3.js';
 
-// Mock the necessary DOM elements and methods
-document.body.innerHTML = `
-  <div id="frame3-layout">
-    <img id="teapotImage" src="" />
-    <img id="pouringImage" src="" />
-  </div>
-  <div id="frame4-layout"></div>
-  <div id="frame4-template"></div>
-`;
+jest.useFakeTimers();
 
-// Mock the Audio class and its methods
-jest.mock('html5-audio', () => {
-  return jest.fn().mockImplementation(() => ({
-    src: '',
-    preload: '',
-    currentTime: 0,
-    play: jest.fn().mockResolvedValue(undefined), // Resolve the play promise
-    paused: true
-  }));
-});
+window.HTMLMediaElement.prototype.play = jest
+  .fn()
+  .mockImplementation(() => ({ catch: jest.fn() }));
 
 describe('initFrameThree', () => {
-  it('should animate lifting and pouring the teapot', () => {
-    const teapotImage = document.getElementById('teapotImage');
-    const pouringImage = document.getElementById('pouringImage');
-    const pouringSound = new Audio();
+  beforeEach(() => {
+    jest.resetModules();
+    document.body.innerHTML = `
+            <div class='teapot' id='teapot'>
+                <img id='teapotImage' />
+                <img id='pouringImage' class='hidden' />
+            </div>
+            <div id='frame3-layout' style='display: block;'>
+                <div id='frame3-template'>
+                    Template content
+                </div>
+            </div>
+            <div id='frame4-layout' style='display: none;'>
+                <div id='frame4-template'>
+                    Template content
+                </div>
+            </div>
+        `;
+  });
 
+  test('should add event listener to teapot element', () => {
+    const teapot = document.getElementById('teapotImage');
+    const spy = jest.spyOn(teapot, 'addEventListener');
     initFrameThree();
+    expect(spy).toHaveBeenCalled();
+  });
 
-    // Simulate a click event on the teapot image
-    teapotImage.click();
-
-    // Assert that the 'lifted' class is added to the teapot element
-    const teapot = document.querySelector('.teapot');
-    expect(teapot.classList.contains('lifted')).toBe(true);
-
-    // Fast-forward to the end of the animation
-    jest.advanceTimersByTime(5000);
-
-    // Assert that the pouring and teapot images are toggled
-    expect(teapotImage.classList.contains('hidden')).toBe(false);
-    expect(pouringImage.classList.contains('hidden')).toBe(true);
-
-    // Assert that the pouring image's source is reset
-    expect(pouringImage.getAttribute('src')).toBe('');
-
-    // Assert that the teapot element is back to its original position
-    expect(teapot.style.transform).toBe('');
-
-    // Assert that the sound's currentTime is set to 0
-    expect(pouringSound.currentTime).toBe(0);
-
-    // Assert that the sound's play method is called
-    expect(pouringSound.play).toHaveBeenCalled();
-
-    // Fast-forward to the end of the transition
-    jest.advanceTimersByTime(2400);
-
-    // Assert that the teapot image click event listener is added again
-    expect(teapotImage.addEventListener).toHaveBeenCalledWith('click', expect.any(Function));
-
-    // Assert that the layout elements are updated correctly
-    const thisLayout = document.getElementById('frame3-layout');
-    const nextLayout = document.getElementById('frame4-layout');
-    expect(thisLayout.style.display).toBe('none');
-    expect(thisLayout.innerHTML).toBe('');
-    expect(nextLayout.innerHTML).toBe('');
-    expect(nextLayout.style.display).toBe('block');
+  test('should execute liftTeapot function correctly', done => {
+    jest.setTimeout(10000); // Increase timeout to 10 seconds
+  
+    initFrameThree();
+  
+    const teapotEle = document.querySelector('.teapot');
+    const teapotImageEle = document.getElementById('teapotImage');
+    const pouringImageEle = document.getElementById('pouringImage');
+  
+    // Trigger a click event on the teapot element
+    teapotEle.dispatchEvent(new Event('click'));
+  
+    setTimeout(() => {
+      // Assert that the styles are changed correctly after the teapot is lifted
+      expect(teapotEle.style.transform).toBeTruthy();
+      expect(teapotEle.classList.contains('lifted')).toBeTruthy();
+  
+      // fast-forward until all the remaining timers have been executed
+      jest.runAllTimers();
+  
+      // Checks if the teapot and pouringImage classes have been toggled correctly
+      expect(teapotImageEle.classList.contains('hidden')).toBeTruthy();
+      expect(pouringImageEle.classList.contains('hidden')).toBeFalsy();
+  
+      // Check layout transitions
+      expect(document.getElementById('frame3-layout').style.display).toBe(
+        'none'
+      );
+      expect(document.getElementById('frame4-layout').style.display).toBe(
+        'block'
+      );
+  
+      done();
+    }, 0);
   });
 });

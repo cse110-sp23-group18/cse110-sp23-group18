@@ -1,4 +1,4 @@
-import initFrameFour from '..scripts/frame4.js';
+import initFrameFour from '../scripts/frame4.js';
 
 // Mock the necessary DOM elements and functions
 document.body.innerHTML = `
