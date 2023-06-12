@@ -1,12 +1,11 @@
 /**
  * @summary This file provides the testing for the second frame of the file.
- * 
+ *
  * @author Pramesh Kariyawasam (June 10, 2023)
- * 
+ *
  */
 
-import initFrameTwo from '..//scripts/frame2.js';
-import initFrameThree from '../scripts/frame3.js';
+import initFrameTwo from '../scripts/frame2.js';
 
 // prevents an HTMLMediaElement error
 window.HTMLMediaElement.prototype.play = () => {
@@ -50,9 +49,9 @@ describe('initFrameTwo', () => {
 
     test('should add event listener to teapot element', () => {
         const clickEvent = new MouseEvent('click', {
-            'view': window,
-            'bubbles': true,
-            'cancelable': true
+            view: window,
+            bubbles: true,
+            cancelable: true,
         });
 
         teapotEle.dispatchEvent(clickEvent);
@@ -63,9 +62,9 @@ describe('initFrameTwo', () => {
 
     test('should change layouts after 5000ms', () => {
         const clickEvent = new MouseEvent('click', {
-            'view': window,
-            'bubbles': true,
-            'cancelable': true
+            view: window,
+            bubbles: true,
+            cancelable: true,
         });
 
         teapotEle.dispatchEvent(clickEvent);
@@ -78,4 +77,3 @@ describe('initFrameTwo', () => {
         expect(nextLayout.style.display).toBe('block');
     });
 });
-
