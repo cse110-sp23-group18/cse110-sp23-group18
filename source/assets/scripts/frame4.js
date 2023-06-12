@@ -4,18 +4,24 @@
  * the next frame (frame 5)
  *
  * @author Shuyi Han (May ??, 2023)
- * Last modified by: Grant Cheng (June 2, 2023)
+ * Last modified by: Grant Cheng (June 9, 2023)
  */
+
+import initFrameFive from './frame5.js';
 
 /**
  * The initialization function that runs when the window loads
- * When the teacup is clicked, frame 4 is changed visited in localStroage
- * and the user is moved to frame 5
+ * When the teacup is clicked, the user is moved to frame 5
  *
  * Last modified by: Kavi Nelakonda (June 2, 2023)
  * @returns void
  */
-function init() {
+
+const drinkingSound = new Audio();
+drinkingSound.src = './assets/audios/drinking_tea.mp3';
+drinkingSound.preload = 'auto';
+
+export default function initFrameFour() {
     const teacupImage = document.getElementById('teacup');
     let isEnlarged = false;
 
@@ -31,11 +37,18 @@ function init() {
     }
     teacupImage.addEventListener('click', () => {
         toggleSize();
-        localStorage.setItem('frame4', 'true');
+
+        drinkingSound.play();
         setTimeout(() => {
-            window.location.href = './frame5.html';
-        }, 800);
+            const thisLayout = document.getElementById('frame4-layout');
+            const nextLayout = document.getElementById('frame5-layout');
+            const nextTemplate = document.getElementById('frame5-template');
+
+            thisLayout.style.display = 'none';
+            thisLayout.innerHTML = '';
+            nextLayout.innerHTML = nextTemplate.innerHTML;
+            nextLayout.style.display = 'flex';
+            initFrameFive();
+        }, 1180);
     });
 }
-
-window.addEventListener('DOMContentLoaded', init);

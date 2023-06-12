@@ -4,14 +4,14 @@
  * Requires users to go through every page in order to get a new prediction.
  *
  * @author Kavi Nelakonda (May 14, 2023)
- * Last modified by: Kavi Nelakonda (June 6, 2023)
+ * Last modified by: Grant Cheng (June 9, 2023)
  */
 
 /**
  * 10 responses, all with different tones, each corresponding with different images.
  * Adding to this adds to total number of responses.
  */
-const PREDICTIONS = [
+export const PREDICTIONS = [
     {
         text: 'Ah, a fish shape. The tea leaves reveal a wild journey ahead in overseas relations. Success is your destiny!',
         picture: './assets/images/dredges/fish1.png',
@@ -57,23 +57,6 @@ const PREDICTIONS = [
 const PREDICTION_COUNT = Object.keys(PREDICTIONS).length;
 
 /**
- * All of the frames are keys associated with a value of true or false in localStorage.
- * The function checks if the value is true for each of these keys.
- *
- * Last modified by: Kavi Nelakonda (June 2, 2023)
- * @returns true if all frames have been reached, false if not
- */
-function allFramesReached() {
-    return (
-        localStorage.getItem('index') === 'true' &&
-        localStorage.getItem('frame1') === 'true' &&
-        localStorage.getItem('frame2') === 'true' &&
-        localStorage.getItem('frame3') === 'true' &&
-        localStorage.getItem('frame4') === 'true'
-    );
-}
-
-/**
  * Generates a random number, uses the number as a key to find a response.
  * Response text is put in the response element that is generated if it does not exist.
  * Picture associated with the response is put as an image element source
@@ -82,69 +65,42 @@ function allFramesReached() {
  * Last Modified by: Grant Cheng (June 6, 2023)
  * @returns void
  */
-function prediction() {
-    let predictionTxt;
-    let predictionPic;
+export function prediction() {
     const predictionTxtEl = document.querySelector('#prediction-txt');
     const predictPicEl = document.querySelector('#prediction-img');
     const revealLayerEl = document.querySelector('#reveal-layer');
+    const restartButton = document.querySelector('#restart');
 
-    if (allFramesReached()) {
-        const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
-        predictionTxt = PREDICTIONS[randomNumber].text;
-        predictionPic = PREDICTIONS[randomNumber].picture;
+    const randomNumber = Math.floor(Math.random() * PREDICTION_COUNT);
+    const predictionTxt = PREDICTIONS[randomNumber].text;
+    const predictionPic = PREDICTIONS[randomNumber].picture;
 
-        localStorage.setItem('text', predictionTxt);
-        localStorage.setItem('picture', predictionPic);
-    }
-
-    if (localStorage.getItem('text') != null) {
-        predictionTxtEl.innerHTML = localStorage.getItem('text');
-    } else {
-        predictionTxtEl.innerHTML =
-            'You did not go thorugh the proper process!';
-    }
-    predictPicEl.src = localStorage.getItem('picture');
+    predictPicEl.src = predictionPic;
 
     revealLayerEl.style.transition = 'opacity 3s';
-    revealLayerEl.style.opacity = 0;
+
+    setTimeout(() => {
+        revealLayerEl.style.opacity = 0;
+    }, 100);
 
     setTimeout(() => {
         revealLayerEl.style.display = 'none';
-        predictionTxtEl.innerHTML = localStorage.getItem('text');
-    }, 3000);
-
-    localStorage.setItem('index', 'false');
+        predictionTxtEl.innerHTML = predictionTxt;
+        restartButton.style.display = 'block';
+    }, 3100);
 }
 
 /**
  * Loads up the prediction with the image.
- * Loads up the button that restarts the project and
- * index is changed to not visited in localStorage.
+ * Loads up the button that restarts the project.
  *
  * Last Modified by: Kavi Nelakonda (June 6, 2023)
  * @returns void
  */
-function init() {
+export default function initFrameFive() {
     prediction();
     const restartButton = document.querySelector('#restart');
     restartButton.addEventListener('click', () => {
-        localStorage.setItem('index', 'false');
+        window.location.reload();
     });
-}
-
-window.addEventListener('DOMContentLoaded', init);
-
-/**
- * Allows testing files to be able access the functions.
- */
-try {
-    module.exports = {
-        prediction,
-        PREDICTIONS,
-        PREDICTION_COUNT,
-        allFramesReached,
-    };
-} catch (e) {
-    console.warn('Modules not exported');
 }

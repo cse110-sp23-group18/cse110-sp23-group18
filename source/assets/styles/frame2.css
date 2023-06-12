@@ -1,108 +1,114 @@
 /*
 Description: Styling specific for mobile
 */
-@media (max-width: 768px) {
-    .header {
-        height: 30vh;
-    }
-    /* h1 alignment */
-    h1 {
-        text-align: center;
-    }
-    /* h2 styling */
-    h2 {
-        margin-top: 4.2rem;
-        font-size: 20px;
-    }
-    /* teacup image styling */
-    .teacup img {
-        max-width: 35%;
-        height: auto;
-        position: relative;
-        left: 32vw;
-        top: 10vh;
-    }
-    /* teapot image styling */
-    .teapot img {
-        position: relative;
-        max-width: 30%;
-        left: 38vw;
-        top: calc(160px - 30vh);
-        height: auto;
-    }
-
-    a {
-        position: relative;
-        top: 16vh;
-        text-decoration: none;
-    }
+#frame2-layout .header {
+    text-align: center;
+    margin-right: 1.5rem;
+}
+/* h1 alignment */
+#frame2-layout h1 {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: calc(var(--img-scale) * var(--mbg-height) * 0.07);
+}
+/* h2 styling */
+#frame2-layout h2 {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: calc(var(--img-scale) * var(--mbg-height) * 0.13);
+}
+/* teacup image styling */
+#frame2-layout .teacup img {
+    position: absolute;
+    width: 30vw;
+    top: calc(var(--img-scale) * var(--mbg-height) * 0.7);
+    left: calc(var(--img-scale) * var(--mbg-width) * 0.2);
+}
+/* teapot image styling */
+#frame2-layout .teapot img {
+    position: absolute;
+    width: 25vw;
+    top: calc(var(--img-scale) * var(--mbg-height) * 0.33);
+    left: calc(var(--img-scale) * var(--mbg-width) * 0.4);
 }
 
-/*
-Description: Styling specific for desktop and mobile
-Frame 2
-*/
-#frame-two {
+#frame2-layout a {
+    position: relative;
+    top: 16vh;
+    text-decoration: none;
+}
+
+#frame2-layout #frame-two {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*height: 90vh;*/
 }
 
-.frame-two-container {
+#frame2-layout .frame-two-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    /*height: 40vh;*/
 }
 
 /*
 Description: Styling specific for desktop
-Note: still need to implement responsiveness
 */
 @media (min-width: 769px) {
-    .frame-two {
+    #frame2-layout .frame-two {
         position: relative;
         flex-direction: row;
     }
 
-    .header {
-        margin-top: 14vh;
+    #frame2-layout .header {
         flex-direction: row;
         text-align: center;
     }
-    .header h1 {
-        position: relative;
-        text-align: center;
-        font-size: 40px;
-        top: -17vh;
-    }
-    .header h2 {
-        position: relative;
-        text-align: center;
-        font-size: 40px;
-        top: -80px;
 
-        /*top: -5vh;*/
+    #frame2-layout .header h1 {
+        font-size: 2rem;
+        margin-top: calc(var(--img-scale) * var(--tbg-height) * 0.06);
     }
 
-    .teapot img {
-        display: flex;
-        position: relative;
-        width: 18vw;
-        height: auto;
-        top: -130px;
-        /*bottom: calc(190px - 8vh);
-        left: calc(110px - 12vh);*/
+    #frame2-layout .header h2 {
+        font-size: 2rem;
+        margin-top: calc(var(--img-scale) * var(--tbg-height) * 0.1);
     }
 
-    .teacup img {
-        display: flex;
-        position: relative;
-        width: 18vw;
-        height: auto;
-        top: calc(70px - 15vh);
+    /* teapot image styling */
+    #frame2-layout .teapot img {
+        width: 11vw;
+        top: calc(var(--img-scale) * var(--tbg-height) * 0.34);
+        left: calc(var(--img-scale) * var(--tbg-width) * 0.46);
+    }
+
+    /* teacup image styling */
+    #frame2-layout .teacup img {
+        width: 15vw;
+        top: calc(var(--img-scale) * var(--tbg-height) * 0.7);
+        left: calc(var(--img-scale) * var(--tbg-width) * 0.43);
+    }
+}
+
+@media (min-width: 1280px) {
+    #frame2-layout .header h1 {
+        margin-top: calc(var(--img-scale) * var(--dbg-height) * 0.08);
+    }
+
+    #frame2-layout .header h2 {
+        margin-top: calc(var(--img-scale) * var(--dbg-height) * 0.12);
+    }
+
+    #frame2-layout .teapot img {
+        top: calc(var(--img-scale) * var(--dbg-height) * 0.31);
+        left: calc(var(--img-scale) * var(--dbg-width) * 0.45);
+    }
+
+    #frame2-layout .teacup img {
+        top: calc(var(--img-scale) * var(--dbg-height) * 0.6);
+        left: calc(var(--img-scale) * var(--dbg-width) * 0.43);
     }
 }
