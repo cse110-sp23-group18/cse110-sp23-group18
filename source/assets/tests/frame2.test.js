@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import initFrameTwo from '../scripts/frame2.js';
+import initFrameTwo from '..//scripts/frame2.js';
 import initFrameThree from '../scripts/frame3.js';
 
 // prevents an HTMLMediaElement error
@@ -75,3 +75,4 @@ describe('initFrameTwo', () => {
         expect(nextLayout.style.display).toBe('block');
     });
 });
+

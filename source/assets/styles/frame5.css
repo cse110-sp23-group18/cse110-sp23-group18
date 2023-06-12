@@ -1,17 +1,16 @@
-/*
-Description: Styling specific for mobile
-*/
 /* h1 styling */
 #frame5-layout h1 {
     position: relative;
     text-align: center;
 }
+
 /* h2 styling */
 #frame5-layout h2 {
     position: relative;
     text-align: center;
     font-size: 110%;
 }
+
 /* a styling */
 #frame5-layout a {
     background-color: black;
@@ -53,6 +52,7 @@ Description: Styling specific for desktop and mobile
     margin-right: auto;
     max-width: 90vw;
 }
+
 #frame5-layout .image-overlay {
     position: absolute;
     max-width: 100%;
