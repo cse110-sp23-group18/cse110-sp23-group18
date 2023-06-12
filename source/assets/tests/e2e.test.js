@@ -3,8 +3,8 @@
  */
 
 describe('Basic user flow for Website', () => {
-    // const BASE_LINK = 'http://127.0.0.1:5500/source'; // test locally
-    const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
+    const BASE_LINK = 'http://127.0.0.1:5500/source'; // test locally
+    // const BASE_LINK = 'https://dev--apollo18-tealeaves.netlify.app'; // test dev
 
     // First, visit the tasseography website
     beforeAll(async () => {
@@ -14,25 +14,23 @@ describe('Basic user flow for Website', () => {
 
     // Check that
     it('Test the landing frame of the app', async () => {
+        // Wait for the page to load (wait for 1 sec)
         await page.waitForTimeout(1000);
+
         // Click on the start button
-
-        // Test for if the background music is playing
-        // Check that the new page has loaded
-
         await page.click('.start-button');
 
-        // const landingSelector = '#landing-layout'
-        // const frame1Selector = '#frame1-layout'
+        // Check that the new page has loaded
+        const landingLayout = await page.$('#landing-layout');
+        const landingLayoutProp = await landingLayout.getProperty('innerHTML');
+        const landingLayoutInner = await landingLayoutProp.jsonValue();
 
-        // const landingLayout = await page.$(landingSelector);
-        // const frame1Layout = await page.$(frame1Selector)
+        const frame1Layout = await page.$('#frame1-layout');
+        const frame1LayoutProp = await frame1Layout.getProperty('innerHTML');
+        const frame1LayoutInner = await frame1LayoutProp.jsonValue();
 
-        // const layoutInner = await page.$eval(element => element.textContent, landingLayout);
-        // const frame1Inner = await page.$eval(element => element.textContent, frame1Layout);
-
-        // expect(layoutInner.trim()).toBe('');
-        // expect(frame1Inner.trim()).toBeTruthy();
+        expect(landingLayoutInner.trim()).toBe('');
+        expect(frame1LayoutInner.trim()).toBeTruthy();
     }, 5000);
 
     it('Test the first frame of the app', async () => {
@@ -50,6 +48,18 @@ describe('Basic user flow for Website', () => {
 
         await confirmation.click();
         await page.waitForTimeout(3000);
+
+        // Check that the new page has loaded
+        const frame1Layout = await page.$('#frame1-layout');
+        const frame1LayoutProp = await frame1Layout.getProperty('innerHTML');
+        const frame1LayoutInner = await frame1LayoutProp.jsonValue();
+
+        const frame2Layout = await page.$('#frame2-layout');
+        const frame2LayoutProp = await frame2Layout.getProperty('innerHTML');
+        const frame2LayoutInner = await frame2LayoutProp.jsonValue();
+
+        expect(frame1LayoutInner.trim()).toBe('');
+        expect(frame2LayoutInner.trim()).toBeTruthy();
     }, 5000);
 
     it('Test the second frame of the app', async () => {
@@ -60,6 +70,18 @@ describe('Basic user flow for Website', () => {
         await teapotEl.click();
 
         await page.waitForTimeout(7000);
+
+        // Check that the new page has loaded
+        const frame2Layout = await page.$('#frame2-layout');
+        const frame2LayoutProp = await frame2Layout.getProperty('innerHTML');
+        const frame2LayoutInner = await frame2LayoutProp.jsonValue();
+
+        const frame3Layout = await page.$('#frame3-layout');
+        const frame3LayoutProp = await frame3Layout.getProperty('innerHTML');
+        const frame3LayoutInner = await frame3LayoutProp.jsonValue();
+
+        expect(frame2LayoutInner.trim()).toBe('');
+        expect(frame3LayoutInner.trim()).toBeTruthy();
     }, 10000);
 
     it('Test the third frame of the app', async () => {
@@ -70,6 +92,18 @@ describe('Basic user flow for Website', () => {
         await teapotEl.click();
 
         await page.waitForTimeout(8000);
+
+        // Check that the new page has loaded
+        const frame3Layout = await page.$('#frame3-layout');
+        const frame3LayoutProp = await frame3Layout.getProperty('innerHTML');
+        const frame3LayoutInner = await frame3LayoutProp.jsonValue();
+
+        const frame4Layout = await page.$('#frame4-layout');
+        const frame4LayoutProp = await frame4Layout.getProperty('innerHTML');
+        const frame4LayoutInner = await frame4LayoutProp.jsonValue();
+
+        expect(frame3LayoutInner.trim()).toBe('');
+        expect(frame4LayoutInner.trim()).toBeTruthy();
     }, 10000);
 
     it('Test the fourth frame of the app', async () => {
@@ -80,6 +114,18 @@ describe('Basic user flow for Website', () => {
         await teacupEl.click();
 
         await page.waitForTimeout(3000);
+
+        // Check that the new page has loaded
+        const frame4Layout = await page.$('#frame4-layout');
+        const frame4LayoutProp = await frame4Layout.getProperty('innerHTML');
+        const frame4LayoutInner = await frame4LayoutProp.jsonValue();
+
+        const frame5Layout = await page.$('#frame5-layout');
+        const frame5LayoutProp = await frame5Layout.getProperty('innerHTML');
+        const frame5LayoutInner = await frame5LayoutProp.jsonValue();
+
+        expect(frame4LayoutInner.trim()).toBe('');
+        expect(frame5LayoutInner.trim()).toBeTruthy();
     }, 5000);
 
     it('Test the fifth frame of the app', async () => {

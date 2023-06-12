@@ -1,11 +1,11 @@
 import initFrameTwo from '../scripts/frame2.js';
 
 document.body.innerHTML = `
-  <div id="frame2-layout">
+    <div id="frame2-layout">
     <img id="teapot" src="" />
-  </div>
-  <div id="frame3-layout"></div>
-  <div id="frame3-template"></div>
+    </div>
+    <div id="frame3-layout"></div>
+    <div id="frame3-template"></div>
 `;
 
 jest.mock('html5-audio', () =>
