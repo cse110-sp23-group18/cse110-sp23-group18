@@ -1,54 +1,81 @@
-import initFrameTwo from '../scripts/frame2.js';
+/**
+ * @summary This file provides the testing for the second frame of the file.
+ * 
+ * @author Pramesh Kariyawasam (June 10, 2023)
+ * 
+ */
 
-document.body.innerHTML = `
-    <div id="frame2-layout">
-    <img id="teapot" src="" />
-    </div>
-    <div id="frame3-layout"></div>
-    <div id="frame3-template"></div>
-`;
+import initFrameTwo from '..//scripts/frame2.js';
+import initFrameThree from '../scripts/frame3.js';
 
-jest.mock('html5-audio', () =>
-    jest.fn().mockImplementation(() => ({
-        src: '',
-        preload: '',
-        currentTime: 0,
-        play: jest.fn(),
-        pause: jest.fn(),
-    }))
-);
+// prevents an HTMLMediaElement error
+window.HTMLMediaElement.prototype.play = () => {
+    /* do nothing */
+};
+window.HTMLMediaElement.prototype.pause = () => {
+    /* do nothing */
+};
+
+jest.useFakeTimers(); // to control setTimeout and setInterval
 
 describe('initFrameTwo', () => {
-    it('should change teapot image and play sound when clicked', () => {
-        const teapotEle = document.getElementById('teapot');
-        const boilSound = new Audio();
+    let teapotEle;
+    let thisLayout;
+    let nextLayout;
+    let nextTemplate;
 
+    beforeEach(() => {
+        jest.resetModules();
+
+        document.body.innerHTML = `
+            <img id='teapot' src='assets/images/teapot.png'>
+            <div id='frame2-layout'>
+                Frame 2 content
+            </div>
+            <div id='frame3-layout' style='display:none;'>
+                Frame 3 content
+            </div>
+            <template id='frame3-template'>
+                Frame 3 template
+            </template>
+            <img id='teapotImage' src='assets/images/teapotImage.png'>
+        `;
+
+        teapotEle = document.getElementById('teapot');
+        thisLayout = document.getElementById('frame2-layout');
+        nextLayout = document.getElementById('frame3-layout');
+        nextTemplate = document.getElementById('frame3-template');
         initFrameTwo();
+    });
 
-        // Simulate a click event on the teapot element
-        teapotEle.click();
+    test('should add event listener to teapot element', () => {
+        const clickEvent = new MouseEvent('click', {
+            'view': window,
+            'bubbles': true,
+            'cancelable': true
+        });
 
-        // Assert that the teapot image is changed to the steaming gif
-        expect(teapotEle.src).toBe('assets/images/gifs/teapotSteaming.gif');
+        teapotEle.dispatchEvent(clickEvent);
 
-        // Assert that the sound's currentTime is set to 0
-        expect(boilSound.currentTime).toBe(0);
+        // Check if src has changed after clicking
+        expect(teapotEle.src).toContain('teapotSteaming.gif');
+    });
 
-        // Assert that the sound's play method is called
-        expect(boilSound.play).toHaveBeenCalled();
+    test('should change layouts after 5000ms', () => {
+        const clickEvent = new MouseEvent('click', {
+            'view': window,
+            'bubbles': true,
+            'cancelable': true
+        });
 
-        // Fast-forward 5000 milliseconds to simulate the passage of time
-        jest.advanceTimersByTime(5000);
+        teapotEle.dispatchEvent(clickEvent);
 
-        // Assert that the sound's pause method is called
-        expect(boilSound.pause).toHaveBeenCalled();
+        // Fast-forward until all timers have been executed
+        jest.runAllTimers();
 
-        // Assert that the layout elements are updated correctly
-        const thisLayout = document.getElementById('frame2-layout');
-        const nextLayout = document.getElementById('frame3-layout');
         expect(thisLayout.style.display).toBe('none');
-        expect(thisLayout.innerHTML).toBe('');
-        expect(nextLayout.innerHTML).toBe('');
+        expect(nextLayout.innerHTML).toBe(nextTemplate.innerHTML);
         expect(nextLayout.style.display).toBe('block');
     });
 });
+
