@@ -36,12 +36,11 @@ describe('prediction', () => {
             setTimeout(() => {
                 // Verify that the prediction text and image elements are updated correctly
                 expect(
-                    PREDICTIONS.some((pred) => {
-                        return (
+                    PREDICTIONS.some(
+                        (pred) =>
                             pred.text === predictionTxtEl.innerHTML &&
                             predictPicEl.src.includes(pred.picture.slice(2))
-                        );
-                    })
+                    )
                 ).toBe(true);
 
                 resolve();
