@@ -1,5 +1,8 @@
 /**
- * @jest-environment jsdom
+ * @summary This file provides the testing for the second frame of the file.
+ * 
+ * @author Pramesh Kariyawasam (June 10, 2023)
+ * 
  */
 
 import initFrameTwo from '..//scripts/frame2.js';
