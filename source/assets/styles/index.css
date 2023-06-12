@@ -1,0 +1,31 @@
+/* styling for website title */
+#landing-layout .website-title {
+    padding-top: calc(var(--img-scale) * var(--mbg-height) * 0.24);
+}
+
+/* main margin */
+#landing-layout main {
+    margin-top: 25vh;
+}
+
+/* start button styling */
+#landing-layout .start-button a {
+    font-size: 5vw;
+    padding: 10px;
+}
+
+@media (min-width: 769px) {
+    #landing-layout .website-title {
+        padding-top: calc(var(--img-scale) * var(--tbg-height) * 0.26);
+    }
+
+    #landing-layout .website-title h1 {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    #landing-layout .website-title {
+        padding-top: calc(var(--img-scale) * var(--dbg-height) * 0.26);
+    }
+}

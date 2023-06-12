@@ -1,6 +1,9 @@
 {
     "devDependencies": {
+        "@babel/core": "^7.21.8",
+        "@babel/preset-env": "^7.21.5",
         "auto-changelog": "^2.4.0",
+        "babel-jest": "^27.5.1",
         "docdash": "^2.0.1",
         "eslint": "^8.40.0",
         "eslint-config-airbnb": "^19.0.4",
@@ -12,9 +15,13 @@
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
+        "jest": "^27.5.1",
+        "jest-puppeteer": "^6.2.0",
         "jsdoc": "^4.0.2",
         "jsdoc-to-markdown": "^8.0.0",
+        "jsdom": "^22.1.0",
         "prettier": "^2.8.8",
+        "puppeteer": "^18.1.0",
         "stylelint-prettier": "^3.0.0"
     },
     "name": "team-apollo-tea-readings",
@@ -47,6 +54,7 @@
         "callsites": "^3.1.0",
         "chalk": "^4.1.2",
         "chardet": "^0.7.0",
+        "chromium": "^3.0.3",
         "cli-cursor": "^3.1.0",
         "cli-width": "^3.0.0",
         "color-convert": "^2.0.1",
@@ -252,12 +260,23 @@
         "yocto-queue": "^0.1.0"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest",
         "lint": "npx eslint ./source/ --fix && npx stylelint ./source/**/*.css --fix",
         "version": "auto-changelog -p && git add CHANGELOG.md",
-        "jsdoc2md": "find ./source/ -name \"*.js\" -exec jsdoc2md {} \\; > ./docs/devdocs.md;",
-        "jsdocjs": "jsdoc -a all -c jsdoc.json -r ./source/ -d docs/jsdoc --verbose",
-        "jsdoc": "npm run jsdoc2md"
+        "jsdoc": "jsdoc -a all -c jsdoc.json -r ./source/ -d docs/jsdoc --verbose",
+        "build": "babel src -d dist"
+    },
+    "jest": {
+        "preset": "jest-puppeteer",
+        "verbose": true,
+        "testRegex": "./source/assets/test/*.*.js$",
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        },
+        "testEnvironment": "jsdom"
+    },
+    "engines": {
+        "node": ">=11.0.0"
     },
     "author": "Team Apollo",
     "license": "ISC"
