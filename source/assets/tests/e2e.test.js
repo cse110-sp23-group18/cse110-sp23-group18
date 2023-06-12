@@ -13,7 +13,7 @@ describe('Basic user flow for Website', () => {
     });
 
     // IMPORTANT: Remove this test and uncomment other lines of code after dev is updated
-    it('Placeholder test to prevent error', async () => {})
+    it('Placeholder test to prevent error', async () => {});
 
     // it('Test the landing frame of the app', async () => {
     //     // Wait for the page to load (wait for 1 sec)

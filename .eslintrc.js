@@ -1,4 +1,3 @@
-// .eslintrc.js example
 module.exports = {
     env: {
         browser: true,
