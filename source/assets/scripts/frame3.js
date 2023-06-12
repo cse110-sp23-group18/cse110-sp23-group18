@@ -40,7 +40,7 @@ function liftTeapot() {
         // Enable transition
         teapot.style.transition = 'transform 1.0s ease';
         // Move teapot upward and left
-        teapot.style.transform = `translateY(calc(-13vh + ${initVertPos})) translateX(calc(-7vw))`;
+        teapot.style.transform = `translateY(calc(-15vh + ${initVertPos})) translateX(calc(-7vw))`;
         // Remove the 'lifted' class after the transition
         teapot.classList.remove('lifted');
         setTimeout(() => {
