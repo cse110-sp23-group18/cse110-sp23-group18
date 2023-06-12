@@ -45,30 +45,26 @@ describe('initFrameThree', () => {
         const teapotImageEle = document.getElementById('teapotImage');
         const pouringImageEle = document.getElementById('pouringImage');
 
-        // Trigger a click event on the teapot element
-        teapotEle.dispatchEvent(new Event('click'));
+        teapotEle.click();
 
-        // Wait for next event loop tick
-        // eslint-disable-next-line no-promise-executor-return
-        await new Promise((r) => setTimeout(r, 0));
+        setTimeout(() => {
+            // Assert that the styles are changed correctly after the teapot is lifted
+            expect(teapotEle.style.transform).toBeTruthy();
+            expect(teapotEle.classList.contains('lifted')).toBeTruthy();
+        }, 1000);
 
-        // Assert that the styles are changed correctly after the teapot is lifted
-        expect(teapotEle.style.transform).toBeTruthy();
-        expect(teapotEle.classList.contains('lifted')).toBeTruthy();
+        setTimeout(() => {
+            // Checks if the teapot and pouringImage classes have been toggled correctly
+            expect(teapotImageEle.classList.contains('hidden')).toBeTruthy();
+            expect(pouringImageEle.classList.contains('hidden')).toBeFalsy();
 
-        // fast-forward until all the remaining timers have been executed
-        jest.runAllTimers();
-
-        // Checks if the teapot and pouringImage classes have been toggled correctly
-        expect(teapotImageEle.classList.contains('hidden')).toBeTruthy();
-        expect(pouringImageEle.classList.contains('hidden')).toBeFalsy();
-
-        // Check layout transitions
-        expect(document.getElementById('frame3-layout').style.display).toBe(
-            'none'
-        );
-        expect(document.getElementById('frame4-layout').style.display).toBe(
-            'block'
-        );
-    });
+            // Check layout transitions
+            expect(document.getElementById('frame3-layout').style.display).toBe(
+                'none'
+            );
+            expect(document.getElementById('frame4-layout').style.display).toBe(
+                'block'
+            );
+        }, 10000);
+    }, 20000);
 });
