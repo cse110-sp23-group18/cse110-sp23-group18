@@ -27,7 +27,7 @@
 <h3 align="center">Tasseography</h3>
 
   <p align="center">
-    Development Documentation for Tasseography The Best Fortune-telling Website
+    Development Documentation for Tasseography: The Best Fortune-telling Website
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
@@ -60,7 +60,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -70,10 +69,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+Unsure about your future? Try out our super fun fortune-telling website! We built our website to create an unique user experience where people can relax in the easy and light background music and enjoy the cartoon art style. Hopefully the predictions can help you find a path in a life filled with uncertainties.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+If you enjoyed our website - please leave a star or a comment to let us know if you liked it! If there are any bugs that you noticed when running the website, please let us know. Thank you for trying our app!
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+
+For developers - any suggestions on new features or contributions will be greatly appreciated!
+
+Find our live website [here](https://apollo18-tealeaves.netlify.app). We also have information about [user manual](/docs/userdoc.md) and setting up [CI/CD](/docs/cicd.md).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,14 +84,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![HTML][html.logo]][html-url]
+* [![CSS][css.logo]][css-url]
+* [![JavaScript][js.logo]][js-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,32 +95,26 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
+This is an example of how you may set up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+This project is mainly developed for Safari and Chrome browers on both Desktop and Mobile devices. Preferably use those when trying out the features. Please report any bugs if encountered when using other browsers or devices. Addtional help on compatibility will be greatly appreciated. 
+
+* [![Chrome][chrome.logo]][chrome-url]
+* [![Safari][safari.logo]][safari-url]
+
+All of our developers are using Visual Studio Code as our source-code editor. Installing and enabling the LiveServer Plugin is greatly recommended. 
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Make sure you have a browser and a code editor available 
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/cse110-sp23-group18/cse110-sp23-group18.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+3. Happy Developing!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,9 +123,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+_Please refer to the [User Docs](/docs/userdocs.md)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,10 +132,18 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Upload art including website background and tea elements
+- [x] Complete Tea Leave Prediction Generation in JS
+- [x] Set up repective HTML/CSS/JavaScript file structure 
+    - [x] HTML with key elements
+    - [x] CSS for styling
+    - [x] JS for interaction and responsiveness
+- [X] Add CSS to fit both Desktop and Mobile devices
+    - [X] Responsive CSS for all major mobile device
+    - [X] Responsive CSS for all major destop sizes
+- [X] Implement CI/CD modules
+- [X] Combine all frames into one single frame
+- [X] Add sound effects and background music
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
@@ -176,10 +174,21 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Brain Liu - Team Lead - email@email_client.com
-Pramesh Jalath - Co-Team Lead - email@email_client.com
-Grant Cheng - Designer and CI/CD - 
-Kavi Nelakonda - 
+| Team Member          | Role/Contribution         | Email            |
+| :------------------- | :-----------------:       | ---------------: |
+| Brain Liu            |  Team Lead, Code Dev      | bgliu@ucsd.edu   |
+| Pramesh Kariyawasam  |  Co-Team Lead, Code Dev   | pjalath@ucsd.edu |
+| Grant Cheng          |  Designer, Code Dev, CI/CD| gxcheng@ucsd.edu |
+| Kavi Nelakonda       |  Developer, Code Dev      | knelakon@ucsd.edu|
+| Jessie Ouyang        |  Developer, Code Dev      | jeouyang@ucsd.edu|
+| Yulei Lu             |  Developer, CI/CD         | kax008752@acsmail.ucsd.edu|
+| Emily Better         |  Developer, Code Dev      | ebetter@ucsd.edu|
+| Fangyu Zhu           |  Developer, Code Dev      | fazhu@ucsd.edu|
+| Damaris Flores       |  Developer, Code Dev      | d6flores@ucsd.edu|
+| Shuyi Han            |  Developer, Code Dev      | shh020@ucsd.edu|
+
+
+
 
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
@@ -200,32 +209,32 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/cse110-sp23-group18/cse110-sp23-group18.svg?style=for-the-badge
 [contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/cse110-sp23-group18/cse110-sp23-group18.svg?style=for-the-badge
 [forks-url]: https://github.com/cse110-sp23-group18/cse110-sp23-group18/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/cse110-sp23-group18/cse110-sp23-group18.svg?style=for-the-badge
 [stars-url]: https://github.com/cse110-sp23-group18/cse110-sp23-group18/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/cse110-sp23-group18/cse110-sp23-group18.svg?style=for-the-badge
 [issues-url]: https://github.com/cse110-sp23-group18/cse110-sp23-group18/issues
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/https://img.shields.io/badge/Safari-FF1B2D?style=for-the-badge&logo=Safari&logoColor=whitelinkedin_username
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
+[safari.logo]: https://img.shields.io/badge/Safari-FF1B2D?style=for-the-badge&logo=Safari&logoColor=white
+[safari-url]: https://www.apple.com/safari/
+[chrome.logo]: https://img.shields.io/badge/Google_chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white
+[chrome-url]: https://www.google.com/chrome/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
+[html.logo]: https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white
+[html-url]: https://devdocs.io/html/
+[css.logo]: https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white
+[css-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[js.logo]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[js-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
