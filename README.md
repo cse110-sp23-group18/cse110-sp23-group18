@@ -23,4 +23,4 @@ For development and contributions to this project, docs can be found [here](http
 
 ### Video Links
 Final Private Video: [Link](https://youtu.be/QZImNAtB42o)
-Final Public Video: [Link]()
+Final Public Video: [Link](https://www.youtube.com/watch?v=_TFZSRZ5Tqc)
