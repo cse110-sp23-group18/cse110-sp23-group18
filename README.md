@@ -21,4 +21,6 @@ Tasseography, or tea leaf reading, is the final project of the quarter. This is 
 
 For development and contributions to this project, docs can be found [here](https://cse110-sp23-group18.github.io/cse110-sp23-group18/). 
 
-Thank you Team 18!
+### Video Links
+Final Private Video: [Link](https://youtu.be/QZImNAtB42o)
+Final Public Video: [Link]()
