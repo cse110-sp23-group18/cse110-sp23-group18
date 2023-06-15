@@ -2,6 +2,7 @@
  * Has a start button, and when clicked
  * @author Damaris Flores (May ??, 2023)
  * Last modified by: Grant Cheng (June 9, 2023)
+ * Thank you Team 18!
  */
 
 import initFrameOne from './frame1.js';
