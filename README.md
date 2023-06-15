@@ -19,4 +19,6 @@ Towards the beginning of the quarter, we made an introductory project on an 8-ba
 
 Tasseography, or tea leaf reading, is the final project of the quarter. This is a fortune-telling application we are building that will give various readings to users. A link to our project can be found [here](https://apollo18-tealeaves.netlify.app).
 
-For development and contributions to this project, docs can be found [here](https://cse110-sp23-group18.github.io/cse110-sp23-group18/).
+For development and contributions to this project, docs can be found [here](https://cse110-sp23-group18.github.io/cse110-sp23-group18/). 
+
+Thank you Team 18!
