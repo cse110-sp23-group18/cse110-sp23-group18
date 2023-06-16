@@ -30,7 +30,7 @@
     Development Documentation for Tasseography: The Best Fortune-telling Website
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://youtu.be/yYyHpr7XZ98">View Demo</a>
     ·
     <a href="https://github.com/cse110-sp23-group18/cse110-sp23-group18/issues">Report Bug</a>
     ·
